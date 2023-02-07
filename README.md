@@ -1,5 +1,3 @@
-# Capstone-Project
-This is a game I am making for a school project over the next 18 weeks.
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 <!--
@@ -36,10 +34,10 @@ This is a game I am making for a school project over the next 18 weeks.
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Super Robot Soaker</h3>
 
   <p align="center">
-    project_description
+    This is a game I am making for a school project over the next 18 weeks. It will primarily be a first person shooter (fps), but it will also incorporate multiple other gameplay styles, such as driving, parkour, puzzles, and much more (tentatively). It will visually resemble classic DOOM, as I really like its aesthetic and it will allow the game to run on weaker computers. 
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
@@ -87,7 +85,7 @@ This is a game I am making for a school project over the next 18 weeks.
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `MrKahoobadoo`, `Capstone-Project`, 'AUD1GEN', `mattmc649@gmail.com`, `Super Robot Soaker`, `First-Person adventure game in which you destroy evil ASI robots with water guns`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

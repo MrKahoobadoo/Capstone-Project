@@ -85,7 +85,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `MrKahoobadoo`, `Capstone-Project`, 'AUD1GEN', `mattmc649@gmail.com`, `Super Robot Soaker`, `First-Person adventure game in which you destroy evil ASI robots with water guns`
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `MrKahoobadoo`, `Capstone-Project`, `AUD1GEN`, `mattmc649@gmail.com`, `Super Robot Soaker`, `First-Person adventure game in which you destroy evil ASI robots with water guns`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

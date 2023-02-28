@@ -168,11 +168,11 @@ Have fun frying robots with water
 - [ ] Level 1: Driving level
 - [ ] Level 2: COD Zombies inspired level
 - [ ] Level 3: Nextbot/templerun level
-- [ ] Level 4: Rhythm game level
+- [ ] Level 4: Rap Battle Level
 - [ ] Level 5: Ride on firetruck and spray robots with firehose level
-- [ ] Level 6: Detective level
-- [ ] Level 7: Tower ascension level
-- [ ] Level 8: Final Boss
+- [ ] Level 6: Tower ascension level
+- [ ] Level 7: Final Boss 1
+- [ ] Level 8: Final Boss 2
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -232,7 +232,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* Dr. Bixler
+* Thanks to Dr. Bixler for being a great teacher and guiding me along the way
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -5,11 +5,15 @@ using UnityEngine;
 public class ClickScript : MonoBehaviour
 {
 
+    public int scoreToGive = 1;
+
+    public float scaleIncreasePerClick = 0.2f;
+
     public int clicksToPop;
 
     public Transform target;
-    
-    public int hamstersPopped;
+
+    public woohoo woohoo;
 
     void Start ()
     {
@@ -34,15 +38,16 @@ public class ClickScript : MonoBehaviour
     void OnMouseDown ()
     {
         clicksToPop -= 1;
-        transform.localScale += new Vector3(0.2f, 0.2f, 0.2f);
+        transform.localScale += new Vector3(scaleIncreasePerClick, scaleIncreasePerClick, scaleIncreasePerClick);
         
         if (clicksToPop == 0)
         {
             Destroy(gameObject);
+            woohoo.increaseScore(scoreToGive);
 
-            hamstersPopped -= 1;
+
         }
-        
+
     }
 
     void Update()

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1748562826189476344}
   - component: {fileID: 2291942834891076082}
-  - component: {fileID: 2291942834891076083}
+  - component: {fileID: -2019222981328007748}
   m_Layer: 0
   m_Name: Hamster_01
   m_TagString: Untagged
@@ -47,7 +47,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.8
   m_Center: {x: 0, y: 0.72, z: -0.41}
---- !u!114 &2291942834891076083
+--- !u!114 &-2019222981328007748
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,9 +59,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca9d1402caaa1444a5d2a4d07970b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clicksToPop: 3
+  scoreToGive: 1
+  scaleIncreasePerClick: 0.2
+  clicksToPop: 0
   target: {fileID: 0}
-  hamstersPopped: 15
+  hamstersPopped: 0
 --- !u!1 &7962997376558904219
 GameObject:
   m_ObjectHideFlags: 0

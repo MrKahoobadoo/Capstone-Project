@@ -15,18 +15,24 @@ public class ClickScript : MonoBehaviour
 
     public woohoo woohoo;
 
+    public AudioClip myClip;
+    public AudioSource audioSource;
+
     void Start ()
     {
-        float scale = Random.Range(0.5f, 2.0f);
+        float scale = Random.Range(0.4f, 1.4f);
         
         transform.localScale = new Vector3(scale, scale, scale);
         
-        transform.position = new Vector3(Random.Range(-14.5f, 14.5f), Random.Range(0.0f, 9.0f), 2.8f);
+        transform.position = new Vector3(Random.Range(-12f, 12f), Random.Range(1.0f, 8.0f), -18.0f);
 
         transform.LookAt(target);
 
         RotateByDegrees(0, 180, 0);
-        
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = myClip;
+
     }
 
     void RotateByDegrees(float a, float b, float c)
@@ -39,13 +45,13 @@ public class ClickScript : MonoBehaviour
     {
         clicksToPop -= 1;
         transform.localScale += new Vector3(scaleIncreasePerClick, scaleIncreasePerClick, scaleIncreasePerClick);
+
+        audioSource.PlayOneShot(myClip);
         
         if (clicksToPop == 0)
         {
             Destroy(gameObject);
             woohoo.increaseScore(scoreToGive);
-
-
         }
 
     }

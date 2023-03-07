@@ -9,9 +9,16 @@ public class woohoo : MonoBehaviour
     public int score;
     public TextMeshProUGUI scoreText;
 
+    public AudioClip myClip;
+    public AudioSource audioSource;
+
     void Start ()
     {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = myClip;
+        
         updateScoreText();
+
     }
 
     public void increaseScore (int amount)
@@ -20,18 +27,29 @@ public class woohoo : MonoBehaviour
         updateScoreText();
     }
 
-    public void Quit()
+    void Quit()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
         }
-        
+
     }
 
     void updateScoreText ()
     {
         scoreText.text = "Hampsters Popped: " + score;
+        
+        if(score != 0)
+        {
+            audioSource.PlayOneShot(myClip);
+        }
+        
+    }
+
+    IEnumerator WaitAndDoSomething(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
     }
 
     // Update is called once per frame

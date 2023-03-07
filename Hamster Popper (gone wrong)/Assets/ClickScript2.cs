@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClickScript : MonoBehaviour
+public class ClickScript2 : MonoBehaviour
 {
 
     public int scoreToGive = 1;
 
-    public float scaleIncreasePerClick = 0.2f;
+    public float scaleIncreasePerClick = 0.3f;
 
     public int clicksToPop;
 
@@ -15,18 +15,29 @@ public class ClickScript : MonoBehaviour
 
     public woohoo woohoo;
 
+    private float rotateX;
+    private float rotateY;
+    private float rotateZ;
+
+    public AudioClip myClip;
+    public AudioSource audioSource;
+
     void Start()
     {
-        float scale = Random.Range(0.5f, 2.0f);
+        float scale = Random.Range(0.3f, 0.6f);
 
         transform.localScale = new Vector3(scale, scale, scale);
 
-        transform.position = new Vector3(Random.Range(-14.5f, 14.5f), Random.Range(0.0f, 9.0f), 2.8f);
+        transform.position = new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(1.0f, 8.0f), -18.0f);
 
         transform.LookAt(target);
+        
+        rotateX = Random.Range(-0.1f, 0.1f);
+        rotateY = Random.Range(-0.1f, 0.1f);
+        rotateZ = Random.Range(-0.1f, 0.1f);
 
-        RotateByDegrees(0, 180, 0);
-
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = myClip;
     }
 
     void RotateByDegrees(float a, float b, float c)
@@ -38,17 +49,22 @@ public class ClickScript : MonoBehaviour
     void OnMouseDown()
     {
         clicksToPop -= 1;
-        transform.localScale += new Vector3(0, scaleIncreasePerClick, 0);
+        transform.localScale += new Vector3(0, 0, scaleIncreasePerClick);
+
+        audioSource.PlayOneShot(myClip);
 
         if (clicksToPop == 0)
         {
             Destroy(gameObject);
             woohoo.increaseScore(scoreToGive);
 
-
         }
 
     }
 
+    void Update()
+    {
+        RotateByDegrees(rotateX, rotateY, rotateZ);
+    }
 
 }

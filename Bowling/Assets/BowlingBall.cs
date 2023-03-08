@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BowlingBall : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class BowlingBall : MonoBehaviour
     public float forwardForce;
     public float moveIncrement;
     public Rigidbody rig;
+    float startingPosition = 16.0f;
 
     void Start()
     {
@@ -17,7 +19,11 @@ public class BowlingBall : MonoBehaviour
 
     public void Bowl()
     {
-        rig.AddForce(transform.forward * forwardForce, ForceMode.Impulse);
+        if(transform.position.x == startingPosition)
+        {
+            rig.AddForce(transform.forward * forwardForce, ForceMode.Impulse);
+        }
+        
     }
 
     public void MoveLeft()
@@ -38,6 +44,14 @@ public class BowlingBall : MonoBehaviour
 
     }
 
+    void ResetGame()
+    {
+        if(transform.position.x < -100)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
     void Update()
     {
         if (Input.GetKeyDown("space"))
@@ -54,5 +68,8 @@ public class BowlingBall : MonoBehaviour
         {
             MoveRight();
         }
+
+        ResetGame();
     }
+
 }

@@ -1,0 +1,480 @@
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1678293426134978, "dur": 1651418, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1678293426135567, "dur": 21004, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1678293426156578, "dur": 89411, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1678293426245992, "dur": 1251461, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1678293427497456, "dur": 272980, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1678293427770439, "dur": 15956, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1678293427787230, "dur": 23, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "netcorerun.dll" } },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-1" } },
+{ "pid": 35942, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 35942, "tid": 1, "ts": 1678293427198956, "dur": 262092, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1678293427200628, "dur": 83815, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1678293427437906, "dur": 5920, "ph": "X", "name": "OutputData.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1678293427443829, "dur": 17209, "ph": "X", "name": "Backend.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1678293427444916, "dur": 15275, "ph": "X", "name": "JsonToString", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1678293427469703, "dur": 1952, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1678293427467984, "dur": 3704, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1678293427787375, "dur": 358, "ph": "X", "name": "buildprogram0.traceevents", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1678293427572216, "dur":1061, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427573283, "dur":40, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1678293427573342, "dur":22, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1678293427573364, "dur":464, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1678293427573860, "dur":973, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427574833, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427754609, "dur":337, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427754947, "dur":81, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755028, "dur":5, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755033, "dur":18, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755051, "dur":52, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755103, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755112, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755115, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755124, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755126, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755134, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755136, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755143, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755145, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755152, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755153, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755161, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755185, "dur":3, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427755249, "dur":1785, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1678293427575531, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427575532, "dur":5333, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427580867, "dur":24298, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1678293427605172, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427605204, "dur":1432, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1678293427606730, "dur":2909, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1678293427609644, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427609658, "dur":1580, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1678293427611324, "dur":229, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":1, "ts":1678293427611559, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427611572, "dur":3292, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":1, "ts":1678293427615010, "dur":39613, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427654631, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427654867, "dur":11453, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427666433, "dur":275, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427666715, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427666727, "dur":2985, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427669802, "dur":269, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427670078, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427670092, "dur":3721, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427673940, "dur":299, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427674250, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427674267, "dur":2717, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427677108, "dur":589, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427677705, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427677723, "dur":4889, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427682736, "dur":791, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427683534, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427683550, "dur":2702, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427686356, "dur":394, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427686757, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427686774, "dur":3001, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427689888, "dur":2538, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427692433, "dur":23, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427692471, "dur":3102, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427695675, "dur":722, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427696428, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427696454, "dur":3698, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427700251, "dur":20770, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427721029, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427721047, "dur":2502, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427723650, "dur":11768, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427735425, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678293427735441, "dur":6637, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678293427742155, "dur":12440, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427575615, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427575616, "dur":5184, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427580803, "dur":21573, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":2, "ts":1678293427602384, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427602519, "dur":1835, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":2, "ts":1678293427604450, "dur":264, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1678293427604722, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427604745, "dur":6205, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1678293427611061, "dur":273, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":2, "ts":1678293427611340, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427611357, "dur":3185, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":2, "ts":1678293427614685, "dur":12246, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427626942, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427628012, "dur":3882, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427632026, "dur":378, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427632413, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427632433, "dur":3174, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427635750, "dur":338, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427636098, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427636118, "dur":2869, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427639131, "dur":326, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427639466, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427639485, "dur":2192, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427641769, "dur":306, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427642119, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427642134, "dur":3760, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427646002, "dur":769, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427646779, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427646793, "dur":4403, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427651314, "dur":404, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427651724, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427651777, "dur":2728, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427654624, "dur":326, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427654959, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427655023, "dur":3898, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427659034, "dur":297, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427659339, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427659356, "dur":4366, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427663816, "dur":235, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427664058, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427664073, "dur":3889, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427668082, "dur":814, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427668904, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427668925, "dur":4201, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427673238, "dur":379, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427673624, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427673643, "dur":2705, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427676451, "dur":331, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427676789, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427676804, "dur":4035, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427680956, "dur":432, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427681396, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427681575, "dur":3375, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427685067, "dur":1089, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427686164, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427686180, "dur":3391, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427689672, "dur":489, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427690168, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427690184, "dur":2145, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427692425, "dur":1747, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427694178, "dur":6, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427694198, "dur":4888, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427699271, "dur":26995, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427726273, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427726288, "dur":2361, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678293427728743, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":2, "ts":1678293427728836, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427728955, "dur":2003, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":2, "ts":1678293427731044, "dur":213, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":2, "ts":1678293427731264, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427731276, "dur":1670, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":2, "ts":1678293427733045, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/resources.assets" }}
+,{ "pid":12345, "tid":2, "ts":1678293427733146, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427733161, "dur":1723, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/resources.assets" }}
+,{ "pid":12345, "tid":2, "ts":1678293427734981, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/level0" }}
+,{ "pid":12345, "tid":2, "ts":1678293427735080, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427735092, "dur":2190, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/level0" }}
+,{ "pid":12345, "tid":2, "ts":1678293427737377, "dur":5810, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1678293427743201, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678293427743228, "dur":2173, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1678293427745491, "dur":9092, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427575428, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427575430, "dur":9101, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427584532, "dur":563, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":3, "ts":1678293427585104, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427589818, "dur":6982, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":3, "ts":1678293427596900, "dur":273, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1678293427597181, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427597481, "dur":13018, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1678293427610619, "dur":4889, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":3, "ts":1678293427615518, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427615550, "dur":2400, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":3, "ts":1678293427618060, "dur":37265, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling.exe" }}
+,{ "pid":12345, "tid":3, "ts":1678293427655333, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427655347, "dur":3418, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling.exe" }}
+,{ "pid":12345, "tid":3, "ts":1678293427658890, "dur":338, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427659279, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427659302, "dur":4364, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427663754, "dur":23256, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427687018, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427687039, "dur":3015, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427690152, "dur":3971, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427694130, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427694147, "dur":3301, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427697548, "dur":410, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427697965, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427697981, "dur":2864, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427700946, "dur":3411, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427704364, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427704378, "dur":1775, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427706314, "dur":3887, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427710208, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427710226, "dur":6052, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427716404, "dur":2138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427718550, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427718568, "dur":3674, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427722342, "dur":327, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427722675, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427722691, "dur":2129, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427724925, "dur":19680, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427744613, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678293427744626, "dur":1627, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678293427746317, "dur":8268, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427575237, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427575238, "dur":5502, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427580759, "dur":4972, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1678293427585746, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427589982, "dur":9248, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1678293427599311, "dur":20414, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1678293427619734, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427619755, "dur":3317, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1678293427623189, "dur":397, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427623595, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427624287, "dur":2406, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427626807, "dur":298, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427627113, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427627243, "dur":2663, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427630028, "dur":251, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427630286, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427630301, "dur":3141, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427633573, "dur":398, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427633981, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427634042, "dur":2463, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427636585, "dur":283, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427636874, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427636889, "dur":2540, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427639542, "dur":302, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427639852, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427639868, "dur":1970, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427641927, "dur":340, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427642273, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427642286, "dur":3474, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427645868, "dur":2379, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427648254, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427648268, "dur":4728, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427653184, "dur":381, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427653571, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427653587, "dur":4130, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427657815, "dur":275, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427658097, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427658112, "dur":3630, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427661869, "dur":511, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427662389, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427662408, "dur":5061, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427667604, "dur":647, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427668259, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427668280, "dur":4283, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427672662, "dur":447, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427673115, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427673132, "dur":2493, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427675753, "dur":351, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427676113, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427676131, "dur":6387, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427682613, "dur":250, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427682870, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427682884, "dur":3147, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427686124, "dur":423, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427686555, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427686627, "dur":3031, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427689758, "dur":6216, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427695983, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427695999, "dur":7136, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427703238, "dur":1318, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427704577, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427704594, "dur":2180, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427706859, "dur":24868, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427731737, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427731756, "dur":1745, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678293427733588, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/level0.resS" }}
+,{ "pid":12345, "tid":4, "ts":1678293427733692, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427733704, "dur":1875, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/level0.resS" }}
+,{ "pid":12345, "tid":4, "ts":1678293427735661, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":4, "ts":1678293427735753, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678293427735764, "dur":2155, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":4, "ts":1678293427738014, "dur":16592, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427575050, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427575051, "dur":5672, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427580738, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":5, "ts":1678293427580768, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427587514, "dur":784, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":5, "ts":1678293427588308, "dur":127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/app.info" }}
+,{ "pid":12345, "tid":5, "ts":1678293427588444, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427588886, "dur":7754, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/app.info" }}
+,{ "pid":12345, "tid":5, "ts":1678293427596644, "dur":19167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":5, "ts":1678293427615819, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427615842, "dur":2150, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":5, "ts":1678293427618078, "dur":219, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":5, "ts":1678293427618303, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427618824, "dur":12632, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":5, "ts":1678293427631897, "dur":386, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427632290, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427632308, "dur":2787, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427635205, "dur":285, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427635496, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427635510, "dur":3163, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427638773, "dur":295, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427639075, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427639088, "dur":1882, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427641056, "dur":248, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427641311, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427641324, "dur":1793, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427643188, "dur":204, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427643398, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427643410, "dur":2695, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427646220, "dur":283, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427646510, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427646524, "dur":3463, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427650083, "dur":276, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427650366, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427650380, "dur":2635, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427653185, "dur":287, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427653484, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427653500, "dur":3842, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427657447, "dur":287, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427657741, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427657756, "dur":2464, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427660324, "dur":396, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427660727, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427660744, "dur":4230, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427665073, "dur":362, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427665442, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427665456, "dur":4009, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427669562, "dur":343, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427669914, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427669932, "dur":3593, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427673633, "dur":2263, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427675903, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427675919, "dur":5215, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427681260, "dur":45868, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427727135, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427727150, "dur":2048, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678293427729305, "dur":183, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1678293427729495, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427729510, "dur":3293, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1678293427732905, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1678293427733008, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427733022, "dur":2648, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1678293427735750, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":5, "ts":1678293427735872, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678293427735884, "dur":2023, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":5, "ts":1678293427737991, "dur":16616, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427575574, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427575575, "dur":5285, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427580863, "dur":4218, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1678293427585090, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427590111, "dur":15498, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1678293427605680, "dur":184, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1678293427605869, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427606371, "dur":4481, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1678293427610969, "dur":281, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":6, "ts":1678293427611259, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427611281, "dur":5572, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":6, "ts":1678293427616956, "dur":12849, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":6, "ts":1678293427629816, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427629833, "dur":4620, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":6, "ts":1678293427634584, "dur":347, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427634940, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427634966, "dur":3451, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427638608, "dur":482, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427639109, "dur":9, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427639137, "dur":2610, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427641867, "dur":321, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427642197, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427642215, "dur":3435, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427645771, "dur":374, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427646283, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427646301, "dur":3828, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427650253, "dur":706, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427650968, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427650988, "dur":3410, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427654496, "dur":273, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427654776, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427654792, "dur":3256, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427658140, "dur":229, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427658376, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427658390, "dur":3379, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427661870, "dur":780, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427662659, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427662677, "dur":5073, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427667858, "dur":256, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427668121, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427668136, "dur":3618, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427671855, "dur":261, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427672122, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427672174, "dur":2226, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427674500, "dur":252, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427674759, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427674773, "dur":2075, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427676982, "dur":24460, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427701449, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427701467, "dur":1960, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427703504, "dur":6859, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427710371, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427710389, "dur":6347, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427716846, "dur":422, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427717309, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427717327, "dur":2707, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427720106, "dur":30588, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427750699, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678293427750712, "dur":1544, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678293427752323, "dur":2264, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678293427575689, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678293427575689, "dur":5036, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678293427580738, "dur":25780, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":7, "ts":1678293427606529, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678293427607153, "dur":1654, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":7, "ts":1678293427608919, "dur":284, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":7, "ts":1678293427609210, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678293427609355, "dur":6322, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":7, "ts":1678293427615809, "dur":111876, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678293427727691, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678293427727703, "dur":26784, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678293427754556, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":7, "ts":1678293427754559, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427575921, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427575921, "dur":4955, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427580877, "dur":4267, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":8, "ts":1678293427585152, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427589075, "dur":56449, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":8, "ts":1678293427645626, "dur":294, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427645925, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427645939, "dur":3270, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427649298, "dur":312, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427649614, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427649625, "dur":3111, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427652861, "dur":360, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427653230, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427653249, "dur":3245, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427656744, "dur":220, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427656971, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427656986, "dur":2630, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427659750, "dur":553, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427660312, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427660345, "dur":3985, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427664417, "dur":241, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427664665, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427664680, "dur":3712, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427668503, "dur":698, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427669211, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427669233, "dur":4161, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427673524, "dur":333, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427673865, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427673883, "dur":2612, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427676596, "dur":288, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427676891, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427676906, "dur":4303, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427681341, "dur":464, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427681813, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427681831, "dur":6959, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427688894, "dur":829, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427689731, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427689748, "dur":2403, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427692257, "dur":33514, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427725779, "dur":7, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427725801, "dur":2065, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427727967, "dur":326, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427728300, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427728314, "dur":2042, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678293427730446, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":8, "ts":1678293427730535, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427730547, "dur":2167, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":8, "ts":1678293427732811, "dur":8614, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":8, "ts":1678293427741434, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678293427741454, "dur":1683, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Bowling Game/Bowling_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":8, "ts":1678293427743280, "dur":11302, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678293427758547, "dur":2262, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1678293427787845, "dur": 5189, "ph": "X", "name": "backend_profiler1.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1678293427787211, "dur": 5892, "ph": "X", "name": "Write chrome-trace events", "args": {} },

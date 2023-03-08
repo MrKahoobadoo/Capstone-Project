@@ -1,0 +1,268 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.19f1 (c9714fde33b6) revision 13201743'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Enterprise' Language: 'en' Physical Memory: 16064 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Hampster Whopper
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+60705
+Successfully changed project path to: C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Hampster Whopper
+C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Hampster Whopper
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [6216] Host "[IP] 172.16.130.27 [Port] 0 [Flags] 2 [Guid] 538193188 [EditorId] 538193188 [Version] 1048832 [Id] WindowsEditor(7,malc4-16) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [6216] Host "[IP] 172.16.130.27 [Port] 0 [Flags] 2 [Guid] 538193188 [EditorId] 538193188 [Version] 1048832 [Id] WindowsEditor(7,malc4-16) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 293.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.19f1 (c9714fde33b6)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/Hampster Whopper/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x9a49)
+    Vendor:   Intel
+    VRAM:     8032 MB
+    Driver:   31.0.101.3358
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56748
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.018466 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 266.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.114 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2115ms)
+		BeginReloadAssembly (208ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (10ms)
+		EndReloadAssembly (1599ms)
+			LoadAssemblies (190ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (235ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (260ms)
+			SetupLoadedEditorAssemblies (936ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (41ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (267ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (469ms)
+				ProcessInitializeOnLoadMethodAttributes (156ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.014253 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\mmcweeney\Desktop\GitHub\Capstone-Project\Hampster Whopper\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\mmcweeney\Desktop\GitHub\Capstone-Project\Hampster Whopper\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.375 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3378ms)
+		BeginReloadAssembly (420ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (16ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (54ms)
+		EndReloadAssembly (2629ms)
+			LoadAssemblies (247ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (864ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (214ms)
+			SetupLoadedEditorAssemblies (1094ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (260ms)
+				ProcessInitializeOnLoadAttributes (749ms)
+				ProcessInitializeOnLoadMethodAttributes (34ms)
+				AfterProcessingInitializeOnLoad (23ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.18 seconds
+Refreshing native plugins compatible for Editor in 2.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3047 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (113.7 KB). Loaded Objects now: 3507.
+Memory consumption went from 107.5 MB to 107.4 MB.
+Total: 12.748300 ms (FindLiveObjects: 0.765100 ms CreateObjectMapping: 0.392000 ms MarkObjects: 11.090400 ms  DeleteObjects: 0.494800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1738015.902055 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79842766b460edbeab6a34051e857a80') in 0.016228 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 37.624883 seconds.
+  path: Assets/Cheeseburger
+  artifactKey: Guid(12c25a038ad548447925a0152a3111d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cheeseburger using Guid(12c25a038ad548447925a0152a3111d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0654c27b62accc2af27d7a40c3c8282') in 0.005889 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.078153 seconds.
+  path: Assets/Cheeseburger/Hamburger.obj
+  artifactKey: Guid(c7afb0feb20c03949bb8a88300362152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cheeseburger/Hamburger.obj using Guid(c7afb0feb20c03949bb8a88300362152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '859bebdbb528906202d9512e6fce0ff7') in 1.048750 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 193.079051 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(6ea315d0fd7389c41b19996891e99ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(6ea315d0fd7389c41b19996891e99ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8193726cff86800c54781cdc6d54904') in 0.015323 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.723373 seconds.
+  path: Assets/Cheeseburger/Hamburger_BaseColor 1.png
+  artifactKey: Guid(059c640295e49864fab8d4e86cd9679b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cheeseburger/Hamburger_BaseColor 1.png using Guid(059c640295e49864fab8d4e86cd9679b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '691c03c2600237e86f72032f008aced1') in 0.063236 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.184658 seconds.
+  path: Assets/Hamburger_BaseColor.png
+  artifactKey: Guid(cedbe4f809c37de468bf7035339a68f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hamburger_BaseColor.png using Guid(cedbe4f809c37de468bf7035339a68f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f8bf6148161ac9f7234ce3e8280da55') in 0.027539 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.162848 seconds.
+  path: Assets/Hamburger_BaseColor.png
+  artifactKey: Guid(cedbe4f809c37de468bf7035339a68f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hamburger_BaseColor.png using Guid(cedbe4f809c37de468bf7035339a68f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4795b12d21e786914acb73f3366c521') in 0.063169 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 55.724314 seconds.
+  path: Assets/Hamburger_BaseColor.png
+  artifactKey: Guid(cedbe4f809c37de468bf7035339a68f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hamburger_BaseColor.png using Guid(cedbe4f809c37de468bf7035339a68f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7554647113af312659f1b7709f9a771f') in 0.054921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 318.397333 seconds.
+  path: Assets/Hamster (2)
+  artifactKey: Guid(9bb781450934a6742b339d906c0a04f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hamster (2) using Guid(9bb781450934a6742b339d906c0a04f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adfe337f8f428d09f4868003f3ed1737') in 0.006831 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.111557 seconds.
+  path: Assets/Hamster (2)/Mesh_Hamster.obj
+  artifactKey: Guid(db86f2b057c8a3143ac0a3cfc440825d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hamster (2)/Mesh_Hamster.obj using Guid(db86f2b057c8a3143ac0a3cfc440825d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3225c2cfd8d76f5680822a264c2eff04') in 0.101170 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 118.450467 seconds.
+  path: Assets/Hamster (2)/NicePng_minecraft-grass-block-png_1827785.png
+  artifactKey: Guid(b2edcbe930a56e4408250c58c81aaa74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hamster (2)/NicePng_minecraft-grass-block-png_1827785.png using Guid(b2edcbe930a56e4408250c58c81aaa74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '024c8a17bd91717ac15a952846544abd') in 0.054286 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.921632 seconds.
+  path: Assets/NicePng_minecraft-grass-block-png_1827785.png
+  artifactKey: Guid(9b952cde512e1e04082f23f584174405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NicePng_minecraft-grass-block-png_1827785.png using Guid(9b952cde512e1e04082f23f584174405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa701594febd0047e1a318071dee918f') in 0.059981 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 91.886993 seconds.
+  path: Assets/NicePng_minecraft-grass-block-png_1827785.png
+  artifactKey: Guid(9b952cde512e1e04082f23f584174405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NicePng_minecraft-grass-block-png_1827785.png using Guid(9b952cde512e1e04082f23f584174405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3f0d9744f593962dd53494fed3b2044') in 0.031970 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 37.543639 seconds.
+  path: Assets/NicePng_minecraft-grass-block-png_1827785.png
+  artifactKey: Guid(9b952cde512e1e04082f23f584174405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NicePng_minecraft-grass-block-png_1827785.png using Guid(9b952cde512e1e04082f23f584174405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9944055ef2d6907f95e4f695e47e639b') in 0.027228 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 99.514710 seconds.
+  path: Assets/New Material.mat
+  artifactKey: Guid(bce8db9c5b40701479bba658b9cb8889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Material.mat using Guid(bce8db9c5b40701479bba658b9cb8889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '415ba490014a932aca47f814d856a7d2') in 0.066725 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 132.533940 seconds.
+  path: Assets/Materials/NicePng_minecraft-grass-block-png_1827786.mat
+  artifactKey: Guid(868d09631df5ba843887855f5632475b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/NicePng_minecraft-grass-block-png_1827786.mat using Guid(868d09631df5ba843887855f5632475b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecd17746479794a994f3120ebc520314') in 1.910646 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 622.068075 seconds.
+  path: Assets/New Material.mat
+  artifactKey: Guid(bce8db9c5b40701479bba658b9cb8889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Material.mat using Guid(bce8db9c5b40701479bba658b9cb8889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38bb6883fafdcab7c3e7e0961276ab1d') in 0.316358 seconds 

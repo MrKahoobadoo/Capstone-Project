@@ -406,13 +406,7 @@
         398,
         399,
         400,
-        401,
-        402,
-        403,
-        404,
-        405,
-        406,
-        407
+        401
       ],
       "AllowUnexpectedOutput": true,
       "DebugActionIndex": 0
@@ -14644,106 +14638,32 @@
       "DebugActionIndex": 381
     },
     {
-      "Annotation": "7z Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js.unmarked",
-      "Action": "\"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Tools/7z.exe\" a -tgzip \"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js.unmarked\" \"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js\"",
+      "Annotation": "CopyFiles C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.framework.js",
+      "ActionType": "CopyFiles",
       "Inputs": [
         "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js"
       ],
       "Outputs": [
-        "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js.unmarked"
+        "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.framework.js"
       ],
       "ToBuildDependencies": [
         381
       ],
-      "OverwriteOutputs": false,
-      "AllowUnexpectedOutput": true,
       "DebugActionIndex": 382
     },
     {
-      "Annotation": "WriteText Library/Bee/artifacts/csharpactions/hamster-whopper.framework.js.gz_fj32.info",
-      "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "{\"System.Object\":null,\"Bee.TundraBackend.CSharpActionInvocationInformation\":{\"typeFullName\":\"WebGLPlayerBuildProgram.GzipMarker\",\"methodName\":\"Run\",\"assemblyLocation\":\"C:\\\\Program Files\\\\Unity\\\\Hub\\\\Editor\\\\2021.3.19f1\\\\Editor\\\\Data\\\\PlaybackEngines\\\\WebGLSupport\\\\WebGLPlayerBuildProgram.exe\",\"targets\":[\"C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.framework.js.gz\"],\"inputs\":[\"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js.unmarked\"],\"targetDirectories\":[]}}",
-      "Inputs": [],
-      "Outputs": [
-        "Library/Bee/artifacts/csharpactions/hamster-whopper.framework.js.gz_fj32.info"
-      ],
-      "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 383
-    },
-    {
-      "Annotation": "GzipMarker C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.framework.js.gz",
-      "Action": "\"C:\\Program Files\\Unity\\Hub\\Editor\\2021.3.19f1\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"C:\\Program Files\\Unity\\Hub\\Editor\\2021.3.19f1\\Editor\\Data\\PlaybackEngines\\WebGLSupport\\WebGLPlayerBuildProgram.exe\" \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/Bee;C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Tools/BuildPipeline\" invoke_static_method \"Library\\Bee\\artifacts\\csharpactions\\hamster-whopper.framework.js.gz_fj32.info\"",
-      "Inputs": [
-        "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js.unmarked",
-        "Library/Bee/artifacts/csharpactions/hamster-whopper.framework.js.gz_fj32.info",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/modules.asset",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.pdb",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.dll",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.pdb",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.exe"
-      ],
-      "Outputs": [
-        "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.framework.js.gz"
-      ],
-      "ToBuildDependencies": [
-        382,
-        383
-      ],
-      "AllowUnexpectedOutput": true,
-      "Env": [],
-      "DebugActionIndex": 384
-    },
-    {
-      "Annotation": "7z Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm.unmarked",
-      "Action": "\"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Tools/7z.exe\" a -tgzip \"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm.unmarked\" \"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm\"",
+      "Annotation": "CopyFiles C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.wasm",
+      "ActionType": "CopyFiles",
       "Inputs": [
         "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm"
       ],
       "Outputs": [
-        "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm.unmarked"
+        "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.wasm"
       ],
       "ToBuildDependencies": [
         379
       ],
-      "OverwriteOutputs": false,
-      "AllowUnexpectedOutput": true,
-      "DebugActionIndex": 385
-    },
-    {
-      "Annotation": "WriteText Library/Bee/artifacts/csharpactions/hamster-whopper.wasm.gz_cp0p.info",
-      "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "{\"System.Object\":null,\"Bee.TundraBackend.CSharpActionInvocationInformation\":{\"typeFullName\":\"WebGLPlayerBuildProgram.GzipMarker\",\"methodName\":\"Run\",\"assemblyLocation\":\"C:\\\\Program Files\\\\Unity\\\\Hub\\\\Editor\\\\2021.3.19f1\\\\Editor\\\\Data\\\\PlaybackEngines\\\\WebGLSupport\\\\WebGLPlayerBuildProgram.exe\",\"targets\":[\"C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.wasm.gz\"],\"inputs\":[\"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm.unmarked\"],\"targetDirectories\":[]}}",
-      "Inputs": [],
-      "Outputs": [
-        "Library/Bee/artifacts/csharpactions/hamster-whopper.wasm.gz_cp0p.info"
-      ],
-      "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 386
-    },
-    {
-      "Annotation": "GzipMarker C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.wasm.gz",
-      "Action": "\"C:\\Program Files\\Unity\\Hub\\Editor\\2021.3.19f1\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"C:\\Program Files\\Unity\\Hub\\Editor\\2021.3.19f1\\Editor\\Data\\PlaybackEngines\\WebGLSupport\\WebGLPlayerBuildProgram.exe\" \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/Bee;C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Tools/BuildPipeline\" invoke_static_method \"Library\\Bee\\artifacts\\csharpactions\\hamster-whopper.wasm.gz_cp0p.info\"",
-      "Inputs": [
-        "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm.unmarked",
-        "Library/Bee/artifacts/csharpactions/hamster-whopper.wasm.gz_cp0p.info",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/modules.asset",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.pdb",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.dll",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.pdb",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.exe"
-      ],
-      "Outputs": [
-        "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.wasm.gz"
-      ],
-      "ToBuildDependencies": [
-        385,
-        386
-      ],
-      "AllowUnexpectedOutput": true,
-      "Env": [],
-      "DebugActionIndex": 387
+      "DebugActionIndex": 383
     },
     {
       "Annotation": "CopyFiles Temp/EditorBuildOutput/UnityLinkerToEditorData.json",
@@ -14757,7 +14677,7 @@
       "ToBuildDependencies": [
         1
       ],
-      "DebugActionIndex": 388
+      "DebugActionIndex": 384
     },
     {
       "Annotation": "CopyFiles Temp/EditorBuildOutput/MethodMap.tsv",
@@ -14771,7 +14691,7 @@
       "ToBuildDependencies": [
         2
       ],
-      "DebugActionIndex": 389
+      "DebugActionIndex": 385
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/webgl.data_qnm2.info",
@@ -14782,7 +14702,7 @@
         "Library/Bee/artifacts/csharpactions/webgl.data_qnm2.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 390
+      "DebugActionIndex": 386
     },
     {
       "Annotation": "Assemble WebGL Data Library/Bee/artifacts/WebGL/webgl.data",
@@ -14809,66 +14729,29 @@
       ],
       "ToBuildDependencies": [
         2,
-        390
+        386
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 391
+      "DebugActionIndex": 387
     },
     {
-      "Annotation": "7z Library/Bee/artifacts/WebGL/webgl.data.unmarked",
-      "Action": "\"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Tools/7z.exe\" a -tgzip \"Library/Bee/artifacts/WebGL/webgl.data.unmarked\" \"Library/Bee/artifacts/WebGL/webgl.data\"",
+      "Annotation": "CopyFiles C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.data",
+      "ActionType": "CopyFiles",
       "Inputs": [
         "Library/Bee/artifacts/WebGL/webgl.data"
       ],
       "Outputs": [
-        "Library/Bee/artifacts/WebGL/webgl.data.unmarked"
+        "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.data"
       ],
       "ToBuildDependencies": [
-        391
+        387
       ],
-      "OverwriteOutputs": false,
-      "AllowUnexpectedOutput": true,
-      "DebugActionIndex": 392
-    },
-    {
-      "Annotation": "WriteText Library/Bee/artifacts/csharpactions/hamster-whopper.data.gz_ujm2.info",
-      "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "{\"System.Object\":null,\"Bee.TundraBackend.CSharpActionInvocationInformation\":{\"typeFullName\":\"WebGLPlayerBuildProgram.GzipMarker\",\"methodName\":\"Run\",\"assemblyLocation\":\"C:\\\\Program Files\\\\Unity\\\\Hub\\\\Editor\\\\2021.3.19f1\\\\Editor\\\\Data\\\\PlaybackEngines\\\\WebGLSupport\\\\WebGLPlayerBuildProgram.exe\",\"targets\":[\"C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.data.gz\"],\"inputs\":[\"Library/Bee/artifacts/WebGL/webgl.data.unmarked\"],\"targetDirectories\":[]}}",
-      "Inputs": [],
-      "Outputs": [
-        "Library/Bee/artifacts/csharpactions/hamster-whopper.data.gz_ujm2.info"
-      ],
-      "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 393
-    },
-    {
-      "Annotation": "GzipMarker C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.data.gz",
-      "Action": "\"C:\\Program Files\\Unity\\Hub\\Editor\\2021.3.19f1\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"C:\\Program Files\\Unity\\Hub\\Editor\\2021.3.19f1\\Editor\\Data\\PlaybackEngines\\WebGLSupport\\WebGLPlayerBuildProgram.exe\" \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/Bee;C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Tools/BuildPipeline\" invoke_static_method \"Library\\Bee\\artifacts\\csharpactions\\hamster-whopper.data.gz_ujm2.info\"",
-      "Inputs": [
-        "Library/Bee/artifacts/WebGL/webgl.data.unmarked",
-        "Library/Bee/artifacts/csharpactions/hamster-whopper.data.gz_ujm2.info",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/modules.asset",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.pdb",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.dll",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.pdb",
-        "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.exe"
-      ],
-      "Outputs": [
-        "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.data.gz"
-      ],
-      "ToBuildDependencies": [
-        392,
-        393
-      ],
-      "AllowUnexpectedOutput": true,
-      "Env": [],
-      "DebugActionIndex": 394
+      "DebugActionIndex": 388
     },
     {
       "Annotation": "PreprocessJS C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.loader.js",
-      "Action": "cd /d \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='C\\x3a/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='UnityLoader/UnityLoader.js'\"  \"locals.outputPath='C\\x3a/Users/Matt/Desktop/Capstone\\x2dProject/hamster\\x2dwhopper/Build/hamster\\x2dwhopper.loader.js'\"  \"locals.minifyOutput=true\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Hampster Whopper'\" \"PRODUCT_VERSION='0.1'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='hamster\\x2dwhopper.data.gz'\" \"FRAMEWORK_FILENAME='hamster\\x2dwhopper.framework.js.gz'\" \"CODE_FILENAME='hamster\\x2dwhopper.wasm.gz'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK=''\" \"TOTAL_MEMORY=16777216\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2021.3.19f1'\" \"LOADER_FILENAME='hamster\\x2dwhopper.loader.js'\"",
+      "Action": "cd /d \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='C\\x3a/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='UnityLoader/UnityLoader.js'\"  \"locals.outputPath='C\\x3a/Users/Matt/Desktop/Capstone\\x2dProject/hamster\\x2dwhopper/Build/hamster\\x2dwhopper.loader.js'\"  \"locals.minifyOutput=true\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Hampster Whopper'\" \"PRODUCT_VERSION='0.1'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='hamster\\x2dwhopper.data'\" \"FRAMEWORK_FILENAME='hamster\\x2dwhopper.framework.js'\" \"CODE_FILENAME='hamster\\x2dwhopper.wasm'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK=''\" \"TOTAL_MEMORY=16777216\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2021.3.19f1'\" \"LOADER_FILENAME='hamster\\x2dwhopper.loader.js'\"",
       "Inputs": [
         "UnityLoader/UnityLoader.js"
       ],
@@ -14876,11 +14759,11 @@
         "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/Build/hamster-whopper.loader.js"
       ],
       "AllowUnexpectedOutput": true,
-      "DebugActionIndex": 395
+      "DebugActionIndex": 389
     },
     {
       "Annotation": "PreprocessJS C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/index.html",
-      "Action": "cd /d \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='C\\x3a/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='C\\x3a/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/index.html'\"  \"locals.outputPath='C\\x3a/Users/Matt/Desktop/Capstone\\x2dProject/hamster\\x2dwhopper/index.html'\"  \"locals.minifyOutput=false\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Hampster Whopper'\" \"PRODUCT_VERSION='0.1'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='hamster\\x2dwhopper.data.gz'\" \"FRAMEWORK_FILENAME='hamster\\x2dwhopper.framework.js.gz'\" \"CODE_FILENAME='hamster\\x2dwhopper.wasm.gz'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK=''\" \"TOTAL_MEMORY=16777216\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2021.3.19f1'\" \"LOADER_FILENAME='hamster\\x2dwhopper.loader.js'\"",
+      "Action": "cd /d \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='C\\x3a/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='C\\x3a/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/index.html'\"  \"locals.outputPath='C\\x3a/Users/Matt/Desktop/Capstone\\x2dProject/hamster\\x2dwhopper/index.html'\"  \"locals.minifyOutput=false\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Hampster Whopper'\" \"PRODUCT_VERSION='0.1'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='hamster\\x2dwhopper.data'\" \"FRAMEWORK_FILENAME='hamster\\x2dwhopper.framework.js'\" \"CODE_FILENAME='hamster\\x2dwhopper.wasm'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK=''\" \"TOTAL_MEMORY=16777216\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2021.3.19f1'\" \"LOADER_FILENAME='hamster\\x2dwhopper.loader.js'\"",
       "Inputs": [
         "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/index.html"
       ],
@@ -14888,7 +14771,7 @@
         "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/index.html"
       ],
       "AllowUnexpectedOutput": true,
-      "DebugActionIndex": 396
+      "DebugActionIndex": 390
     },
     {
       "Annotation": "CopyFiles C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/favicon.ico",
@@ -14899,7 +14782,7 @@
       "Outputs": [
         "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/favicon.ico"
       ],
-      "DebugActionIndex": 397
+      "DebugActionIndex": 391
     },
     {
       "Annotation": "CopyFiles C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/fullscreen-button.png",
@@ -14910,7 +14793,7 @@
       "Outputs": [
         "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/fullscreen-button.png"
       ],
-      "DebugActionIndex": 398
+      "DebugActionIndex": 392
     },
     {
       "Annotation": "CopyFiles C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/progress-bar-empty-dark.png",
@@ -14921,7 +14804,7 @@
       "Outputs": [
         "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/progress-bar-empty-dark.png"
       ],
-      "DebugActionIndex": 399
+      "DebugActionIndex": 393
     },
     {
       "Annotation": "CopyFiles C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/progress-bar-empty-light.png",
@@ -14932,7 +14815,7 @@
       "Outputs": [
         "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/progress-bar-empty-light.png"
       ],
-      "DebugActionIndex": 400
+      "DebugActionIndex": 394
     },
     {
       "Annotation": "CopyFiles C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/progress-bar-full-dark.png",
@@ -14943,7 +14826,7 @@
       "Outputs": [
         "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/progress-bar-full-dark.png"
       ],
-      "DebugActionIndex": 401
+      "DebugActionIndex": 395
     },
     {
       "Annotation": "CopyFiles C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/progress-bar-full-light.png",
@@ -14954,11 +14837,11 @@
       "Outputs": [
         "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/progress-bar-full-light.png"
       ],
-      "DebugActionIndex": 402
+      "DebugActionIndex": 396
     },
     {
       "Annotation": "PreprocessJS C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/style.css",
-      "Action": "cd /d \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='C\\x3a/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='C\\x3a/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/TemplateData/style.css'\"  \"locals.outputPath='C\\x3a/Users/Matt/Desktop/Capstone\\x2dProject/hamster\\x2dwhopper/TemplateData/style.css'\"  \"locals.minifyOutput=false\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Hampster Whopper'\" \"PRODUCT_VERSION='0.1'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='hamster\\x2dwhopper.data.gz'\" \"FRAMEWORK_FILENAME='hamster\\x2dwhopper.framework.js.gz'\" \"CODE_FILENAME='hamster\\x2dwhopper.wasm.gz'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK=''\" \"TOTAL_MEMORY=16777216\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2021.3.19f1'\" \"LOADER_FILENAME='hamster\\x2dwhopper.loader.js'\"",
+      "Action": "cd /d \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='C\\x3a/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='C\\x3a/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/TemplateData/style.css'\"  \"locals.outputPath='C\\x3a/Users/Matt/Desktop/Capstone\\x2dProject/hamster\\x2dwhopper/TemplateData/style.css'\"  \"locals.minifyOutput=false\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Hampster Whopper'\" \"PRODUCT_VERSION='0.1'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='hamster\\x2dwhopper.data'\" \"FRAMEWORK_FILENAME='hamster\\x2dwhopper.framework.js'\" \"CODE_FILENAME='hamster\\x2dwhopper.wasm'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK=''\" \"TOTAL_MEMORY=16777216\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2021.3.19f1'\" \"LOADER_FILENAME='hamster\\x2dwhopper.loader.js'\"",
       "Inputs": [
         "C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/TemplateData/style.css"
       ],
@@ -14966,7 +14849,7 @@
         "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/style.css"
       ],
       "AllowUnexpectedOutput": true,
-      "DebugActionIndex": 403
+      "DebugActionIndex": 397
     },
     {
       "Annotation": "CopyFiles C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/unity-logo-dark.png",
@@ -14977,7 +14860,7 @@
       "Outputs": [
         "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/unity-logo-dark.png"
       ],
-      "DebugActionIndex": 404
+      "DebugActionIndex": 398
     },
     {
       "Annotation": "CopyFiles C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/unity-logo-light.png",
@@ -14988,7 +14871,7 @@
       "Outputs": [
         "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/unity-logo-light.png"
       ],
-      "DebugActionIndex": 405
+      "DebugActionIndex": 399
     },
     {
       "Annotation": "CopyFiles C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/webgl-logo.png",
@@ -14999,7 +14882,7 @@
       "Outputs": [
         "C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper/TemplateData/webgl-logo.png"
       ],
-      "DebugActionIndex": 406
+      "DebugActionIndex": 400
     },
     {
       "Annotation": "Player",
@@ -15009,26 +14892,26 @@
       "ToBuildDependencies": [
         1,
         375,
+        382,
+        383,
         384,
-        387,
+        385,
         388,
         389,
+        390,
+        391,
+        392,
+        393,
         394,
         395,
         396,
         397,
         398,
         399,
-        400,
-        401,
-        402,
-        403,
-        404,
-        405,
-        406
+        400
       ],
       "AllowUnexpectedOutput": true,
-      "DebugActionIndex": 407
+      "DebugActionIndex": 401
     }
   ],
   "FileSignatures": [
@@ -15397,7 +15280,7 @@
   ],
         "NamedNodes": {
           "all_tundra_nodes": 0,
-          "Player": 407
+          "Player": 401
         }
 ,  "DefaultNodes": [
     0

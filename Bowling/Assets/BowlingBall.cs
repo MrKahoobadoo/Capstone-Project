@@ -19,10 +19,10 @@ public class BowlingBall : MonoBehaviour
 
     public void Bowl()
     {
-        if(transform.position.x == startingPosition)
-        {
+        //if(transform.position.x == startingPosition)
+        //{
             rig.AddForce(transform.forward * forwardForce, ForceMode.Impulse);
-        }
+        //}
         
     }
 

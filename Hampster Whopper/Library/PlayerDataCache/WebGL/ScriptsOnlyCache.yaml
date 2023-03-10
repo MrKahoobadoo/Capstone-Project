@@ -2,7 +2,6 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - GameCloseScript
-    - GameFullscreen
     - GameResetScript
     - HamsterScript
     - LoseText
@@ -91,39 +90,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9516}
+      Script: {instanceID: 2232}
     - Class: 114
-      Script: {instanceID: 9918}
+      Script: {instanceID: 2640}
     - Class: 114
-      Script: {instanceID: 10112}
+      Script: {instanceID: 2840}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 2960}
     - Class: 114
-      Script: {instanceID: 11582}
+      Script: {instanceID: 4092}
     - Class: 114
-      Script: {instanceID: 11652}
+      Script: {instanceID: 4338}
     - Class: 114
-      Script: {instanceID: 12246}
+      Script: {instanceID: 4410}
     - Class: 114
-      Script: {instanceID: 12420}
+      Script: {instanceID: 5014}
     - Class: 114
-      Script: {instanceID: 12716}
+      Script: {instanceID: 5194}
     - Class: 114
-      Script: {instanceID: 12776}
+      Script: {instanceID: 5492}
     - Class: 114
-      Script: {instanceID: 12918}
+      Script: {instanceID: 5552}
     - Class: 114
-      Script: {instanceID: 13002}
+      Script: {instanceID: 5696}
     - Class: 114
-      Script: {instanceID: 13228}
+      Script: {instanceID: 5780}
     - Class: 114
-      Script: {instanceID: 13236}
+      Script: {instanceID: 6006}
     - Class: 114
-      Script: {instanceID: 14590}
+      Script: {instanceID: 6014}
     - Class: 114
-      Script: {instanceID: 56680}
-    - Class: 114
-      Script: {instanceID: 68760}
+      Script: {instanceID: 7376}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -338,6 +335,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameCloseScript
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnDropdownValueChangedMessageListener
@@ -353,6 +356,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameFullscreen
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -953,19 +962,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameFullscreen
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameCloseScript
   platform: 20
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/mmcweeney/Desktop/GitHub/Capstone-Project/hamster-whopper
+  playerPath: C:/Users/Matt/Desktop/Capstone-Project/hamster-whopper

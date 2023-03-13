@@ -3,7 +3,17 @@ guid: 09891b9f315cdc748a1e343d65be2ab9
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maxwell
+    second: {fileID: 2800000, guid: edb9a20fcfca37a47932db30b582c19a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: whiskers
+    second: {fileID: 2800000, guid: fbe1437300b15f94299b9009fac624da, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

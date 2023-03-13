@@ -34,4 +34,13 @@ public class EnemyScript : MonoBehaviour
 
         }
     }
+
+    private void OnTriggerEnter (Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<RealPlayerController>().GameOver();
+            Debug.Log("Game ENdEDE");
+        }
+    }
 }

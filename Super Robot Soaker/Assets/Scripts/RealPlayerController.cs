@@ -2,16 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class RealPlayerController : MonoBehaviour
 {
     public Rigidbody rig;
     public Camera mainCamera;
     public GameObject hamsterModel;
+    
     public AudioSource audioSource;
     public AudioClip audioClip;
+    
     public AudioSource audioSource2;
     public AudioClip audioClip2;
+    
+    public AudioSource audioSource3;
+
+    public UIScriptGameOver gameOverText;
+
 
     public float moveSpeed;
     public float jumpForce;
@@ -28,6 +36,10 @@ public class RealPlayerController : MonoBehaviour
     private bool isGrounded;
     private bool isMoving;
     private bool isRunning;
+
+    //important
+    public bool isSilly = true;
+    //importamt
 
     public int score;
 
@@ -127,15 +139,21 @@ public class RealPlayerController : MonoBehaviour
 
     }
 
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void GameOver()
     {
-        //add UI acknowledgement
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        gameOverText.gameIsOver = true;
+        Invoke("ReloadScene", 3f);
     }
 
     public void AddScore(int amount)
     {
         score += amount;
+        audioSource3.Play();
         //update score text UI
     }
 
@@ -148,9 +166,15 @@ public class RealPlayerController : MonoBehaviour
         wobbler();
         audioPlayer();
         
+        
         if(transform.position.y < -5)
         {
             GameOver();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
 

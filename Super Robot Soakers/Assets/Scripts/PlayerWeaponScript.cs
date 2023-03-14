@@ -4,36 +4,43 @@ using UnityEngine;
 
 public class PlayerWeaponScript : MonoBehaviour
 {
-    public GameObject waterPrefab;
+    public ObjectPool waterPool;
     public Transform muzzle;
     public int curAmmo;
     public int maxAmmo;
-    //public bool infiniteAmmo;
+    public bool infiniteAmmo;
 
     public float bulletSpeed;
     
     public float flowRate;
     private float lastFlowTime;
-    //private bool isPlayer;
+    //public bool isPlayer;
+
+    //public GameObject player;
 
     void Awake()
     {
-        /*if (GetComponent<Player>())
+        /*infiniteAmmo = true;
+
+        if (transform.IsChildOf(player.transform))
         {
             isPlayer = true;
+            infiniteAmmo = false;
         }*/
+
     }
 
     public bool CanShoot()
     {
-        if(Time.time - lastFlowTime < flowRate)
+        if(Time.time - lastFlowTime > flowRate)
         {
-            if(curAmmo > 0)
+            if(curAmmo > 0 || infiniteAmmo)
             {
+                Debug.Log("Can Shoot weehee");
                 return true;
             }
         }
-
+        Debug.Log("Cannot shoot");
         return false;
     }
 
@@ -43,7 +50,10 @@ public class PlayerWeaponScript : MonoBehaviour
         lastFlowTime = Time.time;
         curAmmo--;
 
-        GameObject waterSphere = Instantiate(waterPrefab, muzzle.position, muzzle.rotation);
+        GameObject waterSphere = waterPool.GetObject();
+
+        waterSphere.transform.position = muzzle.position;
+        waterSphere.transform.rotation = muzzle.rotation;
 
         waterSphere.GetComponent<Rigidbody>().velocity = muzzle.forward * bulletSpeed;
     }

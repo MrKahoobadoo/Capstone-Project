@@ -124,9 +124,9 @@ public class RealPlayerController : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            if (playerWeaponScript.CanShoot())
+            if (playerWeaponScript.CanShoot() == true)
             {
-                Debug.Log("Can Shoot");
+                
                 playerWeaponScript.Shoot();
             }
         }

@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     public int damage;
     public float lifetime;
     private float shootTime;
-    
+
     public float bulletGravityConstant;
     public Rigidbody rig;
 
@@ -18,13 +18,13 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        if(Time.time - shootTime >= lifetime)
+        if (Time.time - shootTime >= lifetime)
         {
             gameObject.SetActive(false);
         }
     }
 
-    void OnTriggerEnter (Collider other)
+    void OnTriggerEnter(Collider other)
     {
         // did we hit the player?
         if (other.CompareTag("Player"))

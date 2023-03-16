@@ -240,6 +240,9 @@ MonoBehaviour:
   audioClip2: {fileID: 8300000, guid: 48d41048c164c5244ad97eb3bbbfb20c, type: 3}
   audioSource3: {fileID: 5868639977862402389}
   gameOverText: {fileID: 0}
+  actualHamsterModel: {fileID: 0}
+  weaponModel: {fileID: 0}
+  player: {fileID: 0}
   moveSpeed: 7.5
   jumpForce: 6
   initialFOV: 70
@@ -248,6 +251,8 @@ MonoBehaviour:
   hamsterLeftAngle: -5
   hamsterRightAngle: 5
   hamsterLerpDuration: 0.25
+  curHp: 0
+  maxHp: 0
   isSilly: 1
   score: 0
 --- !u!82 &5868639977862402384
@@ -665,7 +670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 182272759475273682, guid: d701fccd47d297041a6a4f2ec530521d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.09500015
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 182272759475273682, guid: d701fccd47d297041a6a4f2ec530521d, type: 3}
       propertyPath: m_LocalPosition.z

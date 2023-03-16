@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 7456789315019800041}
   - component: {fileID: 7456789315019800040}
   - component: {fileID: 7456789315019800043}
+  - component: {fileID: 7267107500469864777}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -151,6 +152,21 @@ MonoBehaviour:
   yPathOffset: 0.9
   weaponScript: {fileID: 7456789314804799391}
   target: {fileID: 0}
+  realPlayerController: {fileID: 0}
+--- !u!136 &7267107500469864777
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7456789315019800054}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7456789315729244103
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +178,6 @@ GameObject:
   - component: {fileID: 7456789315729244102}
   - component: {fileID: 7456789315729244155}
   - component: {fileID: 7456789315729244152}
-  - component: {fileID: 7456789315729244153}
   m_Layer: 0
   m_Name: EnemyModel
   m_TagString: Untagged
@@ -236,20 +251,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7456789315729244153
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7456789315729244103}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7456789315833943652
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +262,6 @@ GameObject:
   - component: {fileID: 7456789315833943655}
   - component: {fileID: 7456789315833943704}
   - component: {fileID: 7456789315833943705}
-  - component: {fileID: 7456789315833943654}
   m_Layer: 0
   m_Name: GunModel
   m_TagString: Untagged
@@ -335,17 +335,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7456789315833943654
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7456789315833943652}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}

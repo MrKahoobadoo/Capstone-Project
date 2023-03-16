@@ -73,7 +73,6 @@ public class TheEnemyScript : MonoBehaviour
 
         // save that as a list
         path = navMeshPath.corners.ToList();
-        Debug.Log(path);
           
     }
 

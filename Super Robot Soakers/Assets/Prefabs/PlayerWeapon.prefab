@@ -76,6 +76,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80dd00ae291dad444a2792f9fd7d7c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waterPool: {fileID: 0}
+  muzzle: {fileID: 0}
+  curAmmo: 0
+  maxAmmo: 0
+  infiniteAmmo: 0
+  bulletSpeed: 0
+  flowRate: 0
 --- !u!1001 &182272758554790175
 PrefabInstance:
   m_ObjectHideFlags: 0

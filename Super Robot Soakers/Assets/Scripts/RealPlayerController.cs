@@ -202,7 +202,7 @@ public class RealPlayerController : MonoBehaviour
         curHp -= damage;
         if (curHp <= 0)
         {
-            Die();
+            //Die();
         }
     }
 
@@ -249,6 +249,16 @@ public class RealPlayerController : MonoBehaviour
         {
             Application.Quit();
         }
+    }
+
+    public void ReloadWater(int waterAmount)
+    {
+        playerWeaponScript.curAmmo = Mathf.Clamp(playerWeaponScript.curAmmo + waterAmount, 0, playerWeaponScript.maxAmmo);
+    }
+
+    public void GiveHealth(int healthAmount)
+    {
+        curHp = Mathf.Clamp(curHp + healthAmount, 0, maxHp);
     }
 
     private void OnCollisionEnter(Collision collision)

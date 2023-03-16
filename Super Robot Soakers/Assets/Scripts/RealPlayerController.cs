@@ -22,6 +22,11 @@ public class RealPlayerController : MonoBehaviour
 
     public UIScriptGameOver gameOverText;
 
+    public GameObject actualHamsterModel;
+    public GameObject weaponModel;
+
+    public Transform player;
+
 
     public float moveSpeed;
     public float jumpForce;
@@ -39,16 +44,16 @@ public class RealPlayerController : MonoBehaviour
     private bool isMoving;
     private bool isRunning;
 
+    public int curHp;
+    public int maxHp;
+
     //important
     public bool isSilly = true;
     //importamt
 
     public int score;
 
-    /*void Awake()
-    {
-        playerWeaponScript = GetComponent<PlayerWeaponScript>();
-    }*/
+   
 
     void move()
     {
@@ -192,8 +197,40 @@ public class RealPlayerController : MonoBehaviour
         //update score text UI
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage (int damage)
+    {
+        curHp -= damage;
+        if (curHp <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        DisableRenderersExceptCamera();
+        gameOverText.gameIsOver = true;
+        Invoke("ReloadScene", 3f);
+    }
+
+    void DisableRenderersExceptCamera()
+    {
+        foreach (Transform child in player)
+        {
+            if (child.CompareTag("MainCamera"))
+            {
+                continue; // Skip the camera object
+            }
+            Renderer renderer = child.GetComponent<Renderer>();
+            if (renderer != null)
+            {
+                renderer.enabled = false; // Disable the renderer of the child object
+            }
+        }
+    }
+
+        // Update is called once per frame
+        void Update()
     {
         move();
         jump();

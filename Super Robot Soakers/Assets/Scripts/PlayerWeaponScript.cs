@@ -36,17 +36,14 @@ public class PlayerWeaponScript : MonoBehaviour
         {
             if(curAmmo > 0 || infiniteAmmo)
             {
-                Debug.Log("Can Shoot weehee");
                 return true;
             }
         }
-        Debug.Log("Cannot shoot");
         return false;
     }
 
     public void Shoot()
     {
-        Debug.Log("Pew Pew");
         lastFlowTime = Time.time;
         curAmmo--;
 

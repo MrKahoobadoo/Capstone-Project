@@ -14,9 +14,13 @@ public class PlayerWeaponScript : MonoBehaviour
     
     public float flowRate;
     private float lastFlowTime;
-    //public bool isPlayer;
+    public RealPlayerController realPlayerController;
+    
+    private Quaternion newRotation;
+    private Vector3 modPointOfFocus;
 
-    //public GameObject player;
+    public float rotationSpeed;
+    
 
     void Awake()
     {
@@ -53,6 +57,32 @@ public class PlayerWeaponScript : MonoBehaviour
         waterSphere.transform.rotation = muzzle.rotation;
 
         waterSphere.GetComponent<Rigidbody>().velocity = muzzle.forward * bulletSpeed;
+    }
+
+    public void AutoAim()
+    {
+        if(realPlayerController.focusPresent == true)
+        {
+            modPointOfFocus = realPlayerController.pointOfFocus - transform.position;
+            
+            newRotation = Quaternion.LookRotation(modPointOfFocus);
+            transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotationSpeed * Time.deltaTime);
+
+            //transform.LookAt(realPlayerController.pointOfFocus);
+            
+        }
+        else
+        {
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0f, 0f, 0f), rotationSpeed * Time.deltaTime);
+
+            //transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            
+        }
+    }
+
+    void Update()
+    {
+        AutoAim();
     }
     
 }

@@ -53,6 +53,9 @@ public class RealPlayerController : MonoBehaviour
 
     public int score;
 
+    public Vector3 pointOfFocus;
+    public bool focusPresent;
+
    
 
     void move()
@@ -208,12 +211,43 @@ public class RealPlayerController : MonoBehaviour
 
     void Die()
     {
-        DisableRenderersExceptCamera();
+        //DisableRenderersExceptCamera();
         gameOverText.gameIsOver = true;
         Invoke("ReloadScene", 3f);
     }
 
-    void DisableRenderersExceptCamera()
+    void FocusThePoint()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay(ray.origin, ray.direction * 100);
+
+        // Declare a variable to store the raycast hit information
+        RaycastHit hit;
+
+        // Perform the raycast and check if it hit an object
+        if (Physics.Raycast(ray, out hit))
+        {
+            if(hit.distance < 100)
+            {
+                focusPresent = true;
+                // Get the transform point of the hit
+                pointOfFocus = hit.point;
+            }
+            else
+            {
+                focusPresent = false;
+            }
+            
+            // Do something with the hit point
+            Debug.Log("Hit point: " + pointOfFocus);
+        }
+        else
+        {
+            focusPresent = false;
+        }
+    }
+
+    /*void DisableRenderersExceptCamera()
     {
         foreach (Transform child in player)
         {
@@ -227,7 +261,7 @@ public class RealPlayerController : MonoBehaviour
                 renderer.enabled = false; // Disable the renderer of the child object
             }
         }
-    }
+    }*/
 
         // Update is called once per frame
         void Update()
@@ -238,6 +272,7 @@ public class RealPlayerController : MonoBehaviour
         wobbler();
         audioPlayer();
         FireWeapon();
+        FocusThePoint();
         
         
         if(transform.position.y < -5)

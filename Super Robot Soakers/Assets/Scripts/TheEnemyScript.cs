@@ -18,7 +18,7 @@ public class TheEnemyScript : MonoBehaviour
 
     private List<Vector3> path;
 
-    public PlayerWeaponScript weaponScript;
+    public EnemyWeaponScript weaponScript;
     public GameObject target;
     public RealPlayerController realPlayerController;
 

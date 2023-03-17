@@ -16,17 +16,25 @@ public class ThePickupScript : MonoBehaviour
     public int healthToGive;
     public int waterToGive;
     public float yOffset;
+
+    [Header("Auto Movement")]
     public float spinSpeed;
+    private float elapsedTime;
+    public float bottomValue;
+    public float topValue;
+    public float lerpDuration;
 
     [Header("References")]
     public RealPlayerController realPlayerController;
     //public NavMesh navMesh;
 
     private Vector3 spawnPosition;
+    private float newY;
 
     void Start()
     {
         Respawn(50);
+        newY += transform.position.y;
     }
 
     void OnTriggerEnter(Collider other)
@@ -61,12 +69,25 @@ public class ThePickupScript : MonoBehaviour
 
     public void Spinny()
     {
-        //transform.rotation.y += spinSpeed * Time.deltaTime;
-        //transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y + =spinSpeed * Time.deltaTime, 0);
+        newY += spinSpeed * Time.deltaTime;
+        
+        transform.rotation = Quaternion.Euler(transform.rotation.x, newY, 0);
+    }
+
+    void Bouncer()
+    {
+
+        elapsedTime += Time.deltaTime;
+        float t = Mathf.PingPong(elapsedTime / lerpDuration, 1.0f);
+        float currentValue = Mathf.Lerp(bottomValue, topValue, t);
+
+        transform.position = new Vector3 (transform.position.x, currentValue, transform.position.z);
+
     }
 
     void Update()
     {
         Spinny();
+        Bouncer();
     }
 }

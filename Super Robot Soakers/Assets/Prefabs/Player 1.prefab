@@ -242,17 +242,17 @@ MonoBehaviour:
   gameOverText: {fileID: 0}
   actualHamsterModel: {fileID: 0}
   weaponModel: {fileID: 0}
-  player: {fileID: 0}
-  moveSpeed: 7.5
-  jumpForce: 6
+  player: {fileID: 5868639977862402397}
+  moveSpeed: 6
+  jumpForce: 4
   initialFOV: 70
   finalFOV: 90
   fovChange: 150
   hamsterLeftAngle: -5
   hamsterRightAngle: 5
   hamsterLerpDuration: 0.25
-  curHp: 0
-  maxHp: 0
+  curHp: 100
+  maxHp: 100
   isSilly: 1
   score: 0
 --- !u!82 &5868639977862402384
@@ -716,14 +716,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 5868639977862402392}
-    - target: {fileID: 6719068236090880205, guid: d701fccd47d297041a6a4f2ec530521d, type: 3}
-      propertyPath: curAmmo
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6719068236090880205, guid: d701fccd47d297041a6a4f2ec530521d, type: 3}
-      propertyPath: maxAmmo
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 6719068236090880205, guid: d701fccd47d297041a6a4f2ec530521d, type: 3}
       propertyPath: flowRate
       value: 0.1

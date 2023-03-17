@@ -202,7 +202,7 @@ public class RealPlayerController : MonoBehaviour
         curHp -= damage;
         if (curHp <= 0)
         {
-            //Die();
+            Die();
         }
     }
 

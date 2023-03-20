@@ -243,6 +243,10 @@ MonoBehaviour:
   actualHamsterModel: {fileID: 0}
   weaponModel: {fileID: 0}
   player: {fileID: 5868639977862402397}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4
+  excludedTag: Bullet
   moveSpeed: 6
   jumpForce: 4
   initialFOV: 70
@@ -255,6 +259,8 @@ MonoBehaviour:
   maxHp: 100
   isSilly: 1
   score: 0
+  pointOfFocus: {x: 0, y: 0, z: 0}
+  focusPresent: 0
 --- !u!82 &5868639977862402384
 AudioSource:
   m_ObjectHideFlags: 0

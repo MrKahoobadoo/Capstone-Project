@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7534124387174744535}
   - component: {fileID: -1786064722555178913}
   - component: {fileID: -1428805883187855455}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Water Projectile
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -129,5 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   lifetime: 100
+  playerBullet: 1
   bulletGravityConstant: 4
   rig: {fileID: -1786064722555178913}
+  hitParticle: {fileID: 4365026647427227687, guid: b5233e92207584e4789358cf11cb6071, type: 3}

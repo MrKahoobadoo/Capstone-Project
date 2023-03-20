@@ -20,6 +20,10 @@ public class PlayerWeaponScript : MonoBehaviour
     private Vector3 modPointOfFocus;
 
     public float rotationSpeed;
+
+    public float defaultX;
+    public float defaultY;
+    public float defaultZ;
     
 
     void Awake()

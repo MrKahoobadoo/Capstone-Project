@@ -8,8 +8,12 @@ public class Bullet : MonoBehaviour
     public float lifetime;
     private float shootTime;
 
+    public bool playerBullet;
+
     public float bulletGravityConstant;
     public Rigidbody rig;
+
+    public GameObject hitParticle;
 
     void OnEnable()
     {
@@ -29,16 +33,26 @@ public class Bullet : MonoBehaviour
         // did we hit the player?
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<RealPlayerController>().TakeDamage(damage);
+            if (!playerBullet)
+            {
+                other.GetComponent<RealPlayerController>().TakeDamage(damage);
+            }
         }
         else if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<TheEnemyScript>().TakeDamage(damage);
+            if (playerBullet)
+            {
+                other.GetComponent<TheEnemyScript>().TakeDamage(damage);
+            }
         }
-        else if (other.CompareTag("Bullet"))
+        else if (other.CompareTag("Bullet") || other.CompareTag("AimAligner"))
         {
             return;
         }
+
+        GameObject obj = Instantiate(hitParticle, transform.position, Quaternion.identity);
+        Destroy(obj, 1f);
+
         gameObject.SetActive(false);
     }
 

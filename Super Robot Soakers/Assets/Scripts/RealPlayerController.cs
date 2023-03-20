@@ -27,6 +27,9 @@ public class RealPlayerController : MonoBehaviour
 
     public Transform player;
 
+    public LayerMask layerMask;
+    public string excludedTag;
+
 
     public float moveSpeed;
     public float jumpForce;
@@ -226,7 +229,7 @@ public class RealPlayerController : MonoBehaviour
 
         // Perform the raycast and check if it hit an object
         if (Physics.Raycast(ray, out hit))
-        {
+        {   
             if(hit.distance < 100)
             {
                 focusPresent = true;

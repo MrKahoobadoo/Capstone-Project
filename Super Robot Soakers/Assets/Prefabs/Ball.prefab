@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6663872029641452885}
   - component: {fileID: 4168196755632449882}
   - component: {fileID: 8488190444755152360}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ball
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -131,3 +131,4 @@ MonoBehaviour:
   lifetime: 100
   bulletGravityConstant: 4
   rig: {fileID: 4168196755632449882}
+  hitParticle: {fileID: 957953378314600553, guid: 4a4336a45d95c074e8a32225d1d359d4, type: 3}

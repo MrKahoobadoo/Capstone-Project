@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 5868639977862402391}
   - component: {fileID: 5868639977862402390}
   - component: {fileID: 5868639977862402389}
-  - component: {fileID: 5868639977862402472}
+  - component: {fileID: 5800874267090940174}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -562,7 +562,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5868639977862402472
+--- !u!114 &5800874267090940174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objPrefab: {fileID: 7534124387174744532, guid: 5ae11772ed88ddb4bbe867308c11363c, type: 3}
-  createOnStart: 10
+  createOnStart: 5
 --- !u!1001 &5868639977680167540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -729,7 +729,7 @@ PrefabInstance:
     - target: {fileID: 6719068236090880205, guid: d701fccd47d297041a6a4f2ec530521d, type: 3}
       propertyPath: waterPool
       value: 
-      objectReference: {fileID: 5868639977862402472}
+      objectReference: {fileID: 0}
     - target: {fileID: 6719068236090880205, guid: d701fccd47d297041a6a4f2ec530521d, type: 3}
       propertyPath: bulletSpeed
       value: 20

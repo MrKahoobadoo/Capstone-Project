@@ -20,7 +20,7 @@ public class RealPlayerController : MonoBehaviour
     
     public AudioSource audioSource3;
 
-    public UIScriptGameOver gameOverText;
+    public UILoseScreenScript gameOverScreen;
 
     public GameObject actualHamsterModel;
     public GameObject weaponModel;
@@ -59,6 +59,7 @@ public class RealPlayerController : MonoBehaviour
     public Vector3 pointOfFocus;
     public bool focusPresent;
 
+    public bool dead;
    
 
     void move()
@@ -192,7 +193,7 @@ public class RealPlayerController : MonoBehaviour
 
     public void GameOver()
     {
-        gameOverText.gameIsOver = true;
+        gameOverScreen.gameIsOver = true;
         Invoke("ReloadScene", 3f);
     }
 
@@ -206,17 +207,25 @@ public class RealPlayerController : MonoBehaviour
     public void TakeDamage (int damage)
     {
         curHp -= damage;
-        if (curHp <= 0)
+    }
+
+    public void GameEnder()
+    {
+        if (curHp <= 0 || transform.position.y < -5)
         {
             Die();
         }
     }
 
-    void Die()
+    public void Die()
     {
-        //DisableRenderersExceptCamera();
-        gameOverText.gameIsOver = true;
-        Invoke("ReloadScene", 3f);
+        if (!dead)
+        {
+            //DisableRenderersExceptCamera();
+            gameOverScreen.gameIsOver = true;
+            Debug.Log("Game Enszzz DEAD");
+            Invoke("ReloadScene", 3f);
+        }
     }
 
     void FocusThePoint()
@@ -242,7 +251,7 @@ public class RealPlayerController : MonoBehaviour
             }
             
             // Do something with the hit point
-            Debug.Log("Hit point: " + pointOfFocus);
+            // Debug.Log("Hit point: " + pointOfFocus);
         }
         else
         {
@@ -266,8 +275,13 @@ public class RealPlayerController : MonoBehaviour
         }
     }*/
 
+    void Start()
+    {
+        dead = false;
+    }
+
         // Update is called once per frame
-        void Update()
+    void Update()
     {
         move();
         jump();
@@ -276,12 +290,8 @@ public class RealPlayerController : MonoBehaviour
         audioPlayer();
         FireWeapon();
         FocusThePoint();
+        GameEnder();
         
-        
-        if(transform.position.y < -5)
-        {
-            GameOver();
-        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {

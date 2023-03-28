@@ -921,6 +921,52 @@ PrefabInstance:
       objectReference: {fileID: 1306908794}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b3e5c336c9fc1c4daf34fd45807aa69, type: 3}
+--- !u!1 &696263232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 696263233}
+  - component: {fileID: 696263234}
+  m_Layer: 0
+  m_Name: Stopwatch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &696263233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696263232}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &696263234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696263232}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb496601fd8220f449c1ba7518ea67f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elapsedTime: 0
+  isRunning: 0
 --- !u!108 &705507994 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 6797230737200440598, guid: f790d854b91530b44a0baaf1e2d022c7, type: 3}
@@ -2001,6 +2047,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8d933e1128cef5459a9490f46df9c7b, type: 3}
+--- !u!114 &2024428052 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1333998689311745534, guid: 4993d79a37f91824890b17f9a6d99fd4, type: 3}
+  m_PrefabInstance: {fileID: 2674169341261920220}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e88440bb7cf96e14ba7e2ef61a1c7f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2025030791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2504,6 +2561,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4311399142283623422, guid: 4993d79a37f91824890b17f9a6d99fd4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128189227424429020, guid: 4993d79a37f91824890b17f9a6d99fd4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2532,6 +2593,10 @@ PrefabInstance:
       propertyPath: realPlayerController
       value: 
       objectReference: {fileID: 1306908794}
+    - target: {fileID: 6425888849620906370, guid: 4993d79a37f91824890b17f9a6d99fd4, type: 3}
+      propertyPath: realPlayerController
+      value: 
+      objectReference: {fileID: 1306908794}
     - target: {fileID: 8382820780600506907, guid: 4993d79a37f91824890b17f9a6d99fd4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2540,7 +2605,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9061051812847994377, guid: 4993d79a37f91824890b17f9a6d99fd4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6425888849620906370, guid: 4993d79a37f91824890b17f9a6d99fd4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4993d79a37f91824890b17f9a6d99fd4, type: 3}
 --- !u!1001 &5868639976714979627
 PrefabInstance:
@@ -2571,12 +2641,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5868639977862402385, guid: 5ec4092177a91904da31608784f43495, type: 3}
       propertyPath: curHp
-      value: 1000000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5868639977862402385, guid: 5ec4092177a91904da31608784f43495, type: 3}
       propertyPath: gameOverText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5868639977862402385, guid: 5ec4092177a91904da31608784f43495, type: 3}
+      propertyPath: gameOverScreen
+      value: 
+      objectReference: {fileID: 2024428052}
     - target: {fileID: 5868639977862402389, guid: 5ec4092177a91904da31608784f43495, type: 3}
       propertyPath: m_Volume
       value: 0.346

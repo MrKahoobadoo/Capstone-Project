@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class UIScriptGameOver : MonoBehaviour
+public class UILoseScreenScript : MonoBehaviour
 {
-    public GameObject endScreen;
-    public RealPlayerController realPlayerController;
-
     public bool gameIsOver;
+
+    public GameObject endScreen;
 
     void Start()
     {
@@ -16,19 +14,16 @@ public class UIScriptGameOver : MonoBehaviour
         endScreen.SetActive(false);
     }
 
-    public void GameEnd()
+    void displayScreen()
     {
         if (gameIsOver)
         {
             endScreen.SetActive(true);
-            Debug.Log("game Over Diapled");
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        GameEnd();
-        Debug.Log(gameIsOver);
+        displayScreen();
     }
 }

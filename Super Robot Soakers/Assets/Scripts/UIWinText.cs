@@ -5,7 +5,7 @@ using TMPro;
 
 public class UIWinText : MonoBehaviour
 {
-    public TextMeshProUGUI winText;
+    public GameObject winScreen;
 
     public bool gameIsWon;
     
@@ -13,20 +13,20 @@ public class UIWinText : MonoBehaviour
     void Start()
     {
         gameIsWon = false;
-        winText.enabled = false;
+        winScreen.SetActive(false);
     }
 
-    void displayText()
+    void displayScreen()
     {
         if (gameIsWon)
         {
-            winText.enabled = true;
+            winScreen.SetActive(true);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        displayText();
+        displayScreen();
     }
 }

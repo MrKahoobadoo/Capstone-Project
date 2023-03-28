@@ -1440,7 +1440,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3246650381373407823}
-  - component: {fileID: 2742325231514641290}
+  - component: {fileID: 7871883164411680406}
   m_Layer: 5
   m_Name: Win Screen
   m_TagString: Untagged
@@ -1474,7 +1474,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2742325231514641290
+--- !u!114 &7871883164411680406
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1486,7 +1486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 141f67e045dd17d429c43441803cd87a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winText: {fileID: 2674169340190199512}
+  winScreen: {fileID: 4311399142283623422}
   gameIsWon: 0
 --- !u!1 &4340942392494688879
 GameObject:
@@ -2767,7 +2767,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8795877355081146097}
-  - component: {fileID: 2364010199925119219}
+  - component: {fileID: 1333998689311745534}
   m_Layer: 5
   m_Name: Lose Screen
   m_TagString: Untagged
@@ -2800,7 +2800,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2364010199925119219
+--- !u!114 &1333998689311745534
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2809,12 +2809,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9061051812847994377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 018e54c0808903248ae4960348cdff25, type: 3}
+  m_Script: {fileID: 11500000, guid: e88440bb7cf96e14ba7e2ef61a1c7f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverText: {fileID: 0}
-  realPlayerController: {fileID: 0}
   gameIsOver: 0
+  endScreen: {fileID: 9061051812847994377}
 --- !u!1 &9065684665386171068
 GameObject:
   m_ObjectHideFlags: 0

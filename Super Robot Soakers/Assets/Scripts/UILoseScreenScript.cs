@@ -5,6 +5,8 @@ using UnityEngine;
 public class UILoseScreenScript : MonoBehaviour
 {
     public bool gameIsOver;
+    public PlayerRotater playerRotater;
+    public CameraYRotate cameraYRotate;
 
     public GameObject endScreen;
 
@@ -19,6 +21,10 @@ public class UILoseScreenScript : MonoBehaviour
         if (gameIsOver)
         {
             endScreen.SetActive(true);
+            playerRotater.menuOpen = true;
+            cameraYRotate.menuOpen = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 

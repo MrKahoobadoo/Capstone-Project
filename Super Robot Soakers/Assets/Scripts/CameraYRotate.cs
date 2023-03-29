@@ -6,6 +6,7 @@ public class CameraYRotate : MonoBehaviour
 {
     public float rotateAmount;
     public PlayerRotater playerRotater;
+    public bool menuOpen;
 
     void rotate()
     {
@@ -28,6 +29,9 @@ public class CameraYRotate : MonoBehaviour
 
     void Update()
     {
-        rotate();
+        if (!menuOpen)
+        {
+            rotate();
+        }
     }
 }

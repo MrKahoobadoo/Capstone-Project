@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerRotater : MonoBehaviour
 {
     public float mouseSensitivity;
-
     public float setMouseSensitivity;
-
     public float turnAmount;
+
+    public bool menuOpen;
 
     void Start()
     {
@@ -27,6 +27,10 @@ public class PlayerRotater : MonoBehaviour
     {
         float fps = 1 / Time.deltaTime;
         mouseSensitivity = 60 / (1 / Time.deltaTime) * setMouseSensitivity;
-        rotate();
+
+        if (!menuOpen)
+        {
+            rotate();
+        }
     }
 }

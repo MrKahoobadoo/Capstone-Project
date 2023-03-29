@@ -186,11 +186,6 @@ public class RealPlayerController : MonoBehaviour
 
     }
 
-    public void ReloadScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
     public void GameOver()
     {
         gameOverScreen.gameIsOver = true;
@@ -206,7 +201,10 @@ public class RealPlayerController : MonoBehaviour
 
     public void TakeDamage (int damage)
     {
-        curHp -= damage;
+        if(curHp > 0)
+        {
+            curHp -= damage;
+        }
     }
 
     public void GameEnder()
@@ -223,8 +221,6 @@ public class RealPlayerController : MonoBehaviour
         {
             //DisableRenderersExceptCamera();
             gameOverScreen.gameIsOver = true;
-            Debug.Log("Game Enszzz DEAD");
-            Invoke("ReloadScene", 3f);
         }
     }
 
@@ -278,6 +274,7 @@ public class RealPlayerController : MonoBehaviour
     void Start()
     {
         dead = false;
+        Time.timeScale = 1;
     }
 
         // Update is called once per frame
@@ -291,12 +288,6 @@ public class RealPlayerController : MonoBehaviour
         FireWeapon();
         FocusThePoint();
         GameEnder();
-        
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
     }
 
     public void ReloadWater(int waterAmount)

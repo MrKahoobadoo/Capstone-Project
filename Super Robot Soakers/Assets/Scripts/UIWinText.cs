@@ -6,6 +6,8 @@ using TMPro;
 public class UIWinText : MonoBehaviour
 {
     public GameObject winScreen;
+    public PlayerRotater playerRotater;
+    public CameraYRotate cameraYRotate;
 
     public bool gameIsWon;
     
@@ -21,6 +23,10 @@ public class UIWinText : MonoBehaviour
         if (gameIsWon)
         {
             winScreen.SetActive(true);
+            playerRotater.menuOpen = true;
+            cameraYRotate.menuOpen = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 

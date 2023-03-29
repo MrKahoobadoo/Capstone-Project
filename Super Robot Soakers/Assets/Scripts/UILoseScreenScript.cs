@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UILoseScreenScript : MonoBehaviour
 {
@@ -25,11 +26,22 @@ public class UILoseScreenScript : MonoBehaviour
             cameraYRotate.menuOpen = true;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            //Time.timeScale = 0;
         }
     }
 
     void Update()
     {
         displayScreen();
+    }
+
+    public void OnRestartButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void OnQuitButton()
+    {
+        SceneManager.LoadScene(0);
     }
 }

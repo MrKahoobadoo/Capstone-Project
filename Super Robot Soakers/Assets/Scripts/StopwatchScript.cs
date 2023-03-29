@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using TMPro;
 
 public class StopwatchScript : MonoBehaviour
 {
     public float elapsedTime;
     public bool isRunning;
+    public string elapsedTimeString;
+
+    public TextMeshProUGUI timeText;
     
     void Start()
     {
@@ -43,11 +47,11 @@ public class StopwatchScript : MonoBehaviour
 
         TimeSpan timeSpan = TimeSpan.FromSeconds(elapsedTime);
 
-        string elapsedTimeString = string.Format("{0:D2}:{1:D2}",
+        elapsedTimeString = string.Format("{0:D2}:{1:D2}",
             (int)timeSpan.TotalMinutes,
             timeSpan.Seconds);
 
-        Debug.Log("Elapsed time: " + elapsedTimeString); // outputs "Elapsed time: 02:03"
+        timeText.text = elapsedTimeString;
 
     }
 }

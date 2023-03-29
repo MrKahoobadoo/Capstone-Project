@@ -9,20 +9,24 @@ public class SettingsScript : MonoBehaviour
     public PlayerRotater playerRotater;
     public CameraYRotate cameraYRotate;
 
+    public bool settingsActive;
+
     void Start()
     {
         settingsPage.SetActive(false);
+        settingsActive = false;
     }
 
     public void OnGoBackButton()
     {
+        settingsActive = false;
         settingsPage.SetActive(false);
         pauseMenu.SetActive(true);
     }
 
     void CloseSettings()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && settingsActive)
         {
             settingsPage.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;

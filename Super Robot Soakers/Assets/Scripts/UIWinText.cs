@@ -2,12 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIWinText : MonoBehaviour
 {
     public GameObject winScreen;
     public PlayerRotater playerRotater;
     public CameraYRotate cameraYRotate;
+
+    public RealPlayerController realPlayerController;
+    public StopwatchScript stopwatchScript;
+
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI timeText;
 
     public bool gameIsWon;
     
@@ -34,5 +41,17 @@ public class UIWinText : MonoBehaviour
     void Update()
     {
         displayScreen();
+        timeText.text = stopwatchScript.elapsedTimeString;
+        scoreText.text = "Score: " + realPlayerController.score;
+    }
+
+    public void OnRestartButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void OnQuitButton()
+    {
+        SceneManager.LoadScene(0);
     }
 }

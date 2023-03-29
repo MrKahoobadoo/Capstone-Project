@@ -19,12 +19,15 @@ public class TheEnemyScript : MonoBehaviour
     private List<Vector3> path;
 
     public EnemyWeaponScript weaponScript;
-    public GameObject target;
+    private GameObject target;
     public RealPlayerController realPlayerController;
+    private GameObject gameManager;
 
     void Start()
     {
         InvokeRepeating("UpdatePath", 0.0f, 0.25f);
+        target = GameObject.FindGameObjectWithTag("Player");
+        gameManager = GameObject.Find("Game Manager");
     }
     
     void Update()
@@ -90,5 +93,6 @@ public class TheEnemyScript : MonoBehaviour
     {
         Destroy(gameObject);
         realPlayerController.AddScore(1);
+        gameManager.GetComponent<GameManager>().enemiesEliminated++;
     }
 }

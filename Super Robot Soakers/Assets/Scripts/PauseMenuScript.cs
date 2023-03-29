@@ -7,6 +7,7 @@ public class PauseMenuScript : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject settingsPage;
+    public SettingsScript settingsScript;
     public PlayerRotater playerRotater;
     public CameraYRotate cameraYRotate;
 
@@ -35,8 +36,14 @@ public class PauseMenuScript : MonoBehaviour
                 Cursor.visible = true;
                 playerRotater.menuOpen = true;
                 cameraYRotate.menuOpen = true;
-                Time.timeScale = 0;
+                if (true)
+                {
+                    Time.timeScale = 0f;
+                    Debug.LogError("i love ches");
+                }
+                
                 isOpen = true;
+                Debug.Log("poopy brain far");
             }
             else
             {
@@ -55,11 +62,12 @@ public class PauseMenuScript : MonoBehaviour
     public void OnRestartButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
     }
 
     public void OnSettingsButton()
     {
+        settingsScript.settingsActive = true;
         pauseMenu.SetActive(false);
         settingsPage.SetActive(true);
     }
@@ -67,6 +75,6 @@ public class PauseMenuScript : MonoBehaviour
     public void OnQuitButton()
     {
         SceneManager.LoadScene(0);
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
     }
 }

@@ -24,21 +24,18 @@ public class SettingsScript : MonoBehaviour
         pauseMenu.SetActive(true);
     }
 
-    void CloseSettings()
+    /*void CloseSettings()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && settingsActive)
         {
             settingsPage.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            playerRotater.menuOpen = false;
-            cameraYRotate.menuOpen = false;
-            Time.timeScale = 1;
+            pauseMenu.SetActive(true);
+            settingsActive = false;
         }
-    }
+    }*/
 
     void Update()
     {
-        CloseSettings();
+        //CloseSettings();
     }
 }

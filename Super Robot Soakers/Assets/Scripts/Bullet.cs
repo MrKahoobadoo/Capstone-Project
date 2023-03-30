@@ -45,7 +45,7 @@ public class Bullet : MonoBehaviour
                 other.GetComponent<TheEnemyScript>().TakeDamage(damage);
             }
         }
-        else if (other.CompareTag("Bullet") || other.CompareTag("AimAligner"))
+        else if (other.CompareTag("Bullet") || other.CompareTag("AimAligner") || other.CompareTag("Pickup"))
         {
             return;
         }

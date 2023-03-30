@@ -33,6 +33,9 @@ public class ThePickupScript : MonoBehaviour
     private GameObject ground;
     //public NavMesh navMesh;
 
+    public GameObject healthAudioSource;
+    public GameObject waterAudioSource;
+
     private Vector3 spawnPosition;
     private float newY;
 
@@ -55,15 +58,16 @@ public class ThePickupScript : MonoBehaviour
                 case PickupType.Water:
                     player.GetComponent<RealPlayerController>().ReloadWater(waterToGive);
                     pickupManager.GetComponent<PickupSpawner>().actualWaterPickupCount--;
+                    Instantiate(waterAudioSource, transform.position, Quaternion.identity);
 
                     break;
                 case PickupType.Health:
                     player.GetComponent<RealPlayerController>().GiveHealth(healthToGive);
                     pickupManager.GetComponent<PickupSpawner>().actualHealthPickupCount--;
+                    Instantiate(healthAudioSource, transform.position, Quaternion.identity);
                     break;
             }
             Destroy(pickup);
-            Debug.Log("Object Removed");
         }
     }
 
@@ -112,7 +116,6 @@ public class ThePickupScript : MonoBehaviour
                     pickupManager.GetComponent<PickupSpawner>().actualHealthPickupCount--;
                     break;
             }
-            Debug.Log("Remover Run");
             Destroy(pickup);
         }
     }

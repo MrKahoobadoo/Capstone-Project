@@ -237,6 +237,7 @@ MonoBehaviour:
   attackRange: 10
   yPathOffset: 0.9
   weaponScript: {fileID: 8206215446704262857}
+  enemyAudioSource: {fileID: 6417711014034618243, guid: 1e24924b3d5121243a146f7305aae35e, type: 3}
 --- !u!136 &7267107500469864777
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -265,7 +266,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 1
 --- !u!114 &9190378757402869834
 MonoBehaviour:

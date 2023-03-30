@@ -22,6 +22,7 @@ public class TheEnemyScript : MonoBehaviour
     public EnemyWeaponScript weaponScript;
     private GameObject target;
     private GameObject gameManager;
+    public GameObject enemyAudioSource;
 
     void Start()
     {
@@ -102,6 +103,7 @@ public class TheEnemyScript : MonoBehaviour
 
     void Die()
     {
+        Instantiate(enemyAudioSource, transform.position, Quaternion.identity);
         Destroy(gameObject);
         target.GetComponent<RealPlayerController>().AddScore(1);
         gameManager.GetComponent<GameManager>().enemiesEliminated++;

@@ -53,8 +53,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        newWave();
-        winGame();
+        //NewWave();
+        WinGame();
+        GroundShrinker();
         //Debug.Log("Enemies Eliminated: " + enemiesEliminated);
         //Debug.Log("Current Wave Size: " + enemiesToSpawn);
     }
@@ -75,7 +76,7 @@ public class GameManager : MonoBehaviour
         Instantiate(enemy, spawnLocation, Quaternion.Euler(0, 0, 0));
     }
 
-    public void newWave()
+    public void NewWave()
     {
         if(enemiesEliminated == enemiesToSpawn)
         {
@@ -85,9 +86,9 @@ public class GameManager : MonoBehaviour
 
             //modify difficulty
             moveSpeed += (speedIncrease * wavesSurvived);
-            ground.transform.localScale = new Vector3(ground.transform.localScale.x * groundDecreaser, ground.transform.localScale.y, ground.transform.localScale.z * groundDecreaser);
+            /*ground.transform.localScale = new Vector3(ground.transform.localScale.x * groundDecreaser, ground.transform.localScale.y, ground.transform.localScale.z * groundDecreaser);
             pickupSpawner.spawnRadius = ground.transform.localScale.x / 2f;
-            spawnRadius = ground.transform.localScale.x / 2f;
+            spawnRadius = ground.transform.localScale.x / 2f;*/
 
             //add more enemies and stuff
             enemiesEliminated = 0;
@@ -102,11 +103,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void winGame()
+    public void WinGame()
     {
         if (wavesSurvived == wavesToWin)
         {
             gameIsWon = true;
         }
+    }
+
+    void GroundShrinker()
+    {
+        ground.transform.localScale = Vector3.Lerp(ground.transform.localScale, new Vector3(0, ground.transform.localScale.y, 0), groundDecreaser * Time.deltaTime);
+        //ground.transform.localScale = new Vector3(ground.transform.localScale.x * groundDecreaser, ground.transform.localScale.y, ground.transform.localScale.z * groundDecreaser);
+        
+        pickupSpawner.spawnRadius = ground.transform.localScale.x / 2f;
+        spawnRadius = ground.transform.localScale.x / 2f;  
     }
 }

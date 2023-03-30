@@ -4825,7 +4825,7 @@ GameObject:
   - component: {fileID: 2911478318656782502}
   m_Layer: 2
   m_Name: Health Source 1
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4883,6 +4883,8 @@ MonoBehaviour:
   lerpDuration: 2
   player: {fileID: 6958745705909096548, guid: 06e9b42e86848074181cb1a6f3d6d8ad, type: 3}
   pickup: {fileID: 4948604262169611313}
+  healthAudioSource: {fileID: 8892410739283719073, guid: 4fb110ddc9964a647bf1bb9510d8686c, type: 3}
+  waterAudioSource: {fileID: 5036129425154219719, guid: 38c3061b19bf4db418ed0cdbd46f870e, type: 3}
 --- !u!1001 &5252531508790105225
 PrefabInstance:
   m_ObjectHideFlags: 0

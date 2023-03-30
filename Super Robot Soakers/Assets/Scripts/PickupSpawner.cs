@@ -64,7 +64,6 @@ public class PickupSpawner : MonoBehaviour
         {
             StartCoroutine(SpawnPickup(pickupHealth, spawnPosition));
         }
-        Debug.Log("Respawn called");
     }
 
     IEnumerator SpawnPickup(GameObject pickup, Vector3 position)

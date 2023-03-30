@@ -17,8 +17,6 @@ public class RealPlayerController : MonoBehaviour
     
     public AudioSource audioSource2;
     public AudioClip audioClip2;
-    
-    public AudioSource audioSource3;
 
     public UILoseScreenScript gameOverScreen;
 
@@ -177,7 +175,7 @@ public class RealPlayerController : MonoBehaviour
 
     void audioPlayer()
     {
-        if (isMoving && isGrounded)
+        if (isMoving && isGrounded && !menuOpen)
         {
             audioSource.volume = 0.5f;
         }
@@ -197,7 +195,6 @@ public class RealPlayerController : MonoBehaviour
     public void AddScore(int amount)
     {
         score += amount;
-        audioSource3.Play();
         //update score text UI
     }
 

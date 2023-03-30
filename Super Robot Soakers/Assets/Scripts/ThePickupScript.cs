@@ -16,6 +16,8 @@ public class ThePickupScript : MonoBehaviour
     public int healthToGive;
     public int waterToGive;
     public float yOffset;
+    public float spawnRadius;
+    private bool hasBeenCollected;
 
     [Header("Auto Movement")]
     public float spinSpeed;
@@ -25,7 +27,10 @@ public class ThePickupScript : MonoBehaviour
     public float lerpDuration;
 
     [Header("References")]
-    public RealPlayerController realPlayerController;
+    public GameObject player;
+    public GameObject pickup;
+    private GameObject pickupManager;
+    private GameObject ground;
     //public NavMesh navMesh;
 
     private Vector3 spawnPosition;
@@ -33,28 +38,36 @@ public class ThePickupScript : MonoBehaviour
 
     void Start()
     {
-        Respawn(50);
+        pickupManager = GameObject.Find("Pickup Manager");
+        player = GameObject.Find("Player");
+        ground = GameObject.Find("Ground");
+
         newY += transform.position.y;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        // did we hit the player?
-        switch (type)
+        if (other.CompareTag("Player") && !hasBeenCollected)
         {
-            case PickupType.Water:
-                realPlayerController.ReloadWater(waterToGive);
-                break;
-            case PickupType.Health:
-                realPlayerController.GiveHealth(healthToGive);
-                break;
+            hasBeenCollected = true;
+            switch (type)
+            {
+                case PickupType.Water:
+                    player.GetComponent<RealPlayerController>().ReloadWater(waterToGive);
+                    pickupManager.GetComponent<PickupSpawner>().actualWaterPickupCount--;
+
+                    break;
+                case PickupType.Health:
+                    player.GetComponent<RealPlayerController>().GiveHealth(healthToGive);
+                    pickupManager.GetComponent<PickupSpawner>().actualHealthPickupCount--;
+                    break;
+            }
+            Destroy(pickup);
+            Debug.Log("Object Removed");
         }
-
-
-        Respawn(50);
     }
 
-    public void Respawn(float radius)
+    /*public void Respawn(float radius)
     {
         Vector3 randomDirection = Random.insideUnitSphere * radius;
         randomDirection += Vector3.zero;
@@ -65,7 +78,7 @@ public class ThePickupScript : MonoBehaviour
             finalPosition = hit.position;
         }
         transform.position = finalPosition + new Vector3(0, yOffset, 0);
-    }
+    }*/
 
     public void Spinny()
     {
@@ -85,9 +98,29 @@ public class ThePickupScript : MonoBehaviour
 
     }
 
+    void RemoverChecker()
+    {
+        if(pickup.transform.position.x > ground.transform.localScale.x / 2 || pickup.transform.position.x * -1 > ground.transform.localScale.x / 2 || pickup.transform.position.z > ground.transform.localScale.z / 2 || pickup.transform.position.z * -1 > ground.transform.localScale.z / 2)
+        {
+            switch (type)
+            {
+                case PickupType.Water:
+                    pickupManager.GetComponent<PickupSpawner>().actualWaterPickupCount--;
+
+                    break;
+                case PickupType.Health:
+                    pickupManager.GetComponent<PickupSpawner>().actualHealthPickupCount--;
+                    break;
+            }
+            Debug.Log("Remover Run");
+            Destroy(pickup);
+        }
+    }
+
     void Update()
     {
         Spinny();
         Bouncer();
+        RemoverChecker();
     }
 }

@@ -60,6 +60,8 @@ public class RealPlayerController : MonoBehaviour
     public bool focusPresent;
 
     public bool dead;
+    public bool gameOver;
+    public bool menuOpen;
    
 
     void move()
@@ -221,6 +223,8 @@ public class RealPlayerController : MonoBehaviour
         {
             //DisableRenderersExceptCamera();
             gameOverScreen.gameIsOver = true;
+            gameOver = true;
+            dead = true;
         }
     }
 
@@ -280,13 +284,16 @@ public class RealPlayerController : MonoBehaviour
         // Update is called once per frame
     void Update()
     {
-        move();
-        jump();
-        fovChanger();
-        wobbler();
-        audioPlayer();
-        FireWeapon();
-        FocusThePoint();
+        if (!gameOver && !menuOpen)
+        {
+            move();
+            jump();
+            fovChanger();
+            wobbler();
+            audioPlayer();
+            FireWeapon();
+            FocusThePoint();
+        }
         GameEnder();
     }
 

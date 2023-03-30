@@ -12,7 +12,8 @@ public class TheEnemyScript : MonoBehaviour
     public int scoreToGive;
 
     [Header("Movement")]
-    public float moveSpeed;
+    //public float moveSpeed;
+    //public float tempMoveSpeed;
     public float attackRange;
     public float yPathOffset;
 
@@ -20,11 +21,11 @@ public class TheEnemyScript : MonoBehaviour
 
     public EnemyWeaponScript weaponScript;
     private GameObject target;
-    public RealPlayerController realPlayerController;
     private GameObject gameManager;
 
     void Start()
     {
+        //tempMoveSpeed = 0;
         InvokeRepeating("UpdatePath", 0.0f, 0.25f);
         target = GameObject.FindGameObjectWithTag("Player");
         gameManager = GameObject.Find("Game Manager");
@@ -48,6 +49,8 @@ public class TheEnemyScript : MonoBehaviour
 
         // look at the target
         transform.LookAt(target.transform.position + new Vector3(0, 1, 0));
+
+        FallChecker();
         
     }
 
@@ -59,7 +62,7 @@ public class TheEnemyScript : MonoBehaviour
         }
         
         // move towards closest path
-        transform.position = Vector3.MoveTowards(transform.position, path[0] + new Vector3(0, yPathOffset, 0), moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, path[0] + new Vector3(0, yPathOffset, 0), gameManager.GetComponent<GameManager>().moveSpeed * Time.deltaTime);
 
         if(transform.position == path[0] + new Vector3(0, yPathOffset, 0))
         {
@@ -89,10 +92,18 @@ public class TheEnemyScript : MonoBehaviour
         }
     }
 
+    void FallChecker()
+    {
+        if(transform.position.y < -5)
+        {
+            Die();
+        }
+    }
+
     void Die()
     {
         Destroy(gameObject);
-        realPlayerController.AddScore(1);
+        target.GetComponent<RealPlayerController>().AddScore(1);
         gameManager.GetComponent<GameManager>().enemiesEliminated++;
     }
 }

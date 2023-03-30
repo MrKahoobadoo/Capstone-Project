@@ -8,8 +8,10 @@ public class UILoseScreenScript : MonoBehaviour
     public bool gameIsOver;
     public PlayerRotater playerRotater;
     public CameraYRotate cameraYRotate;
+    public RealPlayerController realPlayerController;
 
     public GameObject endScreen;
+    public StopwatchScript stopwatchScript;
 
     void Start()
     {
@@ -26,6 +28,7 @@ public class UILoseScreenScript : MonoBehaviour
             cameraYRotate.menuOpen = true;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            stopwatchScript.isRunning = false;
             //Time.timeScale = 0;
         }
     }

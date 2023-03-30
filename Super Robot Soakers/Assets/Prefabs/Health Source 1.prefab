@@ -4876,11 +4876,13 @@ MonoBehaviour:
   healthToGive: 10
   waterToGive: 0
   yOffset: 0.5
+  spawnRadius: 0
   spinSpeed: 60
   bottomValue: 0.8
   topValue: 1.2
   lerpDuration: 2
-  realPlayerController: {fileID: 0}
+  player: {fileID: 6958745705909096548, guid: 06e9b42e86848074181cb1a6f3d6d8ad, type: 3}
+  pickup: {fileID: 4948604262169611313}
 --- !u!1001 &5252531508790105225
 PrefabInstance:
   m_ObjectHideFlags: 0

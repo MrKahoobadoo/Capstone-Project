@@ -10,6 +10,7 @@ public class PauseMenuScript : MonoBehaviour
     public SettingsScript settingsScript;
     public PlayerRotater playerRotater;
     public CameraYRotate cameraYRotate;
+    public RealPlayerController realPlayerController;
 
     private bool isOpen;
 
@@ -36,14 +37,12 @@ public class PauseMenuScript : MonoBehaviour
                 Cursor.visible = true;
                 playerRotater.menuOpen = true;
                 cameraYRotate.menuOpen = true;
+                realPlayerController.menuOpen = true;
                 if (true)
                 {
                     Time.timeScale = 0f;
-                    Debug.LogError("i love ches");
                 }
-                
                 isOpen = true;
-                Debug.Log("poopy brain far");
             }
             else
             {
@@ -53,6 +52,7 @@ public class PauseMenuScript : MonoBehaviour
                 Cursor.visible = false;
                 playerRotater.menuOpen = false;
                 cameraYRotate.menuOpen = false;
+                realPlayerController.menuOpen = false;
                 Time.timeScale = 1;
                 isOpen = false;
             }

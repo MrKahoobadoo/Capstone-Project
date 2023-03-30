@@ -14,26 +14,29 @@ public class UIWinText : MonoBehaviour
     public StopwatchScript stopwatchScript;
 
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI waveText;
     public TextMeshProUGUI timeText;
 
-    public bool gameIsWon;
+
+    public GameManager gameManager;
     
     // Start is called before the first frame update
     void Start()
     {
-        gameIsWon = false;
         winScreen.SetActive(false);
     }
 
     void displayScreen()
     {
-        if (gameIsWon)
+        if (gameManager.gameIsWon == true)
         {
             winScreen.SetActive(true);
             playerRotater.menuOpen = true;
             cameraYRotate.menuOpen = true;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            stopwatchScript.isRunning = false;
+            Time.timeScale = 0;
         }
     }
 
@@ -41,8 +44,9 @@ public class UIWinText : MonoBehaviour
     void Update()
     {
         displayScreen();
-        timeText.text = stopwatchScript.elapsedTimeString;
-        scoreText.text = "Score: " + realPlayerController.score;
+        timeText.text = "Time: " + stopwatchScript.elapsedTimeString;
+        waveText.text = "Survived " + gameManager.wavesSurvived + " Waves";
+        scoreText.text = "Eliminated " + realPlayerController.score + " Dharrs";
     }
 
     public void OnRestartButton()

@@ -234,13 +234,9 @@ MonoBehaviour:
   curHp: 10
   maxHp: 10
   scoreToGive: 10
-  moveSpeed: 10
-  attackRange: 5
+  attackRange: 10
   yPathOffset: 0.9
   weaponScript: {fileID: 8206215446704262857}
-  target: {fileID: 6958745705909096548, guid: 06e9b42e86848074181cb1a6f3d6d8ad, type: 3}
-  realPlayerController: {fileID: 6958745705909096557, guid: 06e9b42e86848074181cb1a6f3d6d8ad, type: 3}
-  gameManager: {fileID: 9128894225154728916, guid: ebfffd9543e06b148a43cd60c4d98636, type: 3}
 --- !u!136 &7267107500469864777
 CapsuleCollider:
   m_ObjectHideFlags: 0

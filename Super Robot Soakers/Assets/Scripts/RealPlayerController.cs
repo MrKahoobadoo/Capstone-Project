@@ -18,6 +18,9 @@ public class RealPlayerController : MonoBehaviour
     public AudioSource audioSource2;
     public AudioClip audioClip2;
 
+    public AudioSource audioSourceDamageSqueak;
+    public AudioSource audioSourceDieSqueak;
+
     public UILoseScreenScript gameOverScreen;
 
     public GameObject actualHamsterModel;
@@ -186,6 +189,14 @@ public class RealPlayerController : MonoBehaviour
 
     }
 
+    void MenuAudioChecker()
+    {
+        if (menuOpen)
+        {
+            audioSource.volume = 0f;
+        }
+    }
+
     public void GameOver()
     {
         gameOverScreen.gameIsOver = true;
@@ -203,6 +214,7 @@ public class RealPlayerController : MonoBehaviour
         if(curHp > 0)
         {
             curHp -= damage;
+            audioSourceDamageSqueak.Play();
         }
     }
 
@@ -222,6 +234,7 @@ public class RealPlayerController : MonoBehaviour
             gameOverScreen.gameIsOver = true;
             gameOver = true;
             dead = true;
+            audioSourceDieSqueak.Play();
         }
     }
 
@@ -290,6 +303,7 @@ public class RealPlayerController : MonoBehaviour
             audioPlayer();
             FireWeapon();
             FocusThePoint();
+            MenuAudioChecker();
         }
         GameEnder();
     }

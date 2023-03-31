@@ -27,7 +27,7 @@ public class PauseMenuScript : MonoBehaviour
 
     void OpenCloseMenu()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && settingsScript.settingsActive == false)
         {
             if (!isOpen)
             {

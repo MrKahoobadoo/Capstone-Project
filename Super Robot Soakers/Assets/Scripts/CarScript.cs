@@ -4,37 +4,92 @@ using UnityEngine;
 
 public class CarScript : MonoBehaviour
 {
-    
-    
-    public GameObject FRWheel;
-    public GameObject FLWheel;
-    public GameObject BRWheel;
-    public GameObject BLWheel;
+    [SerializeField] WheelCollider frontRight;
+    [SerializeField] WheelCollider frontLeft;
+    [SerializeField] WheelCollider backRight;
+    [SerializeField] WheelCollider backLeft;
 
-    public float horsepower;
-    public float turnAngle;
+    [SerializeField] Transform frontRightTransform;
+    [SerializeField] Transform frontLeftTransform;
+    [SerializeField] Transform backRightTransform;
+    [SerializeField] Transform backLeftTransform;
 
-    private Quaternion moveSpinAmount;
-    private float turnAngleAmount;
+    public float acceleration = 500f;
+    public float brakeForce = 300f;
+    public float maxTurnAngle = 45f;
 
+    private float currentAcceleration = 0f;
+    private float currentBrakeForce = 0f;
+    private float currentTurnAngle = 0f;
 
-    void Move()
+    void FixedUpdate()
     {
-        float power = Input.GetAxisRaw("Vertical") * horsepower * Time.deltaTime;
-        BRWheel.transform.localRotation = Quaternion.Euler(BRWheel.transform.localRotation.eulerAngles.x + power, BRWheel.transform.localRotation.eulerAngles.y, BRWheel.transform.localRotation.eulerAngles.z);
-        BLWheel.transform.localRotation = Quaternion.Euler(BLWheel.transform.localRotation.eulerAngles.x + power, BLWheel.transform.localRotation.eulerAngles.y, BLWheel.transform.localRotation.eulerAngles.z);
+        //basic controls
+        Gas();
+        Brake();
+        Turn();
 
-        
-
-        Debug.Log(BRWheel.transform.localRotation.eulerAngles);
+        UpdateWheel(frontRight, frontRightTransform);
+        UpdateWheel(frontLeft, frontLeftTransform);
+        UpdateWheel(backRight, backRightTransform);
+        UpdateWheel(backLeft, backLeftTransform);
     }
-    
-    
-    
-    
-    // Update is called once per frame
-    void Update()
+
+    void Gas()
     {
-        Move();
+        //get input
+        currentAcceleration = acceleration * Input.GetAxis("Vertical");
+
+        Debug.Log(currentAcceleration);
+
+        //apply power
+        backRight.motorTorque = currentAcceleration;
+        backLeft.motorTorque = currentAcceleration;
+
+        Debug.Log(backRight.motorTorque);
     }
+
+    void Brake()
+    {
+        //get input
+        if (Input.GetKey(KeyCode.Space))
+        {
+            currentBrakeForce = brakeForce;
+        }
+        else
+        {
+            currentBrakeForce = 0;
+        }
+
+        //apply brake
+        frontRight.brakeTorque = currentBrakeForce;
+        frontLeft.brakeTorque = currentBrakeForce;
+        backRight.brakeTorque = currentBrakeForce;
+        backLeft.brakeTorque = currentBrakeForce;
+    }
+
+    void Turn()
+    {
+        //get input
+        currentTurnAngle = maxTurnAngle * Input.GetAxis("Horizontal");
+
+        //apply turn
+        frontLeft.steerAngle = currentTurnAngle;
+        frontRight.steerAngle = currentTurnAngle;
+    }
+
+    void UpdateWheel(WheelCollider col, Transform trans)
+    {
+        Vector3 position;
+        Quaternion rotation;
+        col.GetWorldPose(out position, out rotation);
+
+        trans.position = position;
+        trans.rotation = rotation;
+
+        Quaternion newRotation = Quaternion.Euler(trans.rotation.eulerAngles.x, trans.rotation.eulerAngles.y, rotation.eulerAngles.z + 90);
+
+        trans.rotation = newRotation;
+    }
+
 }

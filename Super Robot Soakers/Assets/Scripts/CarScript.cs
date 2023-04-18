@@ -45,6 +45,8 @@ public class CarScript : MonoBehaviour
         //apply power
         backRight.motorTorque = currentAcceleration;
         backLeft.motorTorque = currentAcceleration;
+        frontRight.motorTorque = currentAcceleration;
+        frontLeft.motorTorque = currentAcceleration;
 
         Debug.Log(backRight.motorTorque);
     }

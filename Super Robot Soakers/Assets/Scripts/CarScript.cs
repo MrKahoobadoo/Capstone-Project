@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class CarScript : MonoBehaviour
 {
@@ -20,9 +21,9 @@ public class CarScript : MonoBehaviour
     [SerializeField] AudioSource engineSound;
 
     // movement stuff
-    public float acceleration = 500f;
-    public float brakeForce = 300f;
-    public float maxTurnAngle = 45f;
+    public float acceleration = 2000f;
+    public float brakeForce = 1000f;
+    public float maxTurnAngle = 30f;
 
     private float currentAcceleration = 0f;
     private float currentBrakeForce = 0f;
@@ -35,9 +36,13 @@ public class CarScript : MonoBehaviour
 
     private float currentPitch;
     public float pitchIncrement;
+    public float pitchLerper;
 
     private float gear;
     private bool isFirstGear;
+
+    // crash stuff
+    
 
     void FixedUpdate()
     {
@@ -57,16 +62,13 @@ public class CarScript : MonoBehaviour
     {
         //get input
         currentAcceleration = acceleration * Input.GetAxis("Vertical");
-
-        Debug.Log(currentAcceleration);
+        currentAcceleration = (currentAcceleration * 0.75f) + (currentAcceleration * 0.25f) * (1 - (rig.velocity.magnitude - (gear - 1f) * 10f) / 10);
 
         //apply power
         backRight.motorTorque = currentAcceleration;
         backLeft.motorTorque = currentAcceleration;
         //frontRight.motorTorque = currentAcceleration;
         //frontLeft.motorTorque = currentAcceleration;
-
-        Debug.Log(backRight.motorTorque);
     }
 
     void Brake()
@@ -117,7 +119,6 @@ public class CarScript : MonoBehaviour
     {
         // gets rigidbody velocity
         float velocity = rig.velocity.magnitude;
-        Debug.Log(velocity);
 
         // determines the car's current "gear"
         switch (velocity)
@@ -174,8 +175,23 @@ public class CarScript : MonoBehaviour
         }
 
         // sets pitch based off of velocity and current gear and yaddah yaddah mathy stuff
-        engineSound.pitch = currentPitch + (velocity - ((gear - 1f) * 10f)) * (maxPitch - currentPitch) / 10f;
+        float goalPitch;
+        goalPitch = currentPitch + (velocity - ((gear - 1f) * 10f)) * (maxPitch - currentPitch) / 10f;
+        
+        engineSound.pitch = Mathf.Lerp(engineSound.pitch, goalPitch, pitchLerper * Time.deltaTime);
+    }
 
+    public void Crash()
+    {
+        /*System.Random rand = new System.Random();
+        
+        float xVel = rand.Next(100, 1000);
+        float yVel = rand.Next(100, 1000);
+        float zVel = rand.Next(100, 1000);
+
+        rig.velocity = new Vector3(xVel, yVel, zVel);*/
+
+        rig.AddForce(Vector3.up * 10000000000000, ForceMode.Impulse);
     }
 
 }

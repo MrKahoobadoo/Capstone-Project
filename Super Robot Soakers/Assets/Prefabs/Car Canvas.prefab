@@ -311,7 +311,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8712719863486335162}
-  - component: {fileID: 4812410565223226740}
   m_Layer: 5
   m_Name: Pause Menu
   m_TagString: Untagged
@@ -340,24 +339,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4812410565223226740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587481156817950798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c46fcdca9a67c3a4693c58d9eb06a40c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 7015261473083720021}
-  settingsPage: {fileID: 3497000706422469513}
-  settingsScript: {fileID: 4331226023682648447}
-  playerRotater: {fileID: 0}
-  cameraYRotate: {fileID: 0}
-  realPlayerController: {fileID: 0}
 --- !u!1 &733420029519141727
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,7 +887,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4133973552748512907}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIWinText, Assembly-CSharp
         m_MethodName: OnQuitButton
         m_Mode: 1
@@ -1040,7 +1021,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5107943658021123555}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UILoseScreenScript, Assembly-CSharp
         m_MethodName: OnQuitButton
         m_Mode: 1
@@ -1273,7 +1254,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3346566871750938348}
-  - component: {fileID: 5107943658021123555}
   m_Layer: 5
   m_Name: Lose Screen
   m_TagString: Untagged
@@ -1302,24 +1282,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5107943658021123555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3017145192160122388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e88440bb7cf96e14ba7e2ef61a1c7f04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameIsOver: 0
-  playerRotater: {fileID: 0}
-  cameraYRotate: {fileID: 0}
-  realPlayerController: {fileID: 0}
-  endScreen: {fileID: 5407337484493700076}
-  stopwatchScript: {fileID: 0}
 --- !u!1 &3085531661513693074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,7 +1404,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4331226023682648447}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SettingsScript, Assembly-CSharp
         m_MethodName: OnGoBackButton
         m_Mode: 1
@@ -2151,7 +2113,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4133973552748512907}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIWinText, Assembly-CSharp
         m_MethodName: OnRestartButton
         m_Mode: 1
@@ -2555,7 +2517,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5107943658021123555}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UILoseScreenScript, Assembly-CSharp
         m_MethodName: OnRestartButton
         m_Mode: 1
@@ -2847,7 +2809,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2086119918475990963}
-  - component: {fileID: 4331226023682648447}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -2876,23 +2837,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4331226023682648447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5997838576966001649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e0bf31e30cb664ea35d4072ee32760, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingsPage: {fileID: 3497000706422469513}
-  pauseMenu: {fileID: 7015261473083720021}
-  playerRotater: {fileID: 0}
-  cameraYRotate: {fileID: 0}
-  settingsActive: 0
 --- !u!1 &6288586371963715256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3912,7 +3856,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8749988707880899154}
-  - component: {fileID: 4133973552748512907}
   m_Layer: 5
   m_Name: Win Screen
   m_TagString: Untagged
@@ -3941,27 +3884,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4133973552748512907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8049469245675842531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 141f67e045dd17d429c43441803cd87a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  winScreen: {fileID: 8042501826463669898}
-  playerRotater: {fileID: 0}
-  cameraYRotate: {fileID: 0}
-  realPlayerController: {fileID: 0}
-  stopwatchScript: {fileID: 0}
-  scoreText: {fileID: 0}
-  waveText: {fileID: 0}
-  timeText: {fileID: 0}
-  gameManager: {fileID: 0}
 --- !u!1 &8177641732060560914
 GameObject:
   m_ObjectHideFlags: 0
@@ -4506,8 +4428,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00086975, y: 0}
-  m_SizeDelta: {x: 1091, y: 512.14}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1091, y: 613.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7687055745577784933
 MonoBehaviour:

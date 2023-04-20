@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class CarObstacleScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Fuf");
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponentInParent<CarScript>().Crash();
+            Debug.Log("Game ENdEDE");
+        }
     }
 }

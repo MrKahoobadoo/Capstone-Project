@@ -3,18 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class CarScript : MonoBehaviour
+public class ActualCarScript : MonoBehaviour
 {
     // references
-    [SerializeField] WheelCollider frontRight;
-    [SerializeField] WheelCollider frontLeft;
-    [SerializeField] WheelCollider backRight;
-    [SerializeField] WheelCollider backLeft;
 
-    [SerializeField] Transform frontRightTransform;
-    [SerializeField] Transform frontLeftTransform;
-    [SerializeField] Transform backRightTransform;
-    [SerializeField] Transform backLeftTransform;
+    public GameObject FRWheel;
+    public GameObject FLWheel;
+    public GameObject BRWheel;
+    public GameObject BLWheel;
+
 
     [SerializeField] Rigidbody rig;
     [SerializeField] GameObject car;
@@ -58,10 +55,6 @@ public class CarScript : MonoBehaviour
         EngineNoise();
         //Stabilize();
 
-        UpdateWheel(frontRight, frontRightTransform);
-        UpdateWheel(frontLeft, frontLeftTransform);
-        UpdateWheel(backRight, backRightTransform);
-        UpdateWheel(backLeft, backLeftTransform);
     }
 
     void Gas()
@@ -70,11 +63,7 @@ public class CarScript : MonoBehaviour
         currentAcceleration = acceleration * Input.GetAxis("Vertical");
         currentAcceleration = (currentAcceleration * 0.75f) + (currentAcceleration * 0.25f) * (1 - (rig.velocity.magnitude - (gear - 1f) * 10f) / 10);
 
-        //apply power
-        backRight.motorTorque = currentAcceleration;
-        backLeft.motorTorque = currentAcceleration;
-        //frontRight.motorTorque = currentAcceleration;
-        //frontLeft.motorTorque = currentAcceleration;
+        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
     }
 
     void Brake()
@@ -90,38 +79,23 @@ public class CarScript : MonoBehaviour
         }
 
         //apply brake
-        frontRight.brakeTorque = currentBrakeForce;
+        /*frontRight.brakeTorque = currentBrakeForce;
         frontLeft.brakeTorque = currentBrakeForce;
         backRight.brakeTorque = currentBrakeForce;
-        backLeft.brakeTorque = currentBrakeForce;
+        backLeft.brakeTorque = currentBrakeForce;*/
     }
 
-    void Turn()
+    /*void Turn()
     {
         float velocity = rig.velocity.magnitude;
 
         //get input
-        currentTurnAngle = maxTurnAngle * Input.GetAxis("Horizontal") * (speedForTurn - velocity)/speedForTurn;
+        currentTurnAngle = maxTurnAngle * Input.GetAxis("Horizontal") * (speedForTurn - velocity) / speedForTurn;
 
         //apply turn
         frontLeft.steerAngle = currentTurnAngle;
         frontRight.steerAngle = currentTurnAngle;
-    }
-
-    void UpdateWheel(WheelCollider col, Transform trans)
-    {
-        // aligns wheel mesh with wheel collider
-        Vector3 position;
-        Quaternion rotation;
-        col.GetWorldPose(out position, out rotation);
-
-        trans.position = position;
-        trans.rotation = rotation;
-
-        Quaternion newRotation = Quaternion.Euler(trans.rotation.eulerAngles.x, trans.rotation.eulerAngles.y, rotation.eulerAngles.z + 90);
-
-        trans.rotation = newRotation;
-    }
+    }*/
 
     void EngineNoise()
     {
@@ -155,7 +129,7 @@ public class CarScript : MonoBehaviour
                 gear = 5;
                 isFirstGear = false;
                 break;
-            
+
             case < 60:
                 gear = 6;
                 isFirstGear = false;
@@ -185,7 +159,7 @@ public class CarScript : MonoBehaviour
         // sets pitch based off of velocity and current gear and yaddah yaddah mathy stuff
         float goalPitch;
         goalPitch = currentPitch + (velocity - ((gear - 1f) * 10f)) * (maxPitch - currentPitch) / 10f;
-        
+
         engineSound.pitch = Mathf.Lerp(engineSound.pitch, goalPitch, pitchLerper * Time.deltaTime);
     }
 

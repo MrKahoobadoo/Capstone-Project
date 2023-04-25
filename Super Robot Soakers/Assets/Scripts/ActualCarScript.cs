@@ -51,7 +51,7 @@ public class ActualCarScript : MonoBehaviour
         //basic controls
         Gas();
         Brake();
-        Turn();
+        //Turn();
         EngineNoise();
         //Stabilize();
 
@@ -63,7 +63,10 @@ public class ActualCarScript : MonoBehaviour
         currentAcceleration = acceleration * Input.GetAxis("Vertical");
         currentAcceleration = (currentAcceleration * 0.75f) + (currentAcceleration * 0.25f) * (1 - (rig.velocity.magnitude - (gear - 1f) * 10f) / 10);
 
-        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        FRWheel.transform.Rotate(Vector3.right, currentAcceleration * Time.deltaTime);
+        FLWheel.transform.Rotate(Vector3.right, currentAcceleration * Time.deltaTime);
+        BRWheel.transform.Rotate(Vector3.right, currentAcceleration * Time.deltaTime);
+        BLWheel.transform.Rotate(Vector3.right, currentAcceleration * Time.deltaTime);
     }
 
     void Brake()

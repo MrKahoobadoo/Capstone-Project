@@ -48,6 +48,15 @@ public class CarScript : MonoBehaviour
     // stabilization stuff
     public float maxTilt;
 
+    // rigidbody modification
+    private Vector3 valueCOM;
+    public GameObject visualCOM;
+
+    void Start()
+    {
+        valueCOM = visualCOM.transform.localPosition;
+        rig.centerOfMass = valueCOM;
+    }
 
     void FixedUpdate()
     {
@@ -57,6 +66,7 @@ public class CarScript : MonoBehaviour
         Turn();
         EngineNoise();
         //Stabilize();
+        COMChanger();
 
         UpdateWheel(frontRight, frontRightTransform);
         UpdateWheel(frontLeft, frontLeftTransform);
@@ -208,5 +218,11 @@ public class CarScript : MonoBehaviour
         tilt = Mathf.Clamp(tilt, -maxTilt, maxTilt);
 
         car.transform.localRotation = Quaternion.Euler(rig.rotation.eulerAngles.x, rig.rotation.eulerAngles.y, tilt);
+    }
+
+    void COMChanger()
+    {
+        valueCOM = visualCOM.transform.localPosition;
+        rig.centerOfMass = valueCOM;
     }
 }

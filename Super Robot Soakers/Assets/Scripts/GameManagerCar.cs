@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerCar : MonoBehaviour
 {
+    [Header("References")]
+    public CarScript carScript;
+    
     [Header("Obstacle Spawning")]
 
     public int obstacleCount;
@@ -14,6 +17,16 @@ public class GameManagerCar : MonoBehaviour
 
     public GameObject CarObstacle;
     public GameObject DeathCube;
+
+    [Header("Important Numbas")]
+    public int obstaclesAvoided;
+    public int obstaclesForMultiIncrease;
+    public float multiIncreaseConstant;
+    public float score;
+    public float multiplier;
+    public float timeElapsed;
+    public int damageLevel;
+    
 
     void Start()
     {
@@ -32,9 +45,33 @@ public class GameManagerCar : MonoBehaviour
 
     }
 
-    public void idkyetbutsomething()
+    public void AddScore()
     {
+        obstaclesAvoided++;
+        multiplier = 1 + multiIncreaseConstant * Mathf.FloorToInt(obstaclesAvoided / obstaclesForMultiIncrease);
+        score = obstaclesAvoided * multiplier;
+    }
 
+    public void ResetScore()
+    {
+        obstaclesAvoided = 0;
+        score = 0;
+        multiplier = 0;
+    }
+
+    public void Damage()
+    {
+        damageLevel++;
+        if(damageLevel >= 3)
+        {
+            carScript.Crash();
+            Invoke("GameEnd", 4);
+        }
+    }
+
+    public void Fix()
+    {
+        damageLevel--;
     }
 
     // Private functions

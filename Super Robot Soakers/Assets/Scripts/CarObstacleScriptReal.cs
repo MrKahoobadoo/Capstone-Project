@@ -13,11 +13,22 @@ public class CarObstacleScriptReal : MonoBehaviour
         gameManagerCar = gameManagerGO.GetComponent<GameManagerCar>();
     }
 
+    void Update()
+    {
+        CarPass();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            gameManagerCar.GameEnd();
+            gameManagerCar.ResetScore();
+            gameManagerCar.Damage();
         }
+    }
+
+    private void CarPass()
+    {
+        gameManagerCar.AddScore();
     }
 }

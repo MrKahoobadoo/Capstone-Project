@@ -31,6 +31,7 @@ public class GameManagerCar : MonoBehaviour
     void Start()
     {
         SpawnObstacles();
+        multiplier = 1;
     }
 
     // Public functions
@@ -49,14 +50,13 @@ public class GameManagerCar : MonoBehaviour
     {
         obstaclesAvoided++;
         multiplier = 1 + multiIncreaseConstant * Mathf.FloorToInt(obstaclesAvoided / obstaclesForMultiIncrease);
-        score = obstaclesAvoided * multiplier;
+        score += multiplier;
     }
 
     public void ResetScore()
     {
         obstaclesAvoided = 0;
-        score = 0;
-        multiplier = 0;
+        multiplier = 1;
     }
 
     public void Damage()

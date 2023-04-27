@@ -6,11 +6,20 @@ public class CarObstacleScriptReal : MonoBehaviour
 {
 
     private GameManagerCar gameManagerCar;
+    private CarScript carScript;
+    private GameObject car;
+
+    private bool isPassed;
 
     void Start()
     {
         GameObject gameManagerGO = GameObject.Find("GameManager");
         gameManagerCar = gameManagerGO.GetComponent<GameManagerCar>();
+
+        car = GameObject.Find("Car");
+        carScript = car.GetComponent<CarScript>();
+
+        isPassed = false;
     }
 
     void Update()
@@ -27,8 +36,15 @@ public class CarObstacleScriptReal : MonoBehaviour
         }
     }
 
-    private void CarPass()
+    void CarPass()
     {
-        gameManagerCar.AddScore();
+        if (!isPassed)
+        {
+            if(car.transform.position.z > transform.position.z)
+            {
+                gameManagerCar.AddScore();
+                isPassed = true;
+            }
+        }
     }
 }

@@ -209,7 +209,7 @@ public class CarScript : MonoBehaviour
 
         rig.velocity = new Vector3(xVel, yVel, zVel);*/
 
-        rig.AddForce(Vector3.up * 10000000000000, ForceMode.Impulse);
+        rig.AddForce(Vector3.up * 100000, ForceMode.Impulse);
     }
 
     void Stabilize()

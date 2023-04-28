@@ -12,11 +12,13 @@ public class GameManagerCar : MonoBehaviour
 
     public int obstacleCount;
     public int deathCubeCount;
+    public int repairObjectCount;
 
     [Header("Obstacles")]
 
     public GameObject CarObstacle;
     public GameObject DeathCube;
+    public GameObject repairObject;
 
     [Header("Important Numbas")]
     public int obstaclesAvoided;
@@ -92,6 +94,17 @@ public class GameManagerCar : MonoBehaviour
             Instantiate(CarObstacle, spawnLocation, Quaternion.identity);
         }
 
+        // spawns repair objects
+        for (int i = 0; i < repairObjectCount; i++)
+        {
+            float xCoor = rand.Next(-14, 14);
+            float yCoor = 1f;
+            float zCoor = rand.Next(20, 10000);
+            Vector3 spawnLocation = new Vector3(xCoor, yCoor, zCoor);
+
+            Instantiate(repairObject, spawnLocation, Quaternion.identity);
+        }
+
         // spawns death cubes
         // death cube
         for (int i = 0; i < deathCubeCount; i++)
@@ -103,6 +116,8 @@ public class GameManagerCar : MonoBehaviour
 
             Instantiate(CarObstacle, spawnLocation, Quaternion.identity);
         }
+
+
 
     }
 }

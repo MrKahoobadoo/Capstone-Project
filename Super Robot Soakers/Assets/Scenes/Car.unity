@@ -1214,10 +1214,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carScript: {fileID: 1901919377}
-  obstacleCount: 400
-  deathCubeCount: 20
+  obstacleCount: 500
+  deathCubeCount: 0
+  repairObjectCount: 200
   CarObstacle: {fileID: 5285906029065972096, guid: 753a3e9d5ef3176469e1efd7a6a13d1a, type: 3}
   DeathCube: {fileID: 5336048749112757782, guid: f86b0f6f19fad614baca87a637b795ab, type: 3}
+  repairObject: {fileID: 2285319943181483959, guid: ebe7646e026be8b498149fece0915cd7, type: 3}
   obstaclesAvoided: 0
   obstaclesForMultiIncrease: 5
   multiIncreaseConstant: 0.1

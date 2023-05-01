@@ -37,7 +37,7 @@ public class CarUIScript : MonoBehaviour
         scoreText.text = "Score: " + gameManagerCar.score;
 
         // multiplier
-        multiplierText.text = "" + gameManagerCar.multiplier;
+        multiplierText.text = "" + gameManagerCar.multiplier + "x";
 
         // time
         

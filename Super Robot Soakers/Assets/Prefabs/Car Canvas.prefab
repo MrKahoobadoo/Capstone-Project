@@ -463,6 +463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8712719863486335162}
+  - component: {fileID: 5533815475570622945}
   m_Layer: 5
   m_Name: Pause Menu
   m_TagString: Untagged
@@ -491,6 +492,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5533815475570622945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587481156817950798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46fcdca9a67c3a4693c58d9eb06a40c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  pauseMenu: {fileID: 7015261473083720021}
+  settingsPage: {fileID: 3497000706422469513}
+  settingsScript: {fileID: 6341474375591508289}
+  playerRotater: {fileID: 0}
+  cameraYRotate: {fileID: 0}
+  realPlayerController: {fileID: 0}
+  carScript: {fileID: 8595979447073442468, guid: 10a2f0caff4293641a526acaeeef09c7, type: 3}
 --- !u!1 &733420029519141727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,7 +1712,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6341474375591508289}
         m_TargetAssemblyTypeName: SettingsScript, Assembly-CSharp
         m_MethodName: OnGoBackButton
         m_Mode: 1
@@ -3360,7 +3381,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5533815475570622945}
         m_TargetAssemblyTypeName: PauseMenuScript, Assembly-CSharp
         m_MethodName: OnRestartButton
         m_Mode: 1
@@ -3381,6 +3402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2086119918475990963}
+  - component: {fileID: 6341474375591508289}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -3409,6 +3431,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6341474375591508289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5997838576966001649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e0bf31e30cb664ea35d4072ee32760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsPage: {fileID: 3497000706422469513}
+  pauseMenu: {fileID: 7015261473083720021}
+  settingsActive: 0
 --- !u!1 &6288586371963715256
 GameObject:
   m_ObjectHideFlags: 0
@@ -4859,6 +4896,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390e64bc5124f6c4690a4eda29ba8d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageText: {fileID: 0}
+  speedText: {fileID: 0}
+  scoreText: {fileID: 0}
+  multiplierText: {fileID: 0}
+  timeText: {fileID: 0}
+  gameManagerCar: {fileID: 0}
+  carRig: {fileID: 0}
+  carScript: {fileID: 0}
 --- !u!1 &8177641733556444867
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,6 +34,9 @@ public class GameManagerCar : MonoBehaviour
     {
         SpawnObstacles();
         multiplier = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1;
     }
 
     // Public functions

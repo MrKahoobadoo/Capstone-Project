@@ -6,8 +6,6 @@ public class SettingsScript : MonoBehaviour
 {
     public GameObject settingsPage;
     public GameObject pauseMenu;
-    public PlayerRotater playerRotater;
-    public CameraYRotate cameraYRotate;
 
     public bool settingsActive;
 

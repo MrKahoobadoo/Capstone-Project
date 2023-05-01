@@ -2204,17 +2204,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4561797313194354157, guid: 84036aec8ccf67c42bcbed93aaa140d4, type: 3}
   m_PrefabInstance: {fileID: 2109632252}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1635061310 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1632909894421712233, guid: 4993d79a37f91824890b17f9a6d99fd4, type: 3}
-  m_PrefabInstance: {fileID: 2674169341261920220}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c46fcdca9a67c3a4693c58d9eb06a40c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1750549980 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4561797313194354157, guid: 84036aec8ccf67c42bcbed93aaa140d4, type: 3}
@@ -3346,10 +3335,6 @@ PrefabInstance:
       propertyPath: m_enableAutoSizing
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5437651301639744098, guid: 4993d79a37f91824890b17f9a6d99fd4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1635061310}
     - target: {fileID: 5680445530238990725, guid: 4993d79a37f91824890b17f9a6d99fd4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -3502,10 +3487,6 @@ PrefabInstance:
       propertyPath: realPlayerController
       value: 
       objectReference: {fileID: 1306908794}
-    - target: {fileID: 8347340527334800152, guid: 4993d79a37f91824890b17f9a6d99fd4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1635061310}
     - target: {fileID: 8375016421916733484, guid: 4993d79a37f91824890b17f9a6d99fd4, type: 3}
       propertyPath: m_Name
       value: Quit Button
@@ -3538,10 +3519,6 @@ PrefabInstance:
       propertyPath: m_enableAutoSizing
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8892307801734796286, guid: 4993d79a37f91824890b17f9a6d99fd4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1635061310}
     - target: {fileID: 9054735234815013732, guid: 4993d79a37f91824890b17f9a6d99fd4, type: 3}
       propertyPath: m_SizeDelta.x
       value: 297.438

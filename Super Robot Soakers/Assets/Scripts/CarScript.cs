@@ -52,10 +52,14 @@ public class CarScript : MonoBehaviour
     private Vector3 valueCOM;
     public GameObject visualCOM;
 
+    // menu stuff
+    public bool menuOpen;
+
     void Start()
     {
         valueCOM = visualCOM.transform.localPosition;
         rig.centerOfMass = valueCOM;
+        menuOpen = false;
     }
 
     void FixedUpdate()
@@ -135,6 +139,41 @@ public class CarScript : MonoBehaviour
 
     void EngineNoise()
     {
+        if (!menuOpen)
+        {
+            engineSound.volume = 0.75f;
+            Debug.Log("Bens)");
+        }
+        if (menuOpen)
+        {
+            engineSound.Stop();
+            Debug.Log("Steamer");
+        }
+
+
+
+
+
+
+
+
+
+        /*// mutes audio when game is paused
+        if (menuOpen)
+        {
+            if (engineSound.isPlaying)
+            {
+                engineSound.Stop();
+            }
+        }
+        else
+        {
+            if (!engineSound.isPlaying)
+            {
+                engineSound.Play();
+            }
+        }*/
+
         // gets rigidbody velocity
         float velocity = rig.velocity.magnitude;
 

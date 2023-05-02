@@ -139,7 +139,8 @@ public class CarScript : MonoBehaviour
 
     void EngineNoise()
     {
-        if (!menuOpen)
+        // mutes audio when game is paused
+        /*if (!menuOpen)
         {
             engineSound.volume = 0.75f;
             Debug.Log("Bens)");
@@ -148,17 +149,9 @@ public class CarScript : MonoBehaviour
         {
             engineSound.Stop();
             Debug.Log("Steamer");
-        }
+        }*/
 
-
-
-
-
-
-
-
-
-        /*// mutes audio when game is paused
+        /*
         if (menuOpen)
         {
             if (engineSound.isPlaying)

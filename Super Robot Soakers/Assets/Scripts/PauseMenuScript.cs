@@ -23,6 +23,7 @@ public class PauseMenuScript : MonoBehaviour
 
     // Car Game
     public CarScript carScript;
+    public AudioSource engineSound;
 
     private bool isOpen;
 
@@ -62,6 +63,11 @@ public class PauseMenuScript : MonoBehaviour
                     
                     case GameLevel.Car:
                         carScript.menuOpen = true;
+                        if (engineSound.isPlaying)
+                        {
+                            engineSound.Stop();
+                        }
+                        Debug.Log("Engine quiet");
                         break;
                 }
                 
@@ -85,6 +91,11 @@ public class PauseMenuScript : MonoBehaviour
 
                     case GameLevel.Car:
                         carScript.menuOpen = false;
+                        if (!engineSound.isPlaying)
+                        {
+                            engineSound.Play();
+                        }
+                        Debug.Log("Engine LOUD");
                         break;
                 }
             }

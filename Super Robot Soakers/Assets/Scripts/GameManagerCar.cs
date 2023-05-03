@@ -7,6 +7,8 @@ public class GameManagerCar : MonoBehaviour
 {
     [Header("References")]
     public CarScript carScript;
+    public GameObject car;
+    public WODScript wodScript;
     
     [Header("Obstacle Spawning")]
 
@@ -28,6 +30,10 @@ public class GameManagerCar : MonoBehaviour
     public float multiplier;
     public float timeElapsed;
     public int damageLevel;
+
+    [Header("Game Status")]
+    public bool gameLost;
+    public bool gameWon;
     
 
     void Start()
@@ -37,6 +43,13 @@ public class GameManagerCar : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1;
+        gameLost = false;
+        gameWon = false;
+    }
+
+    void Update()
+    {
+        CheckForWinOrLose();
     }
 
     // Public functions
@@ -49,6 +62,11 @@ public class GameManagerCar : MonoBehaviour
     public void GameWin()
     {
 
+    }
+
+    public void GameLose()
+    {
+        carScript.Crash();
     }
 
     public void AddScore()
@@ -66,17 +84,18 @@ public class GameManagerCar : MonoBehaviour
 
     public void Damage()
     {
-        damageLevel++;
-        if(damageLevel >= 3)
+        if(damageLevel > 0)
         {
-            carScript.Crash();
-            Invoke("GameEnd", 4);
+            damageLevel--;
         }
     }
 
     public void Fix()
     {
-        damageLevel--;
+        if(damageLevel < 3)
+        {
+            damageLevel++;
+        }
     }
 
     // Private functions
@@ -119,8 +138,15 @@ public class GameManagerCar : MonoBehaviour
 
             Instantiate(CarObstacle, spawnLocation, Quaternion.identity);
         }
+    }
 
-
-
+    void CheckForWinOrLose()
+    {
+        // checks for losing conditions
+        if ((car.transform.position.y < -10 || damageLevel <= 0 || wodScript.hit) && !gameLost)
+        {
+            gameLost = true;
+            GameLose();
+        }
     }
 }

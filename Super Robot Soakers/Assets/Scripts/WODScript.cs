@@ -5,30 +5,34 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class WODScript : MonoBehaviour
 {
-    public PostProcessProfile postProcessProfile;
-    public float bloomThreshold = 0f;
-
-    private Bloom bloom;
+    public GameObject car;
+    
+    public float chaseSpeed;
+    public bool hit;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Get the Bloom settings from the profile
-        if (!postProcessProfile.TryGetSettings(out bloom))
-        {
-            Debug.LogError("Bloom settings not found!");
-            enabled = false;
-            return;
-        }
+        
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        // Modify the threshold value
-        bloom.threshold.value = bloomThreshold;
+        Invoke("Chase", 5);
+        CheckForHit();
+    }
 
-        // Assign the updated profile back to the post-processing volume or layer
-        postProcessProfile.TryGetSettings(out bloom);
+    void Chase()
+    {
+        transform.position += new Vector3(0, 0, chaseSpeed);
+    }
+
+    void CheckForHit()
+    {
+        if(car.transform.position.z < transform.position.z && !hit)
+        {
+            hit = true;
+        }
     }
 }

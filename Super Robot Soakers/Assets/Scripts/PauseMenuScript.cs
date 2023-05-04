@@ -67,7 +67,6 @@ public class PauseMenuScript : MonoBehaviour
                         {
                             engineSound.Stop();
                         }
-                        Debug.Log("Engine quiet");
                         break;
                 }
                 
@@ -95,7 +94,6 @@ public class PauseMenuScript : MonoBehaviour
                         {
                             engineSound.Play();
                         }
-                        Debug.Log("Engine LOUD");
                         break;
                 }
             }

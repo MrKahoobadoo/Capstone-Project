@@ -30,6 +30,7 @@ public class GameManagerCar : MonoBehaviour
     public float multiplier;
     public float timeElapsed;
     public int damageLevel;
+    public int greatestStreak;
 
     [Header("Game Status")]
     public bool gameLost;
@@ -61,11 +62,12 @@ public class GameManagerCar : MonoBehaviour
 
     public void GameWin()
     {
-
+        gameWon = true;
     }
 
     public void GameLose()
     {
+        gameLost = true;
         carScript.Crash();
     }
 
@@ -73,7 +75,12 @@ public class GameManagerCar : MonoBehaviour
     {
         obstaclesAvoided++;
         multiplier = 1 + multiIncreaseConstant * Mathf.FloorToInt(obstaclesAvoided / obstaclesForMultiIncrease);
-        score += multiplier;
+        score += multiplier * 10;
+        if(obstaclesAvoided > greatestStreak)
+        {
+            greatestStreak = obstaclesAvoided;
+            Debug.Log(greatestStreak);
+        }
     }
 
     public void ResetScore()
@@ -145,8 +152,12 @@ public class GameManagerCar : MonoBehaviour
         // checks for losing conditions
         if ((car.transform.position.y < -10 || damageLevel <= 0 || wodScript.hit) && !gameLost)
         {
-            gameLost = true;
             GameLose();
+        }
+
+        if (score >= 4000)
+        {
+            GameWin();
         }
     }
 }

@@ -13,6 +13,7 @@ public class CarUIScript : MonoBehaviour
 
     public GameObject loseScreen;
     public GameObject winScreen;
+    public AudioSource engineSound;
 
     [Header("Normal Screen")]
     public TextMeshProUGUI damageText;
@@ -23,9 +24,14 @@ public class CarUIScript : MonoBehaviour
 
     [Header("Lose Screen")]
     public bool loseScreenOpen;
+    public float slowTimeSpeed;
 
     [Header("Win Screen")]
     public bool winScreenOpen;
+    public TextMeshProUGUI scoreText2;
+    public TextMeshProUGUI timeText2;
+    public TextMeshProUGUI greatestStreakText;
+    public StopwatchScript stopwatchScript;
     
     void Start()
     {
@@ -55,7 +61,8 @@ public class CarUIScript : MonoBehaviour
         speedText.text = speedMPH + " MPH";
 
         // score
-        scoreText.text = "Score: \n" + gameManagerCar.score;
+        float score = Mathf.Floor(gameManagerCar.score);
+        scoreText.text = "Score:\n" + score;
 
         // multiplier
         multiplierText.text = "" + gameManagerCar.multiplier + "x";
@@ -73,21 +80,29 @@ public class CarUIScript : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             carScript.menuOpen = true;
-            Time.timeScale = 0f;
+            stopwatchScript.StopStopwatch();
+            Invoke("SlowTime", 0.5f);
+            Invoke("StopTime", 7.5f);
+            Invoke("MuteEngine", 7.5f);
         }
     }
 
-    public void OnRestartButton()
+    void StopTime()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Debug.Log("Restarted");
-        //Time.timeScale = 1;
+        Time.timeScale = 0f;
     }
 
-    public void OnQuitButton()
+    void SlowTime()
     {
-        SceneManager.LoadScene(0);
-        //Time.timeScale = 1;
+        Time.timeScale = slowTimeSpeed;
+    }
+
+    void MuteEngine()
+    {
+        if (engineSound.isPlaying)
+        {
+            engineSound.Stop();
+        }
     }
 
     // Manage the win screen stuff
@@ -101,7 +116,37 @@ public class CarUIScript : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             carScript.menuOpen = true;
-            Time.timeScale = 0f;
+            stopwatchScript.StopStopwatch();
+            Invoke("SlowTime", 0.5f);
+            Invoke("StopTime", 7.5f);
+            Invoke("MuteEngine", 7.5f);
         }
+        
+        // score
+        float score = Mathf.Floor(gameManagerCar.score);
+        scoreText2.text = "Score: " + score;
+
+        // time
+        timeText2.text = "Time: " + stopwatchScript.elapsedTimeString;
+
+        // greatest streak
+        greatestStreakText.text = "Best Streak: " + gameManagerCar.greatestStreak;
+
     }
+
+    // buttons woo
+
+    public void OnRestartButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //Time.timeScale = 1;
+    }
+
+    public void OnQuitButton()
+    {
+        SceneManager.LoadScene(0);
+        //Time.timeScale = 1;
+    }
+
+   
 }

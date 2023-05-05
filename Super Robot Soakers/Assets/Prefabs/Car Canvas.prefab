@@ -1199,8 +1199,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIWinText, Assembly-CSharp
+      - m_Target: {fileID: 6100789345589415099}
+        m_TargetAssemblyTypeName: CarUIScript, Assembly-CSharp
         m_MethodName: OnQuitButton
         m_Mode: 1
         m_Arguments:
@@ -2845,8 +2845,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIWinText, Assembly-CSharp
+      - m_Target: {fileID: 6100789345589415099}
+        m_TargetAssemblyTypeName: CarUIScript, Assembly-CSharp
         m_MethodName: OnRestartButton
         m_Mode: 1
         m_Arguments:
@@ -5182,6 +5182,7 @@ MonoBehaviour:
   multiplierText: {fileID: 302141084450064051}
   timeText: {fileID: 7008202820762704606}
   loseScreenOpen: 0
+  slowTimeSpeed: 0
   winScreenOpen: 0
   scoreText2: {fileID: 7258603428558540338}
   timeText2: {fileID: 7526739692203657245}

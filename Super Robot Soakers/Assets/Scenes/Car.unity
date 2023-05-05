@@ -189,7 +189,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &266378267
 GameObject:
@@ -273,7 +273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 817929896}
+  m_Father: {fileID: 1186201807}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 13, y: 0, z: 0}
 --- !u!114 &266378271
@@ -559,7 +559,7 @@ Transform:
   - {fileID: 2090967060}
   - {fileID: 1007539100}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &465089385
 PrefabInstance:
@@ -765,6 +765,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1901919382}
     - target: {fileID: 6100789345589415099, guid: ccb6692ac2f090043a33d7d67d5ff97d, type: 3}
+      propertyPath: slowTimeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100789345589415099, guid: ccb6692ac2f090043a33d7d67d5ff97d, type: 3}
       propertyPath: gameManagerCar
       value: 
       objectReference: {fileID: 1880070592}
@@ -838,7 +842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8177641732060560918, guid: ccb6692ac2f090043a33d7d67d5ff97d, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8177641732060560918, guid: ccb6692ac2f090043a33d7d67d5ff97d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1005,7 +1009,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608293960}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a445aedde64aab41bd17bea9cd562b3, type: 3}
   m_Name: 
@@ -1343,15 +1347,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817929895}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 266378270}
+  - {fileID: 1186201807}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &817929897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1365,6 +1369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carBody: {fileID: 1901919375}
+  lookBackHub: {fileID: 1186201806}
   lerpIncrement: 1.15
 --- !u!1 &1007539099
 GameObject:
@@ -1463,6 +1468,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007539099}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1186201806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1186201807}
+  m_Layer: 0
+  m_Name: LookBackHub
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1186201807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186201806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 266378270}
+  m_Father: {fileID: 817929896}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1478108991 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5533815475570622945, guid: ccb6692ac2f090043a33d7d67d5ff97d, type: 3}

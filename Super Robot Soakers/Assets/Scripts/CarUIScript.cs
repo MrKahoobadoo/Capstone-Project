@@ -81,9 +81,9 @@ public class CarUIScript : MonoBehaviour
             Cursor.visible = true;
             carScript.menuOpen = true;
             stopwatchScript.StopStopwatch();
-            Invoke("SlowTime", 0.5f);
-            Invoke("StopTime", 7.5f);
-            Invoke("MuteEngine", 7.5f);
+            Invoke("SlowTime", 0f);
+            Invoke("StopTime", 3f);
+            Invoke("MuteEngine", 0f);
         }
     }
 
@@ -117,9 +117,8 @@ public class CarUIScript : MonoBehaviour
             Cursor.visible = true;
             carScript.menuOpen = true;
             stopwatchScript.StopStopwatch();
-            Invoke("SlowTime", 0.5f);
-            Invoke("StopTime", 7.5f);
-            Invoke("MuteEngine", 7.5f);
+            Invoke("StopTime", 0f);
+            Invoke("MuteEngine", 0f);
         }
         
         // score

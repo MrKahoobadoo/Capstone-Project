@@ -150,12 +150,12 @@ public class GameManagerCar : MonoBehaviour
     void CheckForWinOrLose()
     {
         // checks for losing conditions
-        if ((car.transform.position.y < -10 || damageLevel <= 0 || wodScript.hit) && !gameLost)
+        if ((car.transform.position.y < -10 || damageLevel <= 0 || wodScript.hit) && !gameLost && !gameWon)
         {
             GameLose();
         }
 
-        if (score >= 4000)
+        if (car.transform.position.z >= 9960 && !gameLost && !gameWon)
         {
             GameWin();
         }

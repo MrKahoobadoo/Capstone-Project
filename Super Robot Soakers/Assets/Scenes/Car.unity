@@ -1009,13 +1009,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608293960}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a445aedde64aab41bd17bea9cd562b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   car: {fileID: 1901919375}
-  chaseSpeed: 1
+  chaseSpeed: 1.33
   hit: 0
 --- !u!1 &650285606
 GameObject:
@@ -1541,7 +1541,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 17d11bac8560f4f4db71e1263d85ce6f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.428
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1751,22 +1751,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8595979447073442468, guid: 10a2f0caff4293641a526acaeeef09c7, type: 3}
-      propertyPath: menuOpen
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8595979447073442468, guid: 10a2f0caff4293641a526acaeeef09c7, type: 3}
-      propertyPath: brakeForce
-      value: 2000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8595979447073442468, guid: 10a2f0caff4293641a526acaeeef09c7, type: 3}
-      propertyPath: acceleration
-      value: 3000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8595979447073442468, guid: 10a2f0caff4293641a526acaeeef09c7, type: 3}
-      propertyPath: speedForTurn
-      value: 200
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10a2f0caff4293641a526acaeeef09c7, type: 3}
 --- !u!1 &1880070591
@@ -1807,6 +1791,7 @@ MonoBehaviour:
   CarObstacle: {fileID: 5285906029065972096, guid: 753a3e9d5ef3176469e1efd7a6a13d1a, type: 3}
   DeathCube: {fileID: 5336048749112757782, guid: f86b0f6f19fad614baca87a637b795ab, type: 3}
   repairObject: {fileID: 2285319943181483959, guid: ebe7646e026be8b498149fece0915cd7, type: 3}
+  damageCoolDownLength: 5
   obstaclesAvoided: 0
   obstaclesForMultiIncrease: 5
   multiIncreaseConstant: 0.1

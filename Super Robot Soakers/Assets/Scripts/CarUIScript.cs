@@ -57,7 +57,22 @@ public class CarUIScript : MonoBehaviour
         damageText.text = "Damage: " + gameManagerCar.damageLevel + "/3";
 
         // speed
-        int speedMPH = (int)Mathf.Floor(carRig.velocity.magnitude * 2.23694f);
+            // fancy thing on Reddit to get local forward velocity component
+        var localVelocity = transform.InverseTransformDirection(carRig.velocity);
+        float forwardVelocity = localVelocity.z;
+
+            // ceils if negative, floors if positive
+        int speedMPH;
+        
+        if(forwardVelocity > 0 )
+        {
+            speedMPH = (int)Mathf.Floor(forwardVelocity * 2.23694f);
+        }
+        else
+        {
+            speedMPH = (int)Mathf.Ceil(forwardVelocity * 2.23694f);
+        }
+            // display it
         speedText.text = speedMPH + " MPH";
 
         // score

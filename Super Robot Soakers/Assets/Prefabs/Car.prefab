@@ -908,10 +908,10 @@ MonoBehaviour:
   rig: {fileID: 8595979447073442394}
   car: {fileID: 8595979447073442392}
   engineSound: {fileID: 8595979447073442471}
-  acceleration: 2000
-  brakeForce: 1000
+  acceleration: 3000
+  brakeForce: 2000
   maxTurnAngle: 30
-  speedForTurn: 1000
+  speedForTurn: 200
   idlePitch: 1
   basePitch: 1.5
   maxPitch: 3.5
@@ -919,7 +919,7 @@ MonoBehaviour:
   pitchLerper: 5
   maxTilt: 0
   visualCOM: {fileID: 355966996882634934}
-  menuOpen: 1
+  menuOpen: 0
 --- !u!82 &8595979447073442471
 AudioSource:
   m_ObjectHideFlags: 0

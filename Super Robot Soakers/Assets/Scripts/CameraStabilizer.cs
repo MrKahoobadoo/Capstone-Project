@@ -41,7 +41,7 @@ public class CameraStabilizer : MonoBehaviour
     {
         originalRotation = transform.rotation;
         backRotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y + 180, transform.rotation.z);
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKey(KeyCode.Space))
         {
             lookBackHub.transform.rotation = Quaternion.Lerp(lookBackHub.transform.rotation, backRotation, Time.deltaTime * 10);
         }

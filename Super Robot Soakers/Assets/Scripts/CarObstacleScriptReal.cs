@@ -10,6 +10,7 @@ public class CarObstacleScriptReal : MonoBehaviour
     private GameObject car;
 
     private bool isPassed;
+    private bool isHit;
 
     void Start()
     {
@@ -31,8 +32,12 @@ public class CarObstacleScriptReal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            gameManagerCar.ResetScore();
-            gameManagerCar.Damage();
+            if (!isHit)
+            {
+                gameManagerCar.ResetScore();
+                gameManagerCar.Damage();
+                isHit = true;
+            }
         }
     }
 

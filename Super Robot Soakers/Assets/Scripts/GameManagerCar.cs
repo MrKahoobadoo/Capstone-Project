@@ -21,6 +21,8 @@ public class GameManagerCar : MonoBehaviour
     public GameObject CarObstacle;
     public GameObject DeathCube;
     public GameObject repairObject;
+    private bool isDamageCoolDown;
+    public float damageCoolDownLength;
 
     [Header("Important Numbas")]
     public int obstaclesAvoided;
@@ -91,10 +93,23 @@ public class GameManagerCar : MonoBehaviour
 
     public void Damage()
     {
-        if(damageLevel > 0)
+        if(damageLevel > 0 && !isDamageCoolDown)
         {
             damageLevel--;
+            PauseDamage();
         }
+    }
+
+    // damage cooldown
+    void PauseDamage()
+    {
+        isDamageCoolDown = true;
+        Invoke("ResumeDamage", damageCoolDownLength);
+    }
+
+    void ResumeDamage()
+    {
+        isDamageCoolDown = false;
     }
 
     public void Fix()

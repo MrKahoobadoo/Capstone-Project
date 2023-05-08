@@ -93,15 +93,43 @@ public class CarScript : MonoBehaviour
 
     void Brake()
     {
-        //get input
-        if (Input.GetKey(KeyCode.Space))
+        // determine direction of car
+        var localVelocity = transform.InverseTransformDirection(rig.velocity);
+        float forwardVelocity = localVelocity.z;
+        Debug.Log(forwardVelocity);
+        
+        // make W or S the brake button depending on velocity direction of car. S is brake if going forward, W is brake if going backward
+        if (forwardVelocity > 0)
+        {
+            if (Input.GetKey(KeyCode.S))
+            {
+                currentBrakeForce = brakeForce;
+            }
+            else
+            {
+                currentBrakeForce = 0;
+            }
+        } else if (forwardVelocity < 0)
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                currentBrakeForce = brakeForce;
+            }
+            else
+            {
+                currentBrakeForce = 0;
+            }
+        }
+        
+        // old system
+        /*if (Input.GetKey(KeyCode.Space))
         {
             currentBrakeForce = brakeForce;
         }
         else
         {
             currentBrakeForce = 0;
-        }
+        }*/
 
         //apply brake
         frontRight.brakeTorque = currentBrakeForce;

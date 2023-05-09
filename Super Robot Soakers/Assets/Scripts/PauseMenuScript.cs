@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public enum GameLevel
 {
     IKEA_Wave,
-    Car
+    Car,
+    OSU
 }
 
 public class PauseMenuScript : MonoBehaviour
@@ -24,6 +25,9 @@ public class PauseMenuScript : MonoBehaviour
     // Car Game
     public CarScript carScript;
     public AudioSource engineSound;
+
+    // OSU Game
+
 
     private bool isOpen;
 
@@ -68,6 +72,9 @@ public class PauseMenuScript : MonoBehaviour
                             engineSound.Stop();
                         }
                         break;
+
+                    case GameLevel.OSU:
+                        break;
                 }
                 
                 isOpen = true;
@@ -94,6 +101,9 @@ public class PauseMenuScript : MonoBehaviour
                         {
                             engineSound.Play();
                         }
+                        break;
+
+                    case GameLevel.OSU:
                         break;
                 }
             }

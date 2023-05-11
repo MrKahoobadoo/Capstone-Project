@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class OSUGameScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float songTempo;
+    public float frequency;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject targetCircle;
+
+
 }

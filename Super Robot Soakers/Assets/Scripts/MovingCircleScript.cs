@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public int color;
-public GameObject redCircle;
-public GameObject greenCircle;
-public GameObject blueCircle;
-public GameObject yellowCircle;
-
 public class MovingCircleScript : MonoBehaviour
 {
-    
+    [Header("Color Type Stuff")]
+    public int color;
+    public GameObject redCircle;
+    public GameObject greenCircle;
+    public GameObject blueCircle;
+    public GameObject yellowCircle;
+
+    [Header("Movement")]
+    public float travelSpeed;
+
     void Start()
     {
         redCircle.SetActive(false);
@@ -20,21 +23,36 @@ public class MovingCircleScript : MonoBehaviour
 
         switch (color)
         {
+            case 0:
+                redCircle.SetActive(true);
+                transform.position += new Vector3(-360, 0, 0);
+                break;
+
             case 1:
-                redCircle.SetActive(false);
+                greenCircle.SetActive(true);
+                transform.position += new Vector3(-120, 0, 0);
                 break;
 
             case 2:
-                greenCircle.SetActive(false);
+                blueCircle.SetActive(true);
+                transform.position += new Vector3(120, 0, 0);
                 break;
 
             case 3:
-                blueCircle.SetActive(false);
-                break;
-
-            case 4:
-                yellowCircle.SetActive(false);
+                yellowCircle.SetActive(true);
+                transform.position += new Vector3(360, 0, 0);
                 break;
         }
+
+    }
+
+    void Update()
+    {
+        SlideDown();
+    }
+
+    void SlideDown()
+    {
+        transform.position += new Vector3(0, -travelSpeed * Time.deltaTime, 0);
     }
 }

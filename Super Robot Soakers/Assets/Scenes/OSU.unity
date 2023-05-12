@@ -132,6 +132,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 170058842}
+  - component: {fileID: 170058844}
+  - component: {fileID: 170058843}
+  - component: {fileID: 170058845}
   m_Layer: 0
   m_Name: Clicker Spot 4
   m_TagString: Untagged
@@ -161,6 +164,58 @@ RectTransform:
   m_AnchoredPosition: {x: 360, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &170058843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170058841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aea59cadbb12c24f99594b9c1fd992d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 3
+  hitCircle: 0
+  other1: {fileID: 0}
+--- !u!58 &170058844
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170058841}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 100
+--- !u!50 &170058845
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170058841}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &434795093
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,6 +538,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 692408250}
+  - component: {fileID: 692408252}
+  - component: {fileID: 692408251}
+  - component: {fileID: 692408253}
   m_Layer: 0
   m_Name: Clicker Spot 2
   m_TagString: Untagged
@@ -512,6 +570,58 @@ RectTransform:
   m_AnchoredPosition: {x: -120, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &692408251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692408249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aea59cadbb12c24f99594b9c1fd992d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 1
+  hitCircle: 0
+  other1: {fileID: 0}
+--- !u!58 &692408252
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692408249}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 100
+--- !u!50 &692408253
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692408249}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &698580773
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,6 +952,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff697a656159ed14684228c603e46d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  songTempo: 0
+  frequency: 0
+  targetCircle: {fileID: 0}
 --- !u!114 &927013404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,7 +1029,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1166938940}
-  - {fileID: 1331519351}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1029,6 +1141,7 @@ RectTransform:
   m_Children:
   - {fileID: 1942304407}
   - {fileID: 1284556969}
+  - {fileID: 1331519351}
   m_Father: {fileID: 927013407}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1128,9 +1241,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1331519351}
   - component: {fileID: 1331519352}
+  - component: {fileID: 1331519353}
+  - component: {fileID: 1331519354}
   m_Layer: 5
   m_Name: Moving Circle
-  m_TagString: Untagged
+  m_TagString: OSU_Circle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1142,17 +1257,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331519350}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.56823033, y: 0.56823033, z: 0.56823033}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1097617668}
   - {fileID: 1837453156}
   - {fileID: 692239568}
   - {fileID: 800338274}
-  m_Father: {fileID: 927013407}
-  m_RootOrder: 1
+  m_Father: {fileID: 1166938940}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1171,6 +1286,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb157a4a6d20184eac284b92bc1061a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  color: 3
+  redCircle: {fileID: 1097617667}
+  greenCircle: {fileID: 1837453155}
+  blueCircle: {fileID: 692239567}
+  yellowCircle: {fileID: 800338273}
+  travelSpeed: 100
+--- !u!58 &1331519353
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331519350}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 100
+--- !u!50 &1331519354
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331519350}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1439347233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,6 +1557,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1799191416}
+  - component: {fileID: 1799191418}
+  - component: {fileID: 1799191417}
+  - component: {fileID: 1799191419}
   m_Layer: 0
   m_Name: Clicker Spot 3
   m_TagString: Untagged
@@ -1428,6 +1589,58 @@ RectTransform:
   m_AnchoredPosition: {x: 120, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1799191417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799191415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aea59cadbb12c24f99594b9c1fd992d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 2
+  hitCircle: 0
+  other1: {fileID: 0}
+--- !u!58 &1799191418
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799191415}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 100
+--- !u!50 &1799191419
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799191415}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1837453155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,6 +1796,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1985824622}
+  - component: {fileID: 1985824625}
+  - component: {fileID: 1985824624}
+  - component: {fileID: 1985824623}
   m_Layer: 0
   m_Name: Clicker Spot 1
   m_TagString: Untagged
@@ -1612,6 +1828,58 @@ RectTransform:
   m_AnchoredPosition: {x: -360, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1985824623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985824621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aea59cadbb12c24f99594b9c1fd992d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  hitCircle: 0
+  other1: {fileID: 0}
+--- !u!58 &1985824624
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985824621}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 100
+--- !u!50 &1985824625
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985824621}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1987814698
 GameObject:
   m_ObjectHideFlags: 0

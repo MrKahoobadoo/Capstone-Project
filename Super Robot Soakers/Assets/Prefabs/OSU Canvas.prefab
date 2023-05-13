@@ -4763,6 +4763,7 @@ GameObject:
   - component: {fileID: 8458596051384318753}
   - component: {fileID: 8458596051384318754}
   - component: {fileID: 8458596051384318755}
+  - component: {fileID: 2345123098990726879}
   m_Layer: 5
   m_Name: OSU Canvas
   m_TagString: Untagged
@@ -4856,6 +4857,27 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2345123098990726879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8458596051384318756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c263d884fc42f4da2455af598db77b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loseScreen: {fileID: 5698339226837270234}
+  winScreen: {fileID: 7746927292351617980}
+  scoreText: {fileID: 6212854782019244917}
+  multiplierText: {fileID: 13302064211493765}
+  loseScreenOpen: 0
+  winScreenOpen: 0
+  scoreText2: {fileID: 6964135965279619844}
+  greatestStreakText: {fileID: 8070017497583809487}
+  stopwatchScript: {fileID: 0}
 --- !u!1 &8458596052833082357
 GameObject:
   m_ObjectHideFlags: 0

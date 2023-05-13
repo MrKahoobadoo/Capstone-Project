@@ -12,14 +12,24 @@ public class MovingCircleScript : MonoBehaviour
     public GameObject yellowCircle;
 
     [Header("Movement")]
-    public float travelSpeed;
+    private float travelSpeed;
+
+    // references
+    private GameObject gameCanvas;
 
     void Start()
     {
+        // gets speed from OSUGameScript
+        gameCanvas = GameObject.Find("Game Canvas");
+        travelSpeed = gameCanvas.GetComponent<OSUGameScript>().travelSpeed;
+
+        // randomly chooses color and subsequently position
         redCircle.SetActive(false);
         greenCircle.SetActive(false);
         blueCircle.SetActive(false);
         yellowCircle.SetActive(false);
+
+        color = (int)Random.Range(0, 4);
 
         switch (color)
         {

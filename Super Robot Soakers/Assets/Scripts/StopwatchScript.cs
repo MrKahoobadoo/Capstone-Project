@@ -17,7 +17,6 @@ public class StopwatchScript : MonoBehaviour
         isRunning = true;
     }
 
-    
     void Update()
     {
         TimeChanger();

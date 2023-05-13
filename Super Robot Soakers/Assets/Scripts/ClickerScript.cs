@@ -26,7 +26,7 @@ public class ClickerScript : MonoBehaviour
         switch (color)
         {
             case ClickerColor.red:
-                if (Input.GetKey(KeyCode.A))
+                if (Input.GetKeyDown(KeyCode.A))
                 {
                     Debug.Log("A");
                     if (hitCircle)
@@ -44,7 +44,7 @@ public class ClickerScript : MonoBehaviour
                 break;
 
             case ClickerColor.green:
-                if (Input.GetKey(KeyCode.S))
+                if (Input.GetKeyDown(KeyCode.S))
                 {
                     Debug.Log("S");
                     if (hitCircle)
@@ -62,7 +62,7 @@ public class ClickerScript : MonoBehaviour
                 break;
             
             case ClickerColor.blue:
-                if (Input.GetKey(KeyCode.D))
+                if (Input.GetKeyDown(KeyCode.D))
                 {
                     Debug.Log("D");
                     if (hitCircle)
@@ -80,7 +80,7 @@ public class ClickerScript : MonoBehaviour
                 break;
 
             case ClickerColor.yellow:
-                if (Input.GetKey(KeyCode.F))
+                if (Input.GetKeyDown(KeyCode.F))
                 {
                     Debug.Log("F");
                     if (hitCircle)

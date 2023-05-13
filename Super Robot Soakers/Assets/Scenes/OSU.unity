@@ -179,6 +179,7 @@ MonoBehaviour:
   color: 3
   hitCircle: 0
   other1: {fileID: 0}
+  TriggerList: []
 --- !u!58 &170058844
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -512,6 +513,7 @@ MonoBehaviour:
   color: 1
   hitCircle: 0
   other1: {fileID: 0}
+  TriggerList: []
 --- !u!58 &692408252
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -807,9 +809,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songTempo: 154
-  frequency: 1
+  frequency: 2
   travelSpeed: 1000
-  startOffset: 2
+  startOffset: 1
   preLayers: 4
   movingCircle: {fileID: 1971294454090555864, guid: 27b3e0f70289e0944967805f42a96f4e, type: 3}
   canvasVisualElements: {fileID: 1166938939}
@@ -1291,6 +1293,7 @@ MonoBehaviour:
   color: 2
   hitCircle: 0
   other1: {fileID: 0}
+  TriggerList: []
 --- !u!58 &1799191418
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1457,6 +1460,7 @@ MonoBehaviour:
   color: 0
   hitCircle: 0
   other1: {fileID: 0}
+  TriggerList: []
 --- !u!58 &1985824624
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -60,7 +60,6 @@ MonoBehaviour:
   greenCircle: {fileID: 1971294454582866381}
   blueCircle: {fileID: 1971294455736304225}
   yellowCircle: {fileID: 1971294455691120591}
-  travelSpeed: 100
 --- !u!58 &1971294454090555863
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -85,7 +84,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971294454090555864}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0

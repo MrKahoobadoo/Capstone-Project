@@ -17,10 +17,13 @@ public class ClickerScript : MonoBehaviour
     public GameObject other1;
     public List<Collider2D> TriggerList = new List<Collider2D>();
 
+    public AudioSource audioSource;
+
+    public bool autoClicking;
+
     void Update()
     {
         OnKeyClick();
-        Debug.Log(TriggerList.Count);
     }
 
     void OnKeyClick()
@@ -103,29 +106,19 @@ public class ClickerScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("OSU_Circle"))
-        {
-            if (!TriggerList.Contains(other))
-            {
-                // add the object to the list if not already there
-                TriggerList.Add(other);
-            }
-        }
-
-        Debug.Log("Entered");
+        TriggerList.Add(other);
+        
+        /*Destroy(TriggerList[0]);
+        audioSource.Play();
+        Debug.Log("Hit");*/
+        //UNCOMMENT AND MOVE COLLIDERS DOWN 200 UNITS TO ENABLED AUTO CLICKING FOR TIMING FIXES
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("OSU_Circle"))
-        {
-            if (TriggerList.Contains(other))
-            {
-                // remove it from the list if its in the list
-                TriggerList.Remove(other);
-                Destroy(other.gameObject);
-            }
-        }
-        Debug.Log("Exited");
+        TriggerList.Remove(other);
+        Destroy(other.gameObject);
+        //OSUGameScript.FailedClick();
     }
+
 }

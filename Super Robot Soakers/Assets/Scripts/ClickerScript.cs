@@ -67,9 +67,9 @@ public class ClickerScript : MonoBehaviour
                 break;
 
             case ClickerColor.blue:
-                if (Input.GetKeyDown(KeyCode.D))
+                if (Input.GetKeyDown(KeyCode.Semicolon))
                 {
-                    Debug.Log("D");
+                    Debug.Log(";");
                     if (TriggerList.Count > 0)
                     {
                         float distance = Vector3.Distance(transform.position, TriggerList[0].transform.position);
@@ -85,9 +85,9 @@ public class ClickerScript : MonoBehaviour
                 break;
 
             case ClickerColor.yellow:
-                if (Input.GetKeyDown(KeyCode.F))
+                if (Input.GetKeyDown(KeyCode.Quote))
                 {
-                    Debug.Log("F");
+                    Debug.Log("'");
                     if (TriggerList.Count > 0)
                     {
                         float distance = Vector3.Distance(transform.position, TriggerList[0].transform.position);

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -778,7 +778,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &927013402
 GameObject:
@@ -814,10 +814,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songTempo: 154
   frequency: 1
-  travelSpeed: 400
+  travelSpeed: 800
   startOffset: 2
   preLayers: 5
-  movingCircle: {fileID: 1971294454090555864, guid: 27b3e0f70289e0944967805f42a96f4e, type: 3}
+  multiChance: 0
+  score: 0
+  multiplier: 0
+  redCircle: {fileID: 5094893333810849194, guid: 31cb141b01aa1284098da4d4e7803e28, type: 3}
+  greenCircle: {fileID: 8393928562231763128, guid: 2410a1c7df807714b8baf4805c95dbe9, type: 3}
+  blueCircle: {fileID: 1934981027884134738, guid: 2dc130e6a349c5e48b05628160d6b3e0, type: 3}
+  yellowCircle: {fileID: 2637142597579521834, guid: 33a07e3e0a0f397489607825735b1651, type: 3}
   canvasVisualElements: {fileID: 1166938939}
   audioSource: {fileID: 2131166302}
 --- !u!114 &927013404
@@ -895,7 +901,7 @@ RectTransform:
   m_Children:
   - {fileID: 1166938940}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2059,6 +2065,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -27.104652
       objectReference: {fileID: 0}
+    - target: {fileID: 7527850274961838279, guid: 85414aa206483b945bf69d87aac912bc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8100970661497461542, guid: 85414aa206483b945bf69d87aac912bc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2093,7 +2103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8458596051384318752, guid: 85414aa206483b945bf69d87aac912bc, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8458596051384318752, guid: 85414aa206483b945bf69d87aac912bc, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2166,6 +2176,10 @@ PrefabInstance:
     - target: {fileID: 8458596051384318752, guid: 85414aa206483b945bf69d87aac912bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458596051384318753, guid: 85414aa206483b945bf69d87aac912bc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8458596051384318756, guid: 85414aa206483b945bf69d87aac912bc, type: 3}
       propertyPath: m_Name

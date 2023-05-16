@@ -26,9 +26,17 @@ public class OSUGameScript : MonoBehaviour
     public GameObject blueCircle;
     public GameObject yellowCircle;
 
+    private bool redInst;
+    private bool greenInst;
+    private bool blueInst;
+    private bool yellowInst;
+
     [Header("References")]
     public GameObject canvasVisualElements;
     public AudioSource audioSource;
+
+    [Header("other")]
+    public bool musicPlaying;
 
     void Start()
     {
@@ -41,15 +49,108 @@ public class OSUGameScript : MonoBehaviour
 
         preDelay = startingDistance / travelSpeed; // determines amount of time in total that the song must wait to play in order to allow circles to reach clicker rack at exact time
 
-        InvokeRepeating("SpawnCircle", startOffset, secondsBetweenBeat); // repeatedly spawns circles with these parameters
+        InvokeRepeating("CircleSpawner", startOffset, secondsBetweenBeat); // repeatedly spawns circles with these parameters
         Invoke("StartSong", startOffset + preDelay); // starts song after predelay
 
     }
 
-    // functions to be used in the Invoke statements
-    void SpawnCircle()
+    // circle spawning functions
+    void SpawnRed()
     {
-        
+        Instantiate(redCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
+        redInst = true;
+    }
+    void SpawnGreen()
+    {
+        Instantiate(greenCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
+        greenInst = true;
+    }
+    void SpawnBlue()
+    {
+        Instantiate(blueCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
+        blueInst = true;
+    }
+    void SpawnYellow()
+    {
+        Instantiate(yellowCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
+        yellowInst = true;
+    }
+
+    void CircleSpawner()
+    {
+        // determines circle count with percentage chance
+        int circleChance = Random.Range(0, 100);
+        int circleCount;
+
+        if (circleChance < 70)
+        {
+            circleCount = 1;
+        }
+        else if (circleChance < 85)
+        {
+            circleCount = 2;
+        }
+        else if (circleChance < 95)
+        {
+            circleCount = 3;
+        }
+        else
+        {
+            circleCount = 4;
+        }
+
+        // loops spawning and checking functions circleCount times
+        for (int i = 0; i < circleCount; i++)
+        {
+            bool isFinished = false;
+
+            while (!isFinished)
+            {
+                int whichCircle = Random.Range(0, 4);
+
+                switch (whichCircle)
+                {
+                    case 0:
+                        if (!redInst)
+                        {
+                            SpawnRed();
+                            isFinished = true;
+                        }
+                        break;
+                    case 1:
+                        if (!greenInst)
+                        {
+                            SpawnGreen();
+                            isFinished = true;
+                        }
+                        break;
+                    case 2:
+                        if (!blueInst)
+                        {
+                            SpawnBlue();
+                            isFinished = true;
+                        }
+                        break;
+                    case 3:
+                        if (!yellowInst)
+                        {
+                            SpawnYellow();
+                            isFinished = true;
+                        }
+                        break;
+                }
+            }
+        }
+
+        redInst = false;
+        greenInst = false;
+        blueInst = false;
+        yellowInst = false;
+    }
+
+    /*// functions to be used in the Invoke statements
+    void CircleSpawner()
+    {
         int colorChoice = Random.Range(0, 4);
 
         switch (colorChoice)
@@ -67,112 +168,12 @@ public class OSUGameScript : MonoBehaviour
                 Instantiate(yellowCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
                 break;
         }
-
-        int chancer = Random.Range(0, 100);
-
-        switch (chancer)
-        {
-            case < 60:
-                break;
-
-            case < 80:
-                bool isDifferent = false;
-                int subColorChoice = 0;
-
-                while (isDifferent)
-                {
-                    subColorChoice = Random.Range(0, 4);
-                    if (subColorChoice != colorChoice)
-                    {
-                        isDifferent = true;
-                    }
-                }
-
-                switch (subColorChoice)
-                {
-                    case 0:
-                        Instantiate(redCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                        break;
-                    case 1:
-                        Instantiate(greenCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                        break;
-                    case 2:
-                        Instantiate(blueCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                        break;
-                    case 3:
-                        Instantiate(yellowCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                        break;
-                }
-                break;
-
-            case < 95:
-                int isDifferentEnough = 0;
-                int subColorChoice1 = 0;
-                int subColorChoice2 = 0;
-
-                while (isDifferentEnough < 1)
-                {
-                    subColorChoice1 = Random.Range(0, 4);
-                    if (subColorChoice1 != colorChoice)
-                    {
-                        isDifferentEnough++;
-                    }
-                }
-
-                while (isDifferentEnough < 1)
-                {
-                    subColorChoice2 = Random.Range(0, 4);
-                    if (subColorChoice2 != colorChoice && subColorChoice2 != subColorChoice1)
-                    {
-                        isDifferentEnough++;
-                    }
-                }
-
-                switch (subColorChoice1)
-                {
-                    case 0:
-                        Instantiate(redCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                        break;
-                    case 1:
-                        Instantiate(greenCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                        break;
-                    case 2:
-                        Instantiate(blueCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                        break;
-                    case 3:
-                        Instantiate(yellowCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                        break;
-                }
-
-                switch (subColorChoice2)
-                {
-                    case 0:
-                        Instantiate(redCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                        break;
-                    case 1:
-                        Instantiate(greenCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                        break;
-                    case 2:
-                        Instantiate(blueCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                        break;
-                    case 3:
-                        Instantiate(yellowCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                        break;
-                }
-                break;
-
-            case < 100:
-                Instantiate(redCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                Instantiate(greenCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                Instantiate(blueCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                Instantiate(yellowCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
-                break;
-        }
-    }
+    }*/
 
     void StartSong()
     {
         audioSource.Play();
+        musicPlaying = true;
     }
     // =============================================
 

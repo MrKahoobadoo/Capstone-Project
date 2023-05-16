@@ -27,6 +27,8 @@ public class PauseMenuScript : MonoBehaviour
     public AudioSource engineSound;
 
     // OSU Game
+    public OSUGameScript osuGameScript;
+    public AudioSource musicPlayer;
 
 
     private bool isOpen;
@@ -74,6 +76,10 @@ public class PauseMenuScript : MonoBehaviour
                         break;
 
                     case GameLevel.OSU:
+                        if(osuGameScript.musicPlaying == true)
+                        {
+                            musicPlayer.Pause();
+                        }
                         break;
                 }
                 
@@ -104,6 +110,10 @@ public class PauseMenuScript : MonoBehaviour
                         break;
 
                     case GameLevel.OSU:
+                        if (osuGameScript.musicPlaying == true)
+                        {
+                            musicPlayer.Play();
+                        }
                         break;
                 }
             }

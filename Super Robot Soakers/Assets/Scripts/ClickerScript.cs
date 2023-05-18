@@ -19,7 +19,10 @@ public class ClickerScript : MonoBehaviour
 
     public AudioSource audioSource;
 
+    public OSUGameScript OSUGameScript;
+
     public bool autoClicking;
+
 
     void Update()
     {
@@ -39,11 +42,11 @@ public class ClickerScript : MonoBehaviour
                         float distance = Vector3.Distance(transform.position, TriggerList[0].transform.position);
                         Debug.Log(distance);
                         Destroy(TriggerList[0].gameObject);
-                        //OSUGameScript.SuccessfulClick(distance);
+                        OSUGameScript.Hit(distance);
                     }
                     else
                     {
-                        //OSUGameScript.FailedClick();
+                        OSUGameScript.Miss();
                     }
                 }
                 break;
@@ -57,11 +60,11 @@ public class ClickerScript : MonoBehaviour
                         float distance = Vector3.Distance(transform.position, TriggerList[0].transform.position);
                         Debug.Log(distance);
                         Destroy(TriggerList[0].gameObject);
-                        //OSUGameScript.SuccessfulClick(distance);
+                        OSUGameScript.Hit(distance);
                     }
                     else
                     {
-                        //OSUGameScript.FailedClick();
+                        OSUGameScript.Miss();
                     }
                 }
                 break;
@@ -75,11 +78,11 @@ public class ClickerScript : MonoBehaviour
                         float distance = Vector3.Distance(transform.position, TriggerList[0].transform.position);
                         Debug.Log(distance);
                         Destroy(TriggerList[0].gameObject);
-                        //OSUGameScript.SuccessfulClick(distance);
+                        OSUGameScript.Hit(distance);
                     }
                     else
                     {
-                        //OSUGameScript.FailedClick();
+                        OSUGameScript.Miss();
                     }
                 }
                 break;
@@ -93,11 +96,11 @@ public class ClickerScript : MonoBehaviour
                         float distance = Vector3.Distance(transform.position, TriggerList[0].transform.position);
                         Debug.Log(distance);
                         Destroy(TriggerList[0].gameObject);
-                        //OSUGameScript.SuccessfulClick(distance);
+                        OSUGameScript.Hit(distance);
                     }
                     else
                     {
-                        //OSUGameScript.FailedClick();
+                        OSUGameScript.Miss();
                     }
                 }
                 break;
@@ -118,7 +121,7 @@ public class ClickerScript : MonoBehaviour
     {
         TriggerList.Remove(other);
         Destroy(other.gameObject);
-        //OSUGameScript.FailedClick();
+        OSUGameScript.Miss();
     }
 
 }

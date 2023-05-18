@@ -17,8 +17,16 @@ public class OSUGameScript : MonoBehaviour
     public int multiChance;
 
     [Header("Scoring")]
-    public int score;
+    // basic score management
+    public float score;
+    public float streak;
     public float multiplier;
+    public float multiplierIncrement;
+
+    // percentage of circles hit
+    public int circlesHit;
+    public int circlesPassed;
+    public float accuracy;
 
     [Header("Circles")]
     public GameObject redCircle;
@@ -37,6 +45,8 @@ public class OSUGameScript : MonoBehaviour
 
     [Header("other")]
     public bool musicPlaying;
+    public float songLength;
+    public bool menuOpen;
 
     void Start()
     {
@@ -54,7 +64,7 @@ public class OSUGameScript : MonoBehaviour
 
     }
 
-    // circle spawning functions
+    // circle spawning and musicplaying functions
     void SpawnRed()
     {
         Instantiate(redCircle, canvasVisualElements.transform.position + new Vector3(0, startingHeight - 400, 0), Quaternion.identity, canvasVisualElements.transform);
@@ -177,8 +187,44 @@ public class OSUGameScript : MonoBehaviour
     }
     // =============================================
 
-    public void SuccessfulClick(float distance)
+    public void Hit(float distance)
     {
+        // score
+        float scoreToAdd = (200 - distance) / 200;
+        score += scoreToAdd * multiplier;
+        multiplier += multiplierIncrement;
 
+        // accuracy
+        streak++;
+        circlesHit++;
+        circlesPassed++;
+        accuracy = circlesHit / circlesPassed;
+    }
+
+    public void Miss()
+    {
+        // score
+        multiplier = 0;
+
+        // accuracy
+        streak = 0;
+        circlesPassed++;
+        accuracy = circlesHit / circlesPassed;
+    }
+
+    void Lose()
+    {
+        if (accuracy < 0.5)
+        {
+
+        }
+    }
+
+    void Finish()
+    {
+        if (!audioSource.isPlaying && !menuOpen)
+        {
+
+        }
     }
 }

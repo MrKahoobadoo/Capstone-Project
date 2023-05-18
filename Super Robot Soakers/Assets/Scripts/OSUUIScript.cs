@@ -11,9 +11,13 @@ public class OSUUIScript : MonoBehaviour
     public GameObject loseScreen;
     public GameObject winScreen;
 
+    public OSUGameScript osuGameScript;
+
     [Header("Normal Screen")]
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI multiplierText;
+    public TextMeshProUGUI accuracyText;
+    public TextMeshProUGUI streakText;
 
     [Header("Lose Screen")]
     public bool loseScreenOpen;
@@ -21,8 +25,8 @@ public class OSUUIScript : MonoBehaviour
     [Header("Win Screen")]
     public bool winScreenOpen;
     public TextMeshProUGUI scoreText2;
+    public TextMeshProUGUI accuracyText2;
     public TextMeshProUGUI greatestStreakText;
-    public StopwatchScript stopwatchScript;
 
     void Start()
     {
@@ -44,7 +48,10 @@ public class OSUUIScript : MonoBehaviour
     // update the normal screen stuff
     void UpdateNormalScreen()
     {
-        
+        scoreText.text = "" + osuGameScript.score;
+        multiplierText.text = "" + osuGameScript.multiplier + "x";
+        accuracyText.text = "" + osuGameScript.accuracy + "%";
+        streakText.text = "" + osuGameScript.streak;
     }
 
     // Manage the lose screen stuff
@@ -56,7 +63,6 @@ public class OSUUIScript : MonoBehaviour
             loseScreen.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            stopwatchScript.StopStopwatch();
             StopTime();
         }
     }
@@ -76,7 +82,6 @@ public class OSUUIScript : MonoBehaviour
             winScreen.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            stopwatchScript.StopStopwatch();
             StopTime();
         }
 

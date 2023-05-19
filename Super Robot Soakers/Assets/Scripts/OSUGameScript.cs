@@ -58,6 +58,8 @@ public class OSUGameScript : MonoBehaviour
 
     void Start()
     {
+        
+        Time.timeScale = 1f;
         // figures out time interval for circle instantiation
         secondsBetweenBeat = (60f / songTempo) / frequency; // determines exact time offset between spawning circles by taking the bpm and frequency (circles per beat)
         startingDistance = secondsBetweenBeat * travelSpeed; // determines distance the circle must travel given the time it needs to take and the speed it is travelling at

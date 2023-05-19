@@ -23,10 +23,12 @@ public class ClickerScript : MonoBehaviour
 
     public bool autoClicking;
 
-
     void Update()
     {
-        OnKeyClick();
+        if (!OSUGameScript.gameOver)
+        {
+            OnKeyClick();
+        }
     }
 
     void OnKeyClick()
@@ -36,11 +38,11 @@ public class ClickerScript : MonoBehaviour
             case ClickerColor.red:
                 if (Input.GetKeyDown(KeyCode.A))
                 {
-                    Debug.Log("A");
+                    OSUGameScript.clickCount++;
+                    audioSource.Play();
                     if (TriggerList.Count > 0)
                     {
                         float distance = Vector3.Distance(transform.position, TriggerList[0].transform.position);
-                        Debug.Log(distance);
                         Destroy(TriggerList[0].gameObject);
                         OSUGameScript.Hit(distance);
                     }
@@ -54,11 +56,11 @@ public class ClickerScript : MonoBehaviour
             case ClickerColor.green:
                 if (Input.GetKeyDown(KeyCode.S))
                 {
-                    Debug.Log("S");
+                    OSUGameScript.clickCount++;
+                    audioSource.Play();
                     if (TriggerList.Count > 0)
                     {
                         float distance = Vector3.Distance(transform.position, TriggerList[0].transform.position);
-                        Debug.Log(distance);
                         Destroy(TriggerList[0].gameObject);
                         OSUGameScript.Hit(distance);
                     }
@@ -72,11 +74,11 @@ public class ClickerScript : MonoBehaviour
             case ClickerColor.blue:
                 if (Input.GetKeyDown(KeyCode.Semicolon))
                 {
-                    Debug.Log(";");
+                    OSUGameScript.clickCount++;
+                    audioSource.Play();
                     if (TriggerList.Count > 0)
                     {
                         float distance = Vector3.Distance(transform.position, TriggerList[0].transform.position);
-                        Debug.Log(distance);
                         Destroy(TriggerList[0].gameObject);
                         OSUGameScript.Hit(distance);
                     }
@@ -90,11 +92,11 @@ public class ClickerScript : MonoBehaviour
             case ClickerColor.yellow:
                 if (Input.GetKeyDown(KeyCode.Quote))
                 {
-                    Debug.Log("'");
+                    OSUGameScript.clickCount++;
+                    audioSource.Play();
                     if (TriggerList.Count > 0)
                     {
                         float distance = Vector3.Distance(transform.position, TriggerList[0].transform.position);
-                        Debug.Log(distance);
                         Destroy(TriggerList[0].gameObject);
                         OSUGameScript.Hit(distance);
                     }
@@ -110,7 +112,7 @@ public class ClickerScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         TriggerList.Add(other);
-        
+
         /*Destroy(TriggerList[0]);
         audioSource.Play();
         Debug.Log("Hit");*/
@@ -119,9 +121,14 @@ public class ClickerScript : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
+        float distance = Vector3.Distance(transform.position, other.transform.position);
+        if(distance > 200)
+        {
+            OSUGameScript.Miss();
+        }
+        //OSUGameScript.circlesPassed++;
         TriggerList.Remove(other);
         Destroy(other.gameObject);
-        OSUGameScript.Miss();
     }
 
 }

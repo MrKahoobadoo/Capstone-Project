@@ -14,7 +14,6 @@ public class OSUGameScript : MonoBehaviour
     public float startOffset; // time before teh game starts
     public float preLayers; // number of circles that should spawn in addition to the current one
     private float preDelay; // uyeah
-    public int multiChance;
 
     [Header("Scoring")]
     // basic score management
@@ -24,8 +23,10 @@ public class OSUGameScript : MonoBehaviour
     public float multiplierIncrement;
 
     // percentage of circles hit
-    public int circlesHit;
-    public int circlesPassed;
+    /*public float circlesHit;
+    public float circlesPassed;*/
+    public float clickCount;
+    public float precision;
     public float accuracy;
 
     [Header("Circles")]
@@ -43,10 +44,17 @@ public class OSUGameScript : MonoBehaviour
     public GameObject canvasVisualElements;
     public AudioSource audioSource;
 
+    [Header("Timer and such")]
+    public float elapsedTime;
+    public float songLength;
+
     [Header("other")]
     public bool musicPlaying;
-    public float songLength;
     public bool menuOpen;
+
+    public bool gameOver;
+    public bool gameWon;
+    public bool gameLost;
 
     void Start()
     {
@@ -59,9 +67,23 @@ public class OSUGameScript : MonoBehaviour
 
         preDelay = startingDistance / travelSpeed; // determines amount of time in total that the song must wait to play in order to allow circles to reach clicker rack at exact time
 
+        // setting bools to false
+        musicPlaying = false;
+        gameWon = false;
+        gameLost = false;
+
         InvokeRepeating("CircleSpawner", startOffset, secondsBetweenBeat); // repeatedly spawns circles with these parameters
         Invoke("StartSong", startOffset + preDelay); // starts song after predelay
 
+        // some other stuff
+        multiplier = 1;
+
+    }
+
+    void Update()
+    {
+        AccuracyUpdater();
+        Finish();
     }
 
     // circle spawning and musicplaying functions
@@ -88,74 +110,78 @@ public class OSUGameScript : MonoBehaviour
 
     void CircleSpawner()
     {
-        // determines circle count with percentage chance
-        int circleChance = Random.Range(0, 100);
-        int circleCount;
+        if (!gameOver)
+        {
+            // determines circle count with percentage chance
 
-        if (circleChance < 70)
-        {
-            circleCount = 1;
-        }
-        else if (circleChance < 85)
-        {
-            circleCount = 2;
-        }
-        else if (circleChance < 95)
-        {
-            circleCount = 3;
-        }
-        else
-        {
-            circleCount = 4;
-        }
+            int circleChance = Random.Range(0, 100);
+            int circleCount;
 
-        // loops spawning and checking functions circleCount times
-        for (int i = 0; i < circleCount; i++)
-        {
-            bool isFinished = false;
-
-            while (!isFinished)
+            if (circleChance < 70)
             {
-                int whichCircle = Random.Range(0, 4);
+                circleCount = 1;
+            }
+            else if (circleChance < 85)
+            {
+                circleCount = 2;
+            }
+            else if (circleChance < 95)
+            {
+                circleCount = 3;
+            }
+            else
+            {
+                circleCount = 4;
+            }
 
-                switch (whichCircle)
+            // loops spawning and checking functions circleCount times
+            for (int i = 0; i < circleCount; i++)
+            {
+                bool isFinished = false;
+
+                while (!isFinished)
                 {
-                    case 0:
-                        if (!redInst)
-                        {
-                            SpawnRed();
-                            isFinished = true;
-                        }
-                        break;
-                    case 1:
-                        if (!greenInst)
-                        {
-                            SpawnGreen();
-                            isFinished = true;
-                        }
-                        break;
-                    case 2:
-                        if (!blueInst)
-                        {
-                            SpawnBlue();
-                            isFinished = true;
-                        }
-                        break;
-                    case 3:
-                        if (!yellowInst)
-                        {
-                            SpawnYellow();
-                            isFinished = true;
-                        }
-                        break;
+                    int whichCircle = Random.Range(0, 4);
+
+                    switch (whichCircle)
+                    {
+                        case 0:
+                            if (!redInst)
+                            {
+                                SpawnRed();
+                                isFinished = true;
+                            }
+                            break;
+                        case 1:
+                            if (!greenInst)
+                            {
+                                SpawnGreen();
+                                isFinished = true;
+                            }
+                            break;
+                        case 2:
+                            if (!blueInst)
+                            {
+                                SpawnBlue();
+                                isFinished = true;
+                            }
+                            break;
+                        case 3:
+                            if (!yellowInst)
+                            {
+                                SpawnYellow();
+                                isFinished = true;
+                            }
+                            break;
+                    }
                 }
             }
-        }
 
-        redInst = false;
-        greenInst = false;
-        blueInst = false;
-        yellowInst = false;
+            redInst = false;
+            greenInst = false;
+            blueInst = false;
+            yellowInst = false;
+        }
     }
 
     /*// functions to be used in the Invoke statements
@@ -190,41 +216,64 @@ public class OSUGameScript : MonoBehaviour
     public void Hit(float distance)
     {
         // score
-        float scoreToAdd = (200 - distance) / 200;
+        float scoreToAdd = 100 * ((200 - distance) / 200);
         score += scoreToAdd * multiplier;
         multiplier += multiplierIncrement;
 
         // accuracy
         streak++;
-        circlesHit++;
-        circlesPassed++;
-        accuracy = circlesHit / circlesPassed;
+        precision += ((200 - distance) / 200);
     }
 
     public void Miss()
     {
         // score
-        multiplier = 0;
+        multiplier = 1;
 
         // accuracy
         streak = 0;
-        circlesPassed++;
-        accuracy = circlesHit / circlesPassed;
+        clickCount++;
     }
 
-    void Lose()
+    void AccuracyUpdater()
+    {
+        if(clickCount == 0)
+        {
+            accuracy = 0f;
+        }
+        else
+        {
+            accuracy = precision / clickCount;
+        }
+    }
+
+    /*void TimeChanger()
+    {
+        if (!menuOpen && audioSource.isPlaying)
+        {
+            elapsedTime += Time.deltaTime;
+        }
+    }*/
+
+    void LoseOrWin()
     {
         if (accuracy < 0.5)
         {
-
+            gameLost = true;
+        } 
+        else
+        {
+            gameWon = true;
         }
     }
 
     void Finish()
     {
-        if (!audioSource.isPlaying && !menuOpen)
+        if (!audioSource.isPlaying && !menuOpen && musicPlaying)
         {
-
+            gameOver = true;
+            LoseOrWin();
         }
+
     }
 }

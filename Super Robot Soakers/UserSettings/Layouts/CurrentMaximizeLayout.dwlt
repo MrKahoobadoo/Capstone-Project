@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 11787
+  controlID: 3110
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,8 +139,8 @@ MonoBehaviour:
     y: 0
     width: 262.4
     height: 730.8
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 4}
   m_Panes:
   - {fileID: 4}
@@ -179,7 +179,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 0cfbffff
+      m_ExpandedIDs: d49effff0cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 11788
+  controlID: 3111
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -513,9 +513,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -6.5078692, y: -0.4934243, z: 28.401064}
+    m_Target: {x: -9.132117, y: -1.4515498, z: 40.956005}
     speed: 2
-    m_Value: {x: -6.5078692, y: -0.4934243, z: 28.401064}
+    m_Value: {x: -9.132117, y: -1.4515498, z: 40.956005}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -562,9 +562,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.09362777, y: -0.05352727, z: 0.0053519187, w: -0.9941605}
+    m_Target: {x: -0.17770182, y: 0.68098724, z: -0.17535107, w: -0.68844277}
     speed: 2
-    m_Value: {x: -0.09362707, y: -0.053526867, z: 0.0053518787, w: -0.994153}
+    m_Value: {x: -0.17769979, y: 0.68097943, z: -0.17534906, w: -0.6884349}
   m_Size:
     m_Target: 12.124355
     speed: 2
@@ -617,7 +617,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 11745
+  controlID: 3079
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -685,23 +685,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Pathways
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 62
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Pathways
   m_LastFoldersGridSize: 62
   m_LastProjectPath: C:\Users\mmcweeney\Desktop\GitHub\Capstone-Project\Super Robot
     Soakers
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 212.6}
-    m_SelectedIDs: 9c5b0000
-    m_LastClickedID: 23452
-    m_ExpandedIDs: 00000000265b0000285b00007c5b000000ca9a3b
+    scrollPos: {x: 0, y: 116.600006}
+    m_SelectedIDs: e65a0000
+    m_LastClickedID: 23270
+    m_ExpandedIDs: 00000000d85a0000da5a0000e45a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -729,7 +729,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000265b0000285b000000ca9a3b
+    m_ExpandedIDs: 00000000d85a0000da5a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -754,9 +754,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 0051ffff
-    m_LastClickedInstanceID: -44800
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300003e78000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -781,7 +781,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 133.8}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 62
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 50
@@ -901,7 +901,7 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -44800
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

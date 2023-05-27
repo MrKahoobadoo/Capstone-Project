@@ -9,6 +9,8 @@ public class PathwaySpanwer : MonoBehaviour
     List<GameObject> segments = new List<GameObject>();
     public int pathLength;
     private GameObject newSegment;
+    private float turnAmount;
+    private string turnAmounts;
 
     [Header("References")]
     public GameObject straightHallwayPrefab;
@@ -21,6 +23,7 @@ public class PathwaySpanwer : MonoBehaviour
         SetPath();
         LogListValues(path);
         InstantiatePath();
+        turnAmount = 0;
     }
 
     void Update()
@@ -31,6 +34,7 @@ public class PathwaySpanwer : MonoBehaviour
     // functions
     void SetPath()
     {
+        // creates initial path
         for (int i = 0; i < pathLength; i++)
         {
             float rand = Random.Range(0f, 100f);
@@ -51,6 +55,35 @@ public class PathwaySpanwer : MonoBehaviour
 
             path.Add(direction);
         }
+
+        /*// checks path for possible overlapping situations
+        for (int i = 0; i < pathLength; i++)
+        {
+            if (path[i] == 'R')
+            {
+                turnAmount++;
+                
+                if (turnAmount < 2)
+                {
+                    path[i] = 'S';
+                    turnAmount = 0;
+                }
+            } 
+            else if (path[i] == 'L')
+            {
+                turnAmount--;
+                
+                if (turnAmount < -2)
+                {
+                    path[i] = 'S';
+                    turnAmount++;
+                }
+            }
+
+            turnAmounts += turnAmount;
+        }
+
+        Debug.Log(turnAmounts);*/
     }
 
     void InstantiatePath()
@@ -64,17 +97,28 @@ public class PathwaySpanwer : MonoBehaviour
         {
             if (path[i] == 'S')
             {
-                newSegment = (GameObject)Instantiate(straightHallwayPrefab, segments[segments.Count - 1].transform.position + new Vector3(0, 0, 46), Quaternion.identity, segments[segments.Count - 1].transform);
+                // instantiates object and sets it to newSegment so it can be added to the list
+                newSegment = (GameObject)Instantiate(straightHallwayPrefab, segments[segments.Count - 1].transform);
+                
+                // positions the object, now a child of the previous path, to the correct location
+                newSegment.transform.localPosition = new Vector3(0, 0, 46);
+                newSegment.transform.localRotation = Quaternion.Euler(0, 0, 0);
+                
+                // adds segment to the list
                 segments.Add(newSegment);
             }
             else if (path[i] == 'R')
             {
-                newSegment = (GameObject)Instantiate(rightHallwayPrefab, segments[segments.Count - 1].transform.position + new Vector3(3, 0, 43), Quaternion.Euler(0, 90, 0), segments[segments.Count - 1].transform);
+                newSegment = (GameObject)Instantiate(rightHallwayPrefab, segments[segments.Count - 1].transform);
+                newSegment.transform.localPosition = new Vector3(3, 0, 43);
+                newSegment.transform.localRotation = Quaternion.Euler(0, 90, 0);
                 segments.Add(newSegment);
             } 
             else
             {
-                newSegment = (GameObject)Instantiate(leftHallwayPrefab, segments[segments.Count - 1].transform.position + new Vector3(-3, 0, 43), Quaternion.Euler(0, -90, 0), segments[segments.Count - 1].transform);
+                newSegment = (GameObject)Instantiate(leftHallwayPrefab, segments[segments.Count - 1].transform);
+                newSegment.transform.localPosition = new Vector3(-3, 0, 43);
+                newSegment.transform.localRotation = Quaternion.Euler(0, -90, 0);
                 segments.Add(newSegment);
             }
 

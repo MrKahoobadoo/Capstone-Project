@@ -5,8 +5,8 @@ using UnityEngine;
 public class PathwaySpanwer : MonoBehaviour
 {
     [Header("Path Stuff")]
-    List<char> path = new List<char>();
-    List<GameObject> segments = new List<GameObject>();
+    public List<char> path = new List<char>();
+    public List<GameObject> segments = new List<GameObject>();
     public int pathLength;
     private GameObject newSegment;
     private float turnAmount;
@@ -102,34 +102,45 @@ public class PathwaySpanwer : MonoBehaviour
     {
         if (path[increment] == 'S')
         {
-            // instantiates object and sets it to newSegment so it can be added to the list
-            newSegment = (GameObject)Instantiate(straightHallwayPrefab, segments[segments.Count - 1].transform);
+            GameObject newSegment = Instantiate(
+                straightHallwayPrefab,
+                segments[segments.Count - 1].transform.position,
+                segments[segments.Count - 1].transform.rotation
+            );
 
-            // positions the object, now a child of the previous path, to the correct location
-            newSegment.transform.localPosition = new Vector3(0, 0, 46);
-            newSegment.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            newSegment.transform.position += newSegment.transform.rotation * new Vector3(0, 0, 46);
 
-            // adds segment to the list
             segments.Add(newSegment);
         }
         else if (path[increment] == 'R')
         {
-            newSegment = (GameObject)Instantiate(rightHallwayPrefab, segments[segments.Count - 1].transform);
-            newSegment.transform.localPosition = new Vector3(3, 0, 43);
-            newSegment.transform.localRotation = Quaternion.Euler(0, 90, 0);
+            GameObject newSegment = Instantiate(
+                rightHallwayPrefab,
+                segments[segments.Count - 1].transform.position,
+                segments[segments.Count - 1].transform.rotation
+            );
+
+            newSegment.transform.position += newSegment.transform.rotation * new Vector3(3, 0, 43);
+            newSegment.transform.rotation = Quaternion.Euler(0, newSegment.transform.rotation.eulerAngles.y + 90, 0);
             segments.Add(newSegment);
         }
         else
         {
-            newSegment = (GameObject)Instantiate(leftHallwayPrefab, segments[segments.Count - 1].transform);
-            newSegment.transform.localPosition = new Vector3(-3, 0, 43);
-            newSegment.transform.localRotation = Quaternion.Euler(0, -90, 0);
+            GameObject newSegment = Instantiate(
+                leftHallwayPrefab,
+                segments[segments.Count - 1].transform.position,
+                segments[segments.Count - 1].transform.rotation
+            );
+
+            newSegment.transform.position += newSegment.transform.rotation * new Vector3(-3, 0, 43);
+            newSegment.transform.rotation = Quaternion.Euler(0, newSegment.transform.rotation.eulerAngles.y - 90, 0);
             segments.Add(newSegment);
         }
 
-        if (segments.Count > 4)
+        if (segments.Count > 5)
         {
-            segments[0].SetActive(false);
+            Destroy(segments[0].gameObject);
+            segments.RemoveAt(0);
         }
 
         increment++;

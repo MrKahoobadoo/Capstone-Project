@@ -218,13 +218,14 @@ public class OSUGameScript : MonoBehaviour
     public void Hit(float distance)
     {
         // score
-        float scoreToAdd = 100 * ((200 - distance) / 200);
+        float scoreToAdd = 100 * (((travelSpeed/6) - distance) / (travelSpeed/6));
         score += scoreToAdd * multiplier;
         multiplier += multiplierIncrement;
 
         // accuracy
         streak++;
-        precision += ((200 - distance) / 200);
+        precision += (((travelSpeed/6) - distance) / (travelSpeed/6));
+        Debug.Log(precision + "   " + distance);
     }
 
     public void Miss()

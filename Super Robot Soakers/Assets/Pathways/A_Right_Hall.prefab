@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 7274184113137190982}
   m_Layer: 0
   m_Name: A_Right_Hall
-  m_TagString: Untagged
+  m_TagString: Segment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,6 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8452617ee9c9ef4cb6c22bcb5cb10ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnHub: {fileID: 0}
+  pathwaySpanwer: {fileID: 0}
 --- !u!1 &3027843847197310355
 GameObject:
   m_ObjectHideFlags: 0

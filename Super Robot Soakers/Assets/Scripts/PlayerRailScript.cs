@@ -124,6 +124,60 @@ public class PlayerRailScript : MonoBehaviour
         }
     }
 
+    void CornerLerper()
+    {
+        if (Mathf.Abs(transform.transform.rotation.eulerAngles.y - currentSegment.transform.rotation.eulerAngles.y) > 0.05f)
+        {
+            // sets target positions
+            Vector3 targetPos = currentSegment.transform.TransformPoint(new Vector3(railPos, transform.position.y, 0));
+            Quaternion targetRot = currentSegment.transform.rotation;
+
+            // lerps position and rotation
+            transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * 0.15f * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, moveSpeed * Time.deltaTime * 0.5f);
+        }
+    }
+
+    void clickChecker()
+    {
+
+    }
+
+    void Aligner()
+    {
+        // aligns rotation
+        if (Mathf.Abs(transform.rotation.eulerAngles.y - currentSegment.transform.rotation.eulerAngles.y) < 0.05f)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, currentSegment.transform.rotation, moveSpeed * Time.deltaTime * 0.5f);
+        }
+
+        Vector3 targetPos;
+        // determines direction, and therefore targetPos
+        if (transform.rotation.eulerAngles.y < 0.05f)
+        {
+            targetPos = new Vector3(currentSegment.transform.position.x + railPos, transform.position.y, transform.position.z);
+        } 
+        else if (Mathf.Abs(transform.rotation.eulerAngles.y - 180) < 0.05)
+        {
+            targetPos = new Vector3(currentSegment.transform.position.x - railPos, transform.position.y, transform.position.z);
+        }
+        else if (Mathf.Abs(transform.rotation.eulerAngles.y - 90) < 0.05)
+        {
+            targetPos = new Vector3(transform.position.x, transform.position.y, currentSegment.transform.position.z - railPos);
+        } 
+        else if (Mathf.Abs(transform.rotation.eulerAngles.y - 270) < 0.05)
+        {
+            targetPos = new Vector3(transform.position.x, transform.position.y, currentSegment.transform.position.z + railPos);
+        }
+        else
+        {
+            targetPos = transform.position;
+        }
+
+        // lerps player to targetPos
+        transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * 0.15f * Time.deltaTime);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.GetContact(0).normal == Vector3.up)
@@ -137,42 +191,9 @@ public class PlayerRailScript : MonoBehaviour
         if (other.CompareTag("Straight_Segment") || other.CompareTag("Turned_Segment"))
         {
             currentSegment = other.gameObject;
-            // aligns movement and position to the current segment the player is in
-
-            if (other.CompareTag("Turned_Segment"))
-            {
-                
-            } 
-            else
-            {
-                transform.rotation = currentSegment.transform.rotation;
-                transform.position = currentSegment.transform.TransformPoint(new Vector3(railPos, transform.position.y, -6));
-            }
         }
-        Debug.Log("new seg");
-    }
 
-    void CornerLerper()
-    {
-        if (Mathf.Abs(transform.transform.rotation.eulerAngles.y - currentSegment.transform.rotation.eulerAngles.y) > 0.05f)
-        {
-            // sets target positions
-            Vector3 targetPos = currentSegment.transform.TransformPoint(new Vector3(railPos, transform.position.y, 0));
-            Quaternion targetRot = currentSegment.transform.rotation;
-
-            // lerps position and rotation
-            transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * 0.1f * Time.deltaTime);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, moveSpeed * Time.deltaTime * 0.5f);
-            Debug.Log("lerping");
-        }
-    }
-
-    void Aligner()
-    {
-        if (Mathf.Abs(transform.rotation.eulerAngles.y - currentSegment.transform.rotation.eulerAngles.y) < 0.05f)
-        {
-            transform.rotation = currentSegment.transform.rotation;
-        }
+        
     }
 
 }

@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 995542042988797490}
   - component: {fileID: 300513674333588176}
   - component: {fileID: -3178966866741382038}
+  - component: {fileID: 8373237762709910099}
   m_Layer: 0
   m_Name: A_Left_Hallway
   m_TagString: Turned_Segment
@@ -168,6 +169,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnHub: {fileID: 0}
   pathwaySpanwer: {fileID: 0}
+--- !u!65 &8373237762709910099
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995542042988797489}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6, y: 6, z: 6}
+  m_Center: {x: 0, y: 3, z: -3}
 --- !u!1 &3331589334216816643
 GameObject:
   m_ObjectHideFlags: 0

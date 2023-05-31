@@ -161,6 +161,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2957651452606388459, guid: 49932353e53fa1747bbacafbcb0d4959, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957651452606388459, guid: 49932353e53fa1747bbacafbcb0d4959, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2957651452606388461, guid: 49932353e53fa1747bbacafbcb0d4959, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -210,9 +218,21 @@ PrefabInstance:
       value: Player (Rail-Locked)
       objectReference: {fileID: 0}
     - target: {fileID: 7441568877061763505, guid: 49932353e53fa1747bbacafbcb0d4959, type: 3}
+      propertyPath: jumpForce
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441568877061763505, guid: 49932353e53fa1747bbacafbcb0d4959, type: 3}
+      propertyPath: moveSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441568877061763505, guid: 49932353e53fa1747bbacafbcb0d4959, type: 3}
       propertyPath: currentSegment
       value: 
       objectReference: {fileID: 719547811}
+    - target: {fileID: 7441568877061763505, guid: 49932353e53fa1747bbacafbcb0d4959, type: 3}
+      propertyPath: gravityConstant
+      value: -50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49932353e53fa1747bbacafbcb0d4959, type: 3}
 --- !u!1 &1478842749

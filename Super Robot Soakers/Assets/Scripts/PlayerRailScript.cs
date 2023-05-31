@@ -11,9 +11,9 @@ public class PlayerRailScript : MonoBehaviour
     [Header("Moving and Jumping")]
     public float moveSpeed;
     public float jumpForce;
+    public float gravityConstant;
 
     private bool isGrounded;
-    private bool isMoving;
 
     [Header("Shifting")]
     public GameObject currentSegment;
@@ -26,10 +26,13 @@ public class PlayerRailScript : MonoBehaviour
     public float lerpDuration;
     private float elapsedTime;
 
+    private bool bixcuit;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         rail = 'M';
+        railPos = 0.0f;
     }
 
     void Update()
@@ -38,6 +41,8 @@ public class PlayerRailScript : MonoBehaviour
         Move();
         Jump();
         Wobbler();
+        CornerLerper();
+        Aligner();
     }
 
     void Shift()
@@ -48,11 +53,19 @@ public class PlayerRailScript : MonoBehaviour
             if (rail == 'R')
             {
                 rail = 'M';
+                railPos = 0.0f;
+                transform.Translate(transform.right * -1.5f, Space.World);
             } 
-            else
+            else if (rail == 'M')
             {
                 rail = 'L';
-            } 
+                railPos = -1.5f;
+                transform.Translate(transform.right * -1.5f, Space.World);
+            } else
+            {
+                rail = 'L';
+                railPos = -1.5f;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.D))
@@ -60,30 +73,21 @@ public class PlayerRailScript : MonoBehaviour
             if(rail == 'L')
             {
                 rail = 'M';
+                railPos = 0.0f;
+                transform.Translate(transform.right * 1.5f, Space.World);
+            }
+            else if (rail == 'M')
+            {
+                rail = 'R';
+                railPos = 1.5f;
+                transform.Translate(transform.right * 1.5f, Space.World);
             }
             else
             {
                 rail = 'R';
+                railPos = 1.5f;
             }
         }
-
-        // checks which rail the player is on
-        if (rail == 'M')
-        {
-            railPos = 0.0f;
-        }
-        else if (rail == 'R')
-        {
-            railPos = 1.75f;
-        }
-        else
-        {
-            railPos = -1.75f;
-        }
-
-        // aligns movement and position to the current segment the player is in
-        //transform.rotation = currentSegment.transform.rotation;
-        transform.position = currentSegment.transform.TransformPoint(new Vector3(railPos, transform.position.y, transform.position.z));
     }
     
     void Move()
@@ -99,11 +103,13 @@ public class PlayerRailScript : MonoBehaviour
             rig.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
+
+        rig.AddForce(Vector3.up * gravityConstant);
     }
 
     void Wobbler()
     {
-        if (isMoving && isGrounded)
+        if (isGrounded)
         {
             elapsedTime += Time.deltaTime;
             float t = Mathf.PingPong(elapsedTime / lerpDuration, 1.0f);
@@ -128,14 +134,45 @@ public class PlayerRailScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Segment"))
+        if (other.CompareTag("Straight_Segment") || other.CompareTag("Turned_Segment"))
         {
             currentSegment = other.gameObject;
             // aligns movement and position to the current segment the player is in
-            transform.rotation = currentSegment.transform.rotation;
-            transform.position = currentSegment.transform.TransformPoint(new Vector3(railPos, transform.position.y, 0));
+
+            if (other.CompareTag("Turned_Segment"))
+            {
+                
+            } 
+            else
+            {
+                transform.rotation = currentSegment.transform.rotation;
+                transform.position = currentSegment.transform.TransformPoint(new Vector3(railPos, transform.position.y, -6));
+            }
         }
         Debug.Log("new seg");
+    }
+
+    void CornerLerper()
+    {
+        if (Mathf.Abs(transform.transform.rotation.eulerAngles.y - currentSegment.transform.rotation.eulerAngles.y) > 0.05f)
+        {
+            // sets target positions
+            Vector3 targetPos = currentSegment.transform.TransformPoint(new Vector3(railPos, transform.position.y, 0));
+            Quaternion targetRot = currentSegment.transform.rotation;
+
+            // lerps position and rotation
+            transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * 0.1f * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, moveSpeed * Time.deltaTime * 0.5f);
+            Debug.Log("lerping");
+        }
+    }
+
+    void Aligner()
+    {
+        if (Mathf.Abs(transform.rotation.eulerAngles.y - currentSegment.transform.rotation.eulerAngles.y) < 0.05f)
+        {
+            transform.rotation = currentSegment.transform.rotation;
+        }
     }
 
 }

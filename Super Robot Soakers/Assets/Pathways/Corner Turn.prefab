@@ -107,7 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 196750766694487354}
   - component: {fileID: 8358327061829869666}
-  - component: {fileID: -1075605709936321478}
+  - component: {fileID: -8094233889022667407}
   m_Layer: 0
   m_Name: Corner Turn
   m_TagString: Turn_Cube
@@ -143,12 +143,12 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196750766694487353}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 6, y: 6, z: 6}
   m_Center: {x: 0, y: 3, z: 0}
---- !u!114 &-1075605709936321478
+--- !u!114 &-8094233889022667407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 196750766694487353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61171b690b1a60b45a5193d28ef9373f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bc3dd8d0d10ff640bc8429311c22f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2402161499422667531

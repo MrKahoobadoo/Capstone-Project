@@ -20,19 +20,21 @@ public class PlayerRailScript : MonoBehaviour
     public char rail;
     public float railPos;
 
+    [Header("Turning")]
+    public bool inTurnZone;
+
     [Header("Camera Bobble")]
     public float bottomHeight;
     public float topHeight;
     public float lerpDuration;
     private float elapsedTime;
 
-    private bool bixcuit;
-
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         rail = 'M';
         railPos = 0.0f;
+        inTurnZone = false;
     }
 
     void Update()
@@ -41,51 +43,55 @@ public class PlayerRailScript : MonoBehaviour
         Move();
         Jump();
         Wobbler();
-        CornerLerper();
+        ClickChecker();
         Aligner();
     }
 
     void Shift()
     {
-        // switches rail
-        if (Input.GetKeyDown(KeyCode.A))
+        if (!inTurnZone)
         {
-            if (rail == 'R')
+            // switches rail
+            if (Input.GetKeyDown(KeyCode.A))
             {
-                rail = 'M';
-                railPos = 0.0f;
-                transform.Translate(transform.right * -1.5f, Space.World);
-            } 
-            else if (rail == 'M')
-            {
-                rail = 'L';
-                railPos = -1.5f;
-                transform.Translate(transform.right * -1.5f, Space.World);
-            } else
-            {
-                rail = 'L';
-                railPos = -1.5f;
+                if (rail == 'R')
+                {
+                    rail = 'M';
+                    railPos = 0.0f;
+                    //transform.Translate(transform.right * -1.5f, Space.World);
+                }
+                else if (rail == 'M')
+                {
+                    rail = 'L';
+                    railPos = -1.5f;
+                    //transform.Translate(transform.right * -1.5f, Space.World);
+                }
+                else
+                {
+                    rail = 'L';
+                    railPos = -1.5f;
+                }
             }
-        }
 
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            if(rail == 'L')
+            if (Input.GetKeyDown(KeyCode.D))
             {
-                rail = 'M';
-                railPos = 0.0f;
-                transform.Translate(transform.right * 1.5f, Space.World);
-            }
-            else if (rail == 'M')
-            {
-                rail = 'R';
-                railPos = 1.5f;
-                transform.Translate(transform.right * 1.5f, Space.World);
-            }
-            else
-            {
-                rail = 'R';
-                railPos = 1.5f;
+                if (rail == 'L')
+                {
+                    rail = 'M';
+                    railPos = 0.0f;
+                    //transform.Translate(transform.right * 1.5f, Space.World);
+                }
+                else if (rail == 'M')
+                {
+                    rail = 'R';
+                    railPos = 1.5f;
+                    //transform.Translate(transform.right * 1.5f, Space.World);
+                }
+                else
+                {
+                    rail = 'R';
+                    railPos = 1.5f;
+                }
             }
         }
     }
@@ -138,25 +144,35 @@ public class PlayerRailScript : MonoBehaviour
         }
     }
 
-    void clickChecker()
+    void ClickChecker()
     {
+        if (inTurnZone && (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A)))
+        {
+            StartCoroutine(PerformCornerLerp());
+        }
+    }
 
+    IEnumerator PerformCornerLerp()
+    {
+        float elapsedTime = 0f;
+        float duration = 1f; // Adjust this value to control the duration of the lerp
+
+        while (elapsedTime < duration)
+        {
+            CornerLerper();
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
     }
 
     void Aligner()
     {
-        // aligns rotation
-        if (Mathf.Abs(transform.rotation.eulerAngles.y - currentSegment.transform.rotation.eulerAngles.y) < 0.05f)
-        {
-            transform.rotation = Quaternion.Lerp(transform.rotation, currentSegment.transform.rotation, moveSpeed * Time.deltaTime * 0.5f);
-        }
-
         Vector3 targetPos;
         // determines direction, and therefore targetPos
         if (transform.rotation.eulerAngles.y < 0.05f)
         {
             targetPos = new Vector3(currentSegment.transform.position.x + railPos, transform.position.y, transform.position.z);
-        } 
+        }
         else if (Mathf.Abs(transform.rotation.eulerAngles.y - 180) < 0.05)
         {
             targetPos = new Vector3(currentSegment.transform.position.x - railPos, transform.position.y, transform.position.z);
@@ -164,7 +180,7 @@ public class PlayerRailScript : MonoBehaviour
         else if (Mathf.Abs(transform.rotation.eulerAngles.y - 90) < 0.05)
         {
             targetPos = new Vector3(transform.position.x, transform.position.y, currentSegment.transform.position.z - railPos);
-        } 
+        }
         else if (Mathf.Abs(transform.rotation.eulerAngles.y - 270) < 0.05)
         {
             targetPos = new Vector3(transform.position.x, transform.position.y, currentSegment.transform.position.z + railPos);
@@ -174,8 +190,12 @@ public class PlayerRailScript : MonoBehaviour
             targetPos = transform.position;
         }
 
-        // lerps player to targetPos
-        transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * 0.15f * Time.deltaTime);
+        // aligns rotation and position
+        if (Mathf.Abs(transform.rotation.eulerAngles.y - currentSegment.transform.rotation.eulerAngles.y) < 0.05f)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, currentSegment.transform.rotation, moveSpeed * Time.deltaTime * 0.5f);
+            transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * 0.3f * Time.deltaTime);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -192,8 +212,7 @@ public class PlayerRailScript : MonoBehaviour
         {
             currentSegment = other.gameObject;
         }
-
-        
     }
+
 
 }

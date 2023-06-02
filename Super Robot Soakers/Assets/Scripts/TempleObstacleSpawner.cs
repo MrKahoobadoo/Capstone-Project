@@ -4,42 +4,59 @@ using UnityEngine;
 
 public class TempleObstacleSpawner : MonoBehaviour
 {
+    [Header("Spawn Positions")]
+    public List<float> spawnLocations;
+
+    // objects to spawn
+    private GameObject ob1;
+    private GameObject ob2;
+
     // prefabs
     public GameObject lDesk;
     public GameObject desk;
     public GameObject chair;
     public GameObject closet;
 
-    // objects to spawns
-    private GameObject ob1;
-    private GameObject ob2;
-    private GameObject ob3;
-    private GameObject ob4;
+    void Start()
+    {
+        foreach (int i in spawnLocations)
+        {
+            int choice = Random.Range(0, 4);
+            switch (choice)
+            {
+                case 0:
+                    Spawn_LDesk(spawnLocations[i]);
+                    break;
+                case 1:
+                    Spawn_Desk(spawnLocations[i]);
+                    break;
+                case 2:
+                    Spawn_Chair(spawnLocations[i]);
+                    break;
+                case 3:
+                    Spawn_Closet(spawnLocations[i]);
+                    break;
+            }
+        }
+    }
 
-
-    // location 1
-    void SpawnOb1()
+    void Spawn_LDesk(float spawnLoc)
     {
 
     }
 
-    // location 2
-    void SpawnOb2()
+    void Spawn_Desk(float spawnLoc)
     {
 
     }
 
-    // location 3
-    void SpawnOb3()
+    void Spawn_Chair(float spawnLoc)
     {
 
     }
 
-    // location 4
-    void SpawnOb4()
+    void Spawn_Closet(float spawnLoc)
     {
 
     }
-
-
 }

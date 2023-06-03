@@ -86,7 +86,8 @@ public class PathwaySpanwer : MonoBehaviour
             newSegment = (GameObject)Instantiate(straightHallwayPrefab);
 
             // sets newSegment transform to proper position and rotation offset relative to the previous segment's transform
-            newSegment.transform.position = segments[segments.Count - 1].transform.TransformPoint(new Vector3(0, 0, 46));
+            Vector3 newPos = segments[segments.Count - 1].transform.TransformPoint(new Vector3(0, 0, 46));
+            newSegment.transform.position = RoundVector3(newPos);
             newSegment.transform.rotation = Quaternion.Euler(0, segments[segments.Count - 1].transform.rotation.eulerAngles.y, 0);
 
             // adds segment to the list
@@ -98,7 +99,8 @@ public class PathwaySpanwer : MonoBehaviour
             newSegment = (GameObject)Instantiate(rightHallwayPrefab);
 
             // sets newSegment transform to proper position and rotation offset relative to the previous segment's transform
-            newSegment.transform.position = segments[segments.Count - 1].transform.TransformPoint(new Vector3(3, 0, 43));
+            Vector3 newPos = segments[segments.Count - 1].transform.TransformPoint(new Vector3(3, 0, 43));
+            newSegment.transform.position = RoundVector3(newPos);
             newSegment.transform.rotation = Quaternion.Euler(0, segments[segments.Count - 1].transform.rotation.eulerAngles.y + 90, 0);
 
             // adds segment to the list
@@ -110,7 +112,8 @@ public class PathwaySpanwer : MonoBehaviour
             newSegment = (GameObject)Instantiate(leftHallwayPrefab);
 
             // sets newSegment transform to proper position and rotation offset relative to the previous segment's transform
-            newSegment.transform.position = segments[segments.Count - 1].transform.TransformPoint(new Vector3(-3, 0, 43));
+            Vector3 newPos = segments[segments.Count - 1].transform.TransformPoint(new Vector3(-3, 0, 43));
+            newSegment.transform.position = RoundVector3(newPos);
             newSegment.transform.rotation = Quaternion.Euler(0, segments[segments.Count - 1].transform.rotation.eulerAngles.y - 90, 0);
 
             // adds segment to the list
@@ -153,5 +156,13 @@ public class PathwaySpanwer : MonoBehaviour
         }
 
         Debug.Log(pathList);
+    }
+
+    Vector3 RoundVector3(Vector3 newPos)
+    {
+        int x = Mathf.RoundToInt(newPos.x);
+        int y = Mathf.RoundToInt(newPos.y);
+        int z = Mathf.RoundToInt(newPos.z);
+        return new Vector3(x, y, z);
     }
 }

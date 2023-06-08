@@ -9,6 +9,7 @@ public class PlayerRailScript : MonoBehaviour
     public GameObject mainCamera;
     public GameObject cameraHub;
     public BoxCollider collider;
+    public GameObject hamster;
 
     [Header("Moving and Jumping")]
     public float moveSpeed;
@@ -50,6 +51,9 @@ public class PlayerRailScript : MonoBehaviour
 
     private bool isSliding;
 
+    [Header("Camera Turn Around")]
+    public float camLerpDuration;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -67,6 +71,9 @@ public class PlayerRailScript : MonoBehaviour
         Wobbler();
         ClickChecker();
         Aligner();
+        LookBack();
+        //
+        AlignHamster();
     }
 
     void Shift()
@@ -110,6 +117,13 @@ public class PlayerRailScript : MonoBehaviour
         rig.velocity = transform.forward * moveSpeed;
     }
 
+    void AlignHamster()
+    {
+        float targetX;
+        targetX = Mathf.Lerp(hamster.transform.localPosition.x, -railPos, moveSpeed * 0.3f * Time.deltaTime);
+        hamster.transform.localPosition = new Vector3(targetX, hamster.transform.localPosition.y, hamster.transform.localPosition.z);
+    }
+
     void JumpCommand()
     {
         if (Input.GetKey(KeyCode.W) && isGrounded == true)
@@ -121,7 +135,7 @@ public class PlayerRailScript : MonoBehaviour
     IEnumerator Jump()
     {
         float elapsedTime = 0f;
-        float duration = 0.45f; // Adjust this value to control the duration of the jump
+        float duration = 0.4f; // Adjust this value to control the duration of the jump
 
         while (elapsedTime < duration)
         {
@@ -142,7 +156,7 @@ public class PlayerRailScript : MonoBehaviour
         //yield return new WaitForSeconds(0.1f); // Optional delay for visual effect
 
         elapsedTime = 0f;
-        duration = 0.45f; // Adjust this value to control the duration of the return
+        duration = 0.3f; // Adjust this value to control the duration of the return
 
         while (elapsedTime < duration)
         {
@@ -172,13 +186,12 @@ public class PlayerRailScript : MonoBehaviour
     IEnumerator Slide()
     {
         float elapsedTime = 0f;
-        float duration = 0.45f; // Adjust this value to control the duration of the slide
+        float duration = 0.3f; // Adjust this value to control the duration of the slide
 
         isSliding = true;
 
         while (elapsedTime < duration)
         {
-            Debug.Log("goinf down");
             float t = elapsedTime / duration;
 
             // Calculate the target height, position, and angle using a curve or direct values
@@ -198,14 +211,13 @@ public class PlayerRailScript : MonoBehaviour
         }
 
         //yield return new WaitForSeconds(0.1f); // Optional delay for visual effect
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.15f);
 
         elapsedTime = 0f;
-        duration = 0.45f; // Adjust this value to control the duration of the return
+        duration = 0.4f; // Adjust this value to control the duration of the return
 
         while (elapsedTime < duration)
         {
-            Debug.Log("going up");
             float t = elapsedTime / duration;
 
             // Calculate the target height, position, and angle using a curve or direct values
@@ -224,6 +236,26 @@ public class PlayerRailScript : MonoBehaviour
             isSliding = false;
             yield return null;
         }
+    }
+
+    void LookBack()
+    {
+        float camDirection;
+        
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            camDirection = 180f;
+        } 
+        else
+        {
+            camDirection = 0f;
+        }
+
+        float targetPos = Mathf.Lerp(mainCamera.transform.localRotation.y, camDirection, camLerpDuration * Time.deltaTime);
+
+        mainCamera.transform.localRotation = Quaternion.Euler(mainCamera.transform.localRotation.x, camDirection, mainCamera.transform.localRotation.z);
+
     }
 
     void Wobbler()
@@ -254,7 +286,6 @@ public class PlayerRailScript : MonoBehaviour
             // lerps position and rotation
             transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * 0.15f * Time.deltaTime);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, moveSpeed * Time.deltaTime * 0.5f);
-            Debug.Log("corner lerping");
         }
     }
 

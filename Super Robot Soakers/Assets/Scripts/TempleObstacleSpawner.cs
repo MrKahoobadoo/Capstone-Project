@@ -22,7 +22,6 @@ public class TempleObstacleSpawner : MonoBehaviour
     {
         for (int i = 0; i < spawnLocations.Count; i++)
         {
-            Debug.Log(i);
             int choice = Random.Range(0, 4);
             switch (choice)
             {

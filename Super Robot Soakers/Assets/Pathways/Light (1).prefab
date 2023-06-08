@@ -44,8 +44,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.95165396, b: 0.53207546, a: 1}
-  m_Intensity: 0.7
-  m_Range: 10
+  m_Intensity: 0.55
+  m_Range: 8
   m_SpotAngle: 63
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -206,5 +206,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointLight: {fileID: 1729962387820728021}
-  flickChance: 0.5
-  returnChance: 1
+  flickChance: 0.6
+  returnChance: 0.75

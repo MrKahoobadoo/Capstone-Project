@@ -5,12 +5,10 @@ using UnityEngine;
 public class PathwaySpanwer : MonoBehaviour
 {
     [Header("Path Stuff")]
-    List<char> path = new List<char>();
+    public static List<char> path = new List<char>();
     List<GameObject> segments = new List<GameObject>();
     public int pathLength;
     private GameObject newSegment;
-    private float turnAmount;
-    private string turnAmounts;
 
     public int preSpawn;
     int increment;
@@ -19,13 +17,14 @@ public class PathwaySpanwer : MonoBehaviour
     public GameObject straightHallwayPrefab;
     public GameObject rightHallwayPrefab;
     public GameObject leftHallwayPrefab;
+
+    public EnemyPathwaySpawner enemyPathwaySpawner;
     
 
     void Start()
     {
         SetPath();
         LogListValues(path);
-        turnAmount = 0;
         increment = 0;
 
         // spawns first segment
@@ -46,7 +45,7 @@ public class PathwaySpanwer : MonoBehaviour
 
     void Update()
     {
-        
+        Debug.Log(segments.Count);
     }
 
     // functions
@@ -61,11 +60,11 @@ public class PathwaySpanwer : MonoBehaviour
             float rand = Random.Range(0f, 100f);
             char direction;
 
-            if (rand <= 25f)
+            if (rand <= 30f)
             {
                 direction = 'L';
             }
-            else if (rand <= 50)
+            else if (rand <= 40)
             {
                 direction = 'R';
             }
@@ -76,6 +75,15 @@ public class PathwaySpanwer : MonoBehaviour
 
             path.Add(direction);
         }
+
+        if ((path[1] == 'R' && path[2] == 'R' && path[3] == 'R') || (path[1] == 'L' && path[2] == 'L' && path[3] == 'L'))
+        {
+            int choice = Random.Range(1, 4);
+
+            path[choice] = 'S';
+        }
+
+        enemyPathwaySpawner.ILoveCheese();
     }
 
     public void InstantiatePath()
@@ -125,7 +133,7 @@ public class PathwaySpanwer : MonoBehaviour
     void DeleteOldSegment()
     {
         // checks if the segment path length is greater than preSpawn
-        if (segments.Count > preSpawn)
+        if (segments.Count > (preSpawn))
         {
             // deletes the furthest back segment (preSpawn + 1 segments back) so that there are no future collisions
             Destroy(segments[0]);
@@ -136,7 +144,7 @@ public class PathwaySpanwer : MonoBehaviour
     public void SegmentPassed()
     {
         if (segments.Count <= preSpawn)
-        {
+        { 
             InstantiatePath();
             while (path[increment - 1] == 'S')
             {

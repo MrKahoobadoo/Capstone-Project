@@ -7,7 +7,7 @@ public class SegmentEnterChecker : MonoBehaviour
     public GameObject spawnHub;
     public PathwaySpanwer pathwaySpanwer;
 
-    private bool entered;
+    private bool playerEntered;
 
     void Start()
     {
@@ -17,9 +17,9 @@ public class SegmentEnterChecker : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !entered)
+        if (other.CompareTag("Player") && !playerEntered)
         {
-            entered = true;
+            playerEntered = true;
             pathwaySpanwer.SegmentPassed();
         }
     }

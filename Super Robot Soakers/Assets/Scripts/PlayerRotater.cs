@@ -22,6 +22,11 @@ public class PlayerRotater : MonoBehaviour
         transform.localRotation = Quaternion.Euler(0, turnAmount, 0);
     }
 
+    public void OnSensitivityChanged(float value)
+    {
+        setMouseSensitivity = value;
+    }
+
     // Update is called once per frame
     void Update()
     {

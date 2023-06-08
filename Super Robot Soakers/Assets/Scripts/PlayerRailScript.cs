@@ -40,6 +40,8 @@ public class PlayerRailScript : MonoBehaviour
     public float originAngle;
     public float jumpAngle;
 
+    public bool isJumping;
+
     [Header("Sliding")]
     public float oldColSize;
     public float newColSize;
@@ -72,7 +74,6 @@ public class PlayerRailScript : MonoBehaviour
         ClickChecker();
         Aligner();
         LookBack();
-        //
         AlignHamster();
     }
 
@@ -126,7 +127,7 @@ public class PlayerRailScript : MonoBehaviour
 
     void JumpCommand()
     {
-        if (Input.GetKey(KeyCode.W) && isGrounded == true)
+        if (Input.GetKey(KeyCode.W) && isGrounded == true && !isJumping)
         {
             StartCoroutine(Jump());
         }
@@ -134,6 +135,7 @@ public class PlayerRailScript : MonoBehaviour
     
     IEnumerator Jump()
     {
+        isJumping = true;
         float elapsedTime = 0f;
         float duration = 0.4f; // Adjust this value to control the duration of the jump
 
@@ -173,11 +175,12 @@ public class PlayerRailScript : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        isJumping = false;
     }
 
     void SlideCommand()
     {
-        if (Input.GetKey(KeyCode.S) && isGrounded == true)
+        if (Input.GetKey(KeyCode.S) && isGrounded == true && !isSliding)
         {
             StartCoroutine(Slide());
         } 
@@ -185,6 +188,7 @@ public class PlayerRailScript : MonoBehaviour
 
     IEnumerator Slide()
     {
+        isSliding = true;
         float elapsedTime = 0f;
         float duration = 0.3f; // Adjust this value to control the duration of the slide
 
@@ -233,9 +237,9 @@ public class PlayerRailScript : MonoBehaviour
             cameraHub.transform.localRotation = Quaternion.Euler(targetAngle, cameraHub.transform.localRotation.eulerAngles.y, cameraHub.transform.localRotation.eulerAngles.z);
 
             elapsedTime += Time.deltaTime;
-            isSliding = false;
             yield return null;
         }
+        isSliding = false;
     }
 
     void LookBack()

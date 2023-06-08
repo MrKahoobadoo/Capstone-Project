@@ -234,7 +234,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -552,6 +552,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 85a88b77c4715154eb71642e99debe22, type: 2}
+    - target: {fileID: 6266415268526675899, guid: 49932353e53fa1747bbacafbcb0d4959, type: 3}
+      propertyPath: m_Volume
+      value: 0.286
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266415268526675899, guid: 49932353e53fa1747bbacafbcb0d4959, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9bbeb27fe0f9ed54ba0c5f450b35b29d, type: 3}
     - target: {fileID: 7441568877061763505, guid: 49932353e53fa1747bbacafbcb0d4959, type: 3}
       propertyPath: slideSpeed
       value: 20

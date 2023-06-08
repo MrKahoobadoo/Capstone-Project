@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 6092484424075741277}
   - component: {fileID: 3191461185086211832}
   - component: {fileID: 5225466913134680411}
+  - component: {fileID: 129562826324593257}
   m_Layer: 0
   m_Name: A_Straight_Hall
   m_TagString: Straight_Segment
@@ -265,6 +266,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnHub: {fileID: 0}
   pathwaySpanwer: {fileID: 0}
+--- !u!114 &129562826324593257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6092484424075741278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e1ab25d6fafce45a2d8e9c16285a16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnLocations:
+  - 15.3333
+  - 34.6666
+  hallway: {fileID: 6092484424075741278}
+  lDesk: {fileID: 6173004749965692434, guid: 567cb5e4ff0ccad4abba03fcb74384b4, type: 3}
+  desk: {fileID: 6153723068781330139, guid: 3ca22c04cee97f94c85a9e29ecf22236, type: 3}
+  chair: {fileID: 8184198300778133347, guid: b9fcc789e7186f548a7b2d05a43b724b, type: 3}
+  closet: {fileID: 9191856530336902535, guid: bbdadd7cace3e174da250a9b8e55824c, type: 3}
 --- !u!1 &7042465453463947338
 GameObject:
   m_ObjectHideFlags: 0

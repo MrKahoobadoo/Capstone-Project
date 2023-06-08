@@ -7,6 +7,8 @@ public class PlayerRailScript : MonoBehaviour
     [Header("References")]
     public Rigidbody rig;
     public GameObject mainCamera;
+    public GameObject cameraHub;
+    public BoxCollider collider;
 
     [Header("Moving and Jumping")]
     public float moveSpeed;
@@ -33,11 +35,20 @@ public class PlayerRailScript : MonoBehaviour
     [Header("Jumping")]
     public float originHeight;
     public float jumpHeight;
-    public float jumpIncrement;
 
     public float originAngle;
     public float jumpAngle;
-    public float angleIncrement;
+
+    [Header("Sliding")]
+    public float oldColSize;
+    public float newColSize;
+    public float oldColPosition;
+    public float newColPosition;
+
+    public float oldCamAngle;
+    public float newCamAngle;
+
+    private bool isSliding;
 
     void Start()
     {
@@ -52,6 +63,7 @@ public class PlayerRailScript : MonoBehaviour
         Shift();
         Move();
         JumpCommand();
+        SlideCommand();
         Wobbler();
         ClickChecker();
         Aligner();
@@ -72,12 +84,7 @@ public class PlayerRailScript : MonoBehaviour
                 else if (rail == 'M')
                 {
                     rail = 'L';
-                    railPos = -1.5f;
-                }
-                else
-                {
-                    rail = 'L';
-                    railPos = -3f;
+                    railPos = -1.9f;
                 }
             }
 
@@ -91,12 +98,7 @@ public class PlayerRailScript : MonoBehaviour
                 else if (rail == 'M')
                 {
                     rail = 'R';
-                    railPos = 1.5f;
-                }
-                else
-                {
-                    rail = 'R';
-                    railPos = 3f;
+                    railPos = 1.9f;
                 }
             }
         }
@@ -106,27 +108,7 @@ public class PlayerRailScript : MonoBehaviour
     {
         // constant forward velocity of moveSpeed
         rig.velocity = transform.forward * moveSpeed;
-
-        /*// Get the forward direction of the object's rotation
-        Vector3 forwardDirection = transform.rotation * Vector3.forward;
-
-        // Ignore the X-axis rotation by setting the X component to zero
-        forwardDirection.x = 0f;
-
-        // Move the object forward based on the modified direction
-        transform.Translate(forwardDirection.normalized * moveSpeed * Time.deltaTime);*/
     }
-
-    /*void Jump()
-    {
-        if (Input.GetKey(KeyCode.W) && isGrounded == true)
-        {
-            rig.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
-        }
-
-        //rig.AddForce(Vector3.up * gravityConstant);
-    }*/
 
     void JumpCommand()
     {
@@ -138,7 +120,6 @@ public class PlayerRailScript : MonoBehaviour
     
     IEnumerator Jump()
     {
-
         float elapsedTime = 0f;
         float duration = 0.45f; // Adjust this value to control the duration of the jump
 
@@ -180,27 +161,74 @@ public class PlayerRailScript : MonoBehaviour
         }
     }
 
-    /*void JumpAction()
+    void SlideCommand()
     {
-        // Lerping position
-        float targetY = jumpHeight;
-        float targetAngle = jumpAngle;
-
-        while (Mathf.Abs(transform.position.y - targetY) > 0.1f && Mathf.Abs(transform.rotation.eulerAngles.z - targetAngle) > 0.1f)
+        if (Input.GetKey(KeyCode.S) && isGrounded == true)
         {
-            float newY = Mathf.Lerp(transform.position.y, targetY, jumpIncrement * Time.deltaTime);
-            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+            StartCoroutine(Slide());
+        } 
+    }
+
+    IEnumerator Slide()
+    {
+        float elapsedTime = 0f;
+        float duration = 0.45f; // Adjust this value to control the duration of the slide
+
+        isSliding = true;
+
+        while (elapsedTime < duration)
+        {
+            Debug.Log("goinf down");
+            float t = elapsedTime / duration;
+
+            // Calculate the target height, position, and angle using a curve or direct values
+            float targetHeight = Mathf.Lerp(oldColSize, newColSize, t);
+            float targetPos = Mathf.Lerp(oldColPosition, newColPosition, t);
+
+            float targetAngle = Mathf.Lerp(oldCamAngle, newCamAngle, t);
+
+            // Update the position and rotation
+            collider.size = new Vector3(collider.size.x, targetHeight, collider.size.z);
+            collider.center = new Vector3(collider.center.x, targetPos, collider.center.z);
+
+            cameraHub.transform.localRotation = Quaternion.Euler(targetAngle, cameraHub.transform.localRotation.eulerAngles.y, cameraHub.transform.localRotation.eulerAngles.y);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
 
-        float newAngle = Mathf.Lerp(transform.rotation.eulerAngles.z, targetAngle, angleIncrement * Time.deltaTime);
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, newAngle);
+        //yield return new WaitForSeconds(0.1f); // Optional delay for visual effect
+        yield return new WaitForSeconds(0.3f);
 
+        elapsedTime = 0f;
+        duration = 0.45f; // Adjust this value to control the duration of the return
 
-    }*/
+        while (elapsedTime < duration)
+        {
+            Debug.Log("going up");
+            float t = elapsedTime / duration;
+
+            // Calculate the target height, position, and angle using a curve or direct values
+            float targetHeight = Mathf.Lerp(newColSize, oldColSize, t);
+            float targetPos = Mathf.Lerp(newColPosition, oldColPosition, t);
+
+            float targetAngle = Mathf.Lerp(newCamAngle, oldCamAngle, t);
+
+            // Update the position and rotation
+            collider.size = new Vector3(collider.size.x, targetHeight, collider.size.z);
+            collider.center = new Vector3(collider.center.x, targetPos, collider.center.z);
+
+            cameraHub.transform.localRotation = Quaternion.Euler(targetAngle, cameraHub.transform.localRotation.eulerAngles.y, cameraHub.transform.localRotation.eulerAngles.z);
+
+            elapsedTime += Time.deltaTime;
+            isSliding = false;
+            yield return null;
+        }
+    }
 
     void Wobbler()
     {
-        if (isGrounded)
+        if (isGrounded && !isSliding)
         {
             elapsedTime += Time.deltaTime;
             float t = Mathf.PingPong(elapsedTime / lerpDuration, 1.0f);
@@ -211,7 +239,7 @@ public class PlayerRailScript : MonoBehaviour
         }
         else
         {
-            mainCamera.transform.localPosition = new Vector3(0, Mathf.Lerp(mainCamera.transform.localPosition.z, 1, 1f), 0);
+            mainCamera.transform.localPosition = new Vector3(0, Mathf.Lerp(mainCamera.transform.localPosition.z, 2, 1f), 0);
         }
     }
 
@@ -226,6 +254,7 @@ public class PlayerRailScript : MonoBehaviour
             // lerps position and rotation
             transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * 0.15f * Time.deltaTime);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, moveSpeed * Time.deltaTime * 0.5f);
+            Debug.Log("corner lerping");
         }
     }
 
@@ -281,6 +310,12 @@ public class PlayerRailScript : MonoBehaviour
             Quaternion targetRot = Quaternion.Euler(transform.rotation.x, currentSegment.transform.rotation.eulerAngles.y, transform.rotation.z);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, moveSpeed * Time.deltaTime * 0.5f);
             transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * 0.3f * Time.deltaTime);
+        }
+
+        // sets minimum height
+        if (transform.position.y < 2.07f)
+        {
+            transform.position = new Vector3(transform.position.x, 2.07f, transform.position.z);
         }
     }
 

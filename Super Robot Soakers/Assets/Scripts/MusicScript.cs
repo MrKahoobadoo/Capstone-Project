@@ -17,14 +17,14 @@ public class MusicScript : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if (currentScene.buildIndex == 2)
-        {
-            DontDestroyOnLoad(this.gameObject);
-        }
+        DontDestroyOnLoad(this.gameObject);
+        
     }
 
     void Update()
     {
+        currentScene = SceneManager.GetActiveScene();
+
         if (currentScene.buildIndex != 2)
         {
             Destroy(gameObject);

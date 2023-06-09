@@ -6,7 +6,11 @@ public class PathwaySpanwer : MonoBehaviour
 {
     [Header("Path Stuff")]
     public static List<char> path = new List<char>();
+    private List<char> nothingChar = new List<char>();
+    
     List<GameObject> segments = new List<GameObject>();
+    private List<GameObject> nothingSeg = new List<GameObject>();
+    
     public int pathLength;
     private GameObject newSegment;
 
@@ -23,6 +27,8 @@ public class PathwaySpanwer : MonoBehaviour
 
     void Start()
     {
+        path = nothingChar;
+        segments = nothingSeg;
         SetPath();
         LogListValues(path);
         increment = 0;

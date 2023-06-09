@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerRailScript : MonoBehaviour
 {
@@ -76,7 +75,6 @@ public class PlayerRailScript : MonoBehaviour
         Aligner();
         LookBack();
         AlignHamster();
-        Exit();
     }
 
     void Shift()
@@ -368,21 +366,6 @@ public class PlayerRailScript : MonoBehaviour
         if (transform.position.y < 2.07f)
         {
             transform.position = new Vector3(transform.position.x, 2.07f, transform.position.z);
-        }
-    }
-
-    void Exit()
-    {
-        // restarts scene
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            SceneManager.LoadScene(4);
-        }
-
-        // opens menu
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(0);
         }
     }
 

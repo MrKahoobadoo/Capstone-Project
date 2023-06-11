@@ -36,10 +36,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Super Robot Soaker</h3>
+<h3 align="center">Super Robot Soakers</h3>
 
   <p align="center">
-    This is a game I am making for a school project over the next 18 weeks. It will primarily be a first person shooter (fps), but it will also incorporate multiple other gameplay styles, such as driving, parkour, puzzles, and much more (tentatively). It will visually resemble classic DOOM, as I really like its aesthetic and it will allow the game to run on weaker computers. 
+    Super Robot Soakers is a minigame compilation encompassing many kinds of games, such as a third-person-shooter, a driving game, a rhythm game, a running game, and quite a few others. It has an overarching storyline centered around a young boy named Jimmy, who is the chosen one to save the world from the evil artificial intelligence, "The ASI," and its robot army. What could a child do to defeat an army of robots you ask? Why, use a water gun of course! 
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
@@ -87,7 +87,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-`MrKahoobadoo`, `Capstone-Project`, `AUD1GEN`, `mattmc649@gmail.com`, `Super Robot Soaker`, `First-Person adventure game in which you destroy evil ASI robots with water guns`
+`MrKahoobadoo`, `Capstone-Project`, `AUD1GEN`, `mattmc649@gmail.com`, `Super Robot Soaker`, `Story-driven minigame compilation in which you destroy evil ASI robots with water guns`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -128,9 +128,7 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-Download the game here on itch.io:
-
-(itch.io link)
+Download most recent release
 
 <!--
 1. Get a free API Key at [https://example.com](https://example.com)
@@ -166,13 +164,12 @@ Have fun frying robots with water
 
 - [ ] Base game mechanics (movement, shooting, etc.)
 - [ ] Level 1: Driving level
-- [ ] Level 2: COD Zombies inspired level
+- [ ] Level 2: Wave survival level
 - [ ] Level 3: Nextbot/templerun level
-- [ ] Level 4: Rap Battle Level
-- [ ] Level 5: Ride on firetruck and spray robots with firehose level
-- [ ] Level 6: Tower ascension level
-- [ ] Level 7: Final Boss 1
-- [ ] Level 8: Final Boss 2
+- [ ] Level 4: Ride on firetruck and spray robots with firehose level
+- [ ] Level 5: Tower ascension level
+- [ ] Level 6: Final Boss 1 (third-person-shooter)
+- [ ] Level 7: Final Boss 2 (rhythm game)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -184,8 +181,7 @@ Have fun frying robots with water
 
 - Game code: Me
 - Soundtrack: Me
-- Sound: Me
-- Art Assets: Me and Max (probably)
+- Assets: Me and various royalty free sources
 
 <!--
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -233,6 +229,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 ## Acknowledgments
 
 * Thanks to Dr. Bixler for being a great teacher and guiding me along the way
+* Thanks to ChatGPT for being the best syntax checker I could ever ask for
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

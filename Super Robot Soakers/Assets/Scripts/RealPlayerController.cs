@@ -259,9 +259,6 @@ public class RealPlayerController : MonoBehaviour
             {
                 focusPresent = false;
             }
-            
-            // Do something with the hit point
-            // Debug.Log("Hit point: " + pointOfFocus);
         }
         else
         {
